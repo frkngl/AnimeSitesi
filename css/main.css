@@ -1,0 +1,611 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Pacifico&family=Sedgwick+Ave+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Inter:wght@100..900&family=Pacifico&family=Sedgwick+Ave+Display&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/*---------------------------------------HEADER START---------------------------------------*/
+header {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+header .container-xl .hamburger-btn {
+  display: none;
+}
+header .container-xl .logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+header .container-xl .logo a {
+  font-size: 2rem;
+  color: #FF7F00;
+  text-decoration: none;
+  font-family: "Pacifico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: all 300ms;
+  height: 60px;
+  margin-top: 5px;
+}
+header .container-xl .logo a:hover {
+  color: #ffffff;
+}
+header .container-xl nav {
+  height: 60px;
+}
+header .container-xl nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+header .container-xl nav ul li {
+  margin-left: 5px;
+  margin-left: 5px;
+}
+header .container-xl nav ul li a {
+  height: 60px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+  transition: all 300ms;
+  padding: 8px 8px;
+  border-radius: 20px;
+}
+header .container-xl nav ul li a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+header .box {
+  height: 60px;
+  display: flex;
+  justify-content: end;
+}
+header .box .search {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+header .box .search a {
+  color: #FF7F00;
+  transition: all 300ms;
+  padding: 18px 8px;
+}
+header .box .search a:hover {
+  color: #ffffff;
+}
+header .box .user {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+header .box .user a {
+  color: #FF7F00;
+  transition: all 300ms;
+  padding: 18px 8px;
+}
+header .box .user a:hover {
+  color: #ffffff;
+}
+
+/*HEADER RESPONSİVE*/
+@media only screen and (max-width: 600px) {
+  header .container-xl .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .container-xl .row .logo {
+    transform: translateX(100%);
+    margin-top: 10px;
+  }
+  header .container-xl .row .logo a {
+    font-size: 1.5rem;
+  }
+  header .container-xl .row .hamburger-btn {
+    display: block;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    left: 5px;
+    top: 18px;
+  }
+  header .container-xl .row .hamburger-btn span {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #ffffff;
+    transform: translateY(10px);
+    transition: all 300ms;
+  }
+  header .container-xl .row .hamburger-btn span::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 300ms;
+    bottom: 10px;
+  }
+  header .container-xl .row .hamburger-btn span::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 300ms;
+    top: 10px;
+  }
+  header .container-xl .row nav {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    left: -100%;
+    transition: all 300ms ease-in-out;
+    z-index: 9999;
+  }
+  header .container-xl .row nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  header .container-xl .row nav ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -15px;
+  }
+}
+/*CHECK İŞLEMLERİ HAMBURGER-MENU*/
+#check:checked + .hamburger-btn span {
+  background-color: transparent;
+  transition: all 300ms;
+}
+
+#check:checked + .hamburger-btn span::before {
+  transform: rotate(-45deg);
+  transition: all 300ms;
+  bottom: 0;
+}
+
+#check:checked + .hamburger-btn span::after {
+  transform: rotate(45deg);
+  transition: all 300ms;
+  top: 0;
+}
+
+#check:checked ~ nav {
+  left: 0;
+}
+
+/*---------------------------------------HEADER END---------------------------------------*/
+/*---------------------------------------SWIPER START---------------------------------------*/
+/*---------------------------------------SWIPER END---------------------------------------*/
+/*---------------------------------------FOOTER START---------------------------------------*/
+footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 550px;
+  position: relative;
+}
+footer::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 1%, #000000 60%);
+  z-index: 99;
+}
+footer .footerimg {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/footer.png);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.2);
+}
+footer .detail {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .detail .container-xl {
+  position: relative;
+}
+footer .detail .container-xl .row .page {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 33%;
+  height: auto;
+}
+footer .detail .container-xl .row .page .title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+footer .detail .container-xl .row .page ul {
+  list-style-type: none;
+}
+footer .detail .container-xl .row .page ul li {
+  margin: 10px 0px 10px -30px;
+}
+footer .detail .container-xl .row .page ul li a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  padding: 10px 0px;
+}
+footer .detail .container-xl .row .page ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  transition: all 300ms;
+}
+footer .detail .container-xl .row .page ul li a:hover::after {
+  width: 100%;
+}
+footer .detail .container-xl .row .social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  height: auto;
+}
+footer .detail .container-xl .row .social .title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-left: 90px;
+}
+footer .detail .container-xl .row .social ul {
+  list-style-type: none;
+}
+footer .detail .container-xl .row .social ul li {
+  margin: 10px 0px 10px -30px;
+}
+footer .detail .container-xl .row .social ul li a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  padding: 10px 0px;
+}
+footer .detail .container-xl .row .social ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  transition: all 300ms;
+}
+footer .detail .container-xl .row .social ul li a:hover::after {
+  width: 100%;
+}
+footer .detail .container-xl .row .user {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 33%;
+  height: auto;
+}
+footer .detail .container-xl .row .user .title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-right: 30px;
+}
+footer .detail .container-xl .row .user ul {
+  list-style-type: none;
+}
+footer .detail .container-xl .row .user ul li {
+  margin: 10px 0px 10px -30px;
+}
+footer .detail .container-xl .row .user ul li a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  padding: 10px 0px;
+}
+footer .detail .container-xl .row .user ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  transition: all 300ms;
+}
+footer .detail .container-xl .row .user ul li a:hover::after {
+  width: 100%;
+}
+footer .detail .container-xl .end {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: -155px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .detail .container-xl .end .logo a {
+  font-size: 1.5rem;
+  color: #FF7F00;
+  text-decoration: none;
+  font-family: "Pacifico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: all 300ms;
+  margin-top: 5px;
+}
+footer .detail .container-xl .end .logo a:hover {
+  color: #ffffff;
+}
+footer .detail .container-xl .end .copyright {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 930px) {
+  footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 550px;
+    position: relative;
+  }
+  footer .detail {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 550px;
+  }
+  footer .detail .container-xl {
+    position: relative;
+  }
+  footer .detail .container-xl .row .page .title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  footer .detail .container-xl .row .page ul {
+    list-style-type: none;
+  }
+  footer .detail .container-xl .row .page ul li {
+    margin: 10px 0px 10px -30px;
+  }
+  footer .detail .container-xl .row .page ul li a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding: 10px 0px;
+  }
+  footer .detail .container-xl .row .social .title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-left: 50px;
+  }
+  footer .detail .container-xl .row .social ul {
+    list-style-type: none;
+  }
+  footer .detail .container-xl .row .social ul li {
+    margin: 10px 0px 10px -40px;
+  }
+  footer .detail .container-xl .row .social ul li a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding: 10px 0px;
+  }
+  footer .detail .container-xl .row .user .title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-right: 30px;
+  }
+  footer .detail .container-xl .row .user ul {
+    list-style-type: none;
+  }
+  footer .detail .container-xl .row .user ul li {
+    margin: 10px 0px 10px -30px;
+  }
+  footer .detail .container-xl .row .user ul li a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding: 10px 0px;
+  }
+  footer .detail .container-xl .end {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: -155px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .detail .container-xl .end .logo a {
+    font-size: 1.1rem;
+    color: #FF7F00;
+    text-decoration: none;
+    font-family: "Pacifico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 300ms;
+    margin-top: 5px;
+  }
+  footer .detail .container-xl .end .logo a:hover {
+    color: #ffffff;
+  }
+  footer .detail .container-xl .end .copyright {
+    font-size: 0.8rem;
+    color: #ffffff;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+  }
+  footer .detail {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 500px;
+  }
+  footer .detail .container-xl {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+  }
+  footer .detail .container-xl .row {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .detail .container-xl .row .page {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
+  footer .detail .container-xl .row .page .title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  footer .detail .container-xl .row .page ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .detail .container-xl .row .page ul li {
+    margin: 10px;
+  }
+  footer .detail .container-xl .row .page ul li a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding: 10px 0px;
+  }
+  footer .detail .container-xl .row .page ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    display: block;
+    position: absolute;
+    transition: all 300ms;
+  }
+  footer .detail .container-xl .row .page ul li a:hover::after {
+    width: 100%;
+  }
+  footer .detail .container-xl .row .social {
+    width: 100%;
+    display: flex !important;
+    align-items: start !important;
+  }
+  footer .detail .container-xl .row .social .title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-left: 40px;
+  }
+  footer .detail .container-xl .row .social ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .detail .container-xl .row .social ul li {
+    margin: 10px;
+  }
+  footer .detail .container-xl .row .social ul li a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding: 10px 0px;
+  }
+  footer .detail .container-xl .row .social ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    display: block;
+    position: absolute;
+    transition: all 300ms;
+  }
+  footer .detail .container-xl .row .social ul li a:hover::after {
+    width: 100%;
+  }
+  footer .detail .container-xl .row .user {
+    display: none !important;
+  }
+  footer .detail .container-xl .end {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .detail .container-xl .end .logo a {
+    font-size: 1.1rem;
+    color: #FF7F00;
+    text-decoration: none;
+    font-family: "Pacifico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 300ms;
+  }
+  footer .detail .container-xl .end .logo a:hover {
+    color: #ffffff;
+  }
+  footer .detail .container-xl .end .copyright {
+    font-size: 0.8rem;
+    color: #ffffff;
+  }
+}
+/*---------------------------------------FOOTER END---------------------------------------*//*# sourceMappingURL=main.css.map */
