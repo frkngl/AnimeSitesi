@@ -246,10 +246,10 @@ footer::before {
 footer .footerimg {
   width: 100%;
   height: 100%;
-  background-image: url(../img/footer.png);
+  background-image: url(../img/footer2.png);
   background-position: center;
   background-size: cover;
-  filter: brightness(0.3);
+  filter: brightness(0.8);
 }
 footer .detail {
   position: absolute;

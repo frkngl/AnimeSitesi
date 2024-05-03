@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--SPLIDE CSS-->
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css" type="text/css">
     <!--SWIPER CSS-->
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" type="text/css">
     <!--BOOTSTRAP CSS-->
@@ -17,6 +19,7 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/main.css.map" type="text/css">
     <link rel="stylesheet" href="css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="css/splide.css" type="text/css">
 </head>
 
 <body>
@@ -59,63 +62,236 @@
     <!----------------------------------------------------SWIPER START---------------------------------------------------->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="img/1.png">
-            <div class="inside">
-              <div class="title">
-                SOLO LEVELİNG
-              </div>
-              <div class="des">
-                On yıl önce insanların dünyasında büyü ve canavarların diyarını bağlayan bir "Kapı" beliriverdi.
-                Belli bir süre sonrasında bu "Kapı"ların içinden korkunç canavarlar çıkmaya başladı.
-    
-    
-              </div>
-              <a class="btn" href="#"><i class="fa-solid fa-play"></i></a>
+            <div class="swiper-slide">
+                <img src="img/1.png">
+                <div class="inside">
+                    <div class="title">
+                        SOLO LEVELİNG
+                    </div>
+                    <div class="des">
+                        On yıl önce insanların dünyasında büyü ve canavarların diyarını bağlayan bir "Kapı" beliriverdi.
+                        Belli bir süre sonrasında bu "Kapı"ların içinden korkunç canavarlar çıkmaya başladı.
+
+
+                    </div>
+                    <a class="btn" href="#"><i class="fa-solid fa-play"></i></a>
+                </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/2.png">
-            <div class="inside">
-              <div class="title">
-                NABER MÜDÜR
-              </div>
-              <div class="des">
-                On yıl önce insanların dünyasında büyü ve canavarların diyarını bağlayan bir "Kapı" beliriverdi.
-                Belli bir süre sonrasında bu "Kapı"ların içinden korkunç canavarlar çıkmaya başladı.
-    
-    
-              </div>
-              <a class="btn" href="#"><i class="fa-solid fa-play"></i></a>
+            <div class="swiper-slide">
+                <img src="img/2.png">
+                <div class="inside">
+                    <div class="title">
+                        NABER MÜDÜR
+                    </div>
+                    <div class="des">
+                        On yıl önce insanların dünyasında büyü ve canavarların diyarını bağlayan bir "Kapı" beliriverdi.
+                        Belli bir süre sonrasında bu "Kapı"ların içinden korkunç canavarlar çıkmaya başladı.
+
+
+                    </div>
+                    <a class="btn" href="#"><i class="fa-solid fa-play"></i></a>
+                </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/3.png">
-            <div class="inside">
-              <div class="title">
-                AĞLAMA OYNA
-              </div>
-              <div class="des">
-                On yıl önce insanların dünyasında büyü ve canavarların diyarını bağlayan bir "Kapı" beliriverdi.
-                Belli bir süre sonrasında bu "Kapı"ların içinden korkunç canavarlar çıkmaya başladı.
-    
-    
-              </div>
-              <a class="btn" href="#"><i class="fa-solid fa-play"></i></a>
+            <div class="swiper-slide">
+                <img src="img/3.png">
+                <div class="inside">
+                    <div class="title">
+                        AĞLAMA OYNA
+                    </div>
+                    <div class="des">
+                        On yıl önce insanların dünyasında büyü ve canavarların diyarını bağlayan bir "Kapı" beliriverdi.
+                        Belli bir süre sonrasında bu "Kapı"ların içinden korkunç canavarlar çıkmaya başladı.
+
+
+                    </div>
+                    <a class="btn" href="#"><i class="fa-solid fa-play"></i></a>
+                </div>
             </div>
-          </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
         <div class="autoplay-progress">
             <svg viewBox="0 0 48 48">
-              <circle cx="24" cy="24" r="20"></circle>
+                <circle cx="24" cy="24" r="20"></circle>
             </svg>
             <span></span>
-          </div>
-      </div>
+        </div>
+    </div>
     <!----------------------------------------------------SWIPER END---------------------------------------------------->
+
+
+
+
+    <!----------------------------------------------------SPLIDE START---------------------------------------------------->
+    <div class="category1">
+        <div class="text">
+            <div class="title">
+                Yeni Gelen Animeler
+            </div>
+        </div>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <a href="#">
+                            <img src="img/1.png">
+                            <div class="text">
+                                <div class="title">
+                                    Solo Leveling
+                                </div>
+                                <div class="season">
+                                    1S 1B
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="#">
+                            <img src="img/2.png">
+                            <div class="text">
+                                <div class="title">
+                                    Solo Leveling
+                                </div>
+                                <div class="season">
+                                    1S 1B
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="#">
+                            <img src="img/3.png">
+                            <div class="text">
+                                <div class="title">
+                                    Solo Leveling
+                                </div>
+                                <div class="season">
+                                    1S 1B
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="#">
+                            <img src="img/1.png">
+                            <div class="text">
+                                <div class="title">
+                                    Solo Leveling
+                                </div>
+                                <div class="season">
+                                    1S 1B
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="#">
+                            <img src="img/2.png">
+                            <div class="text">
+                                <div class="title">
+                                    Solo Leveling
+                                </div>
+                                <div class="season">
+                                    1S 1B
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="#">
+                            <img src="img/3.png">
+                            <div class="text">
+                                <div class="title">
+                                    Solo Leveling
+                                </div>
+                                <div class="season">
+                                    1S 1B
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="category2">
+        <div class="text">
+            <div class="title">
+                Shounen Animeler
+            </div>
+            <div class="all">
+                <a href="#">Shounen Kategorisi</a>
+            </div>
+        </div>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">Slide 01</li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="category2">
+        <div class="text">
+            <div class="title">
+                Shounen Animeler
+            </div>
+            <div class="all">
+                <a href="#">Shounen Kategorisi</a>
+            </div>
+        </div>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">Slide 01</li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="category2">
+        <div class="text">
+            <div class="title">
+                Shounen Animeler
+            </div>
+            <div class="all">
+                <a href="#">Shounen Kategorisi</a>
+            </div>
+        </div>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">Slide 01</li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="category2">
+        <div class="text">
+            <div class="title">
+                Shounen Animeler
+            </div>
+            <div class="all">
+                <a href="#">Shounen Kategorisi</a>
+            </div>
+        </div>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">Slide 01</li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------------------------SPLIDE END---------------------------------------------------->
 
 
 
@@ -127,7 +303,7 @@
         </div>
         <div class="detail">
             <div class="container-xl">
-                
+
                 <div class="row">
                     <div class="page  ">
                         <div class="title">
@@ -146,10 +322,14 @@
                             Sosyal Medyalar
                         </div>
                         <ul>
-                            <li><a href="#"><i class="fa-brands fa-youtube fa-lg" style="color: #ffffff;"></i> YouTube</a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i> Instagram</a></li>
-                            <li><a href="#"><i class="fa-brands fa-x-twitter fa-lg" style="color: #ffffff;"></i> Twitter</a></li>
-                            <li><a href="#"><i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i> Linkedin</a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube fa-lg" style="color: #ffffff;"></i>
+                                    YouTube</a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                                    Instagram</a></li>
+                            <li><a href="#"><i class="fa-brands fa-x-twitter fa-lg" style="color: #ffffff;"></i>
+                                    Twitter</a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i>
+                                    Linkedin</a></li>
                         </ul>
                     </div>
                     <div class="user ">
@@ -182,5 +362,8 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--SWIPER JS-->
 <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+<!--SPLIDE JS-->
+<script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
 <!--JS-->
 <script src="js/main.js"></script>
+<script src="js/splide.js"></script>

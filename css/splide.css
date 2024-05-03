@@ -1,0 +1,46 @@
+/*KATEGORİLER1*/
+
+.category1{
+    margin-top: 50px;
+    width: 100%;
+    height: 550px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.category1 .text{
+    width: 95%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.splide{
+    width: 100%;
+    height: 500px;
+}
+.splide .splide__list{
+    transition: all 300ms;
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+.splide .splide__list::before,
+.splide .splide__list::after{
+    content: "";
+    display: block;
+    position: absolute
+}
+
+.splide .splide__list a{
+    text-decoration: none;
+    width: 100%;
+}
+.splide .splide__list a img{
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
