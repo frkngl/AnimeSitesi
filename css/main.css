@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 html, body {
@@ -248,7 +249,7 @@ footer .footerimg {
   background-image: url(../img/footer.png);
   background-position: center;
   background-size: cover;
-  filter: brightness(0.2);
+  filter: brightness(0.3);
 }
 footer .detail {
   position: absolute;
