@@ -7,21 +7,43 @@
     box-sizing: border-box;
 }
 
-body {
+html,body {
     background-color: #000000;
-    max-width: 100%;
     overflow-x: hidden;
+    max-width: 100%;
     font-family: "Inter", sans-serif;
 }
 
-
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #000000;
+    border-left: 1px solid #000000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #313131;
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #FF7F00;
+  }
 
 /*---------------------------------------HEADER START---------------------------------------*/
+
+ .header-change {
+    box-shadow: #000000 0px 20px 30px -10px;
+    background-color: #000000;
+    transition: all 300ms;
+    
+}
 header {
     height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 9999;
+    transition: all 300ms;
 
     .container-xl {
 
@@ -126,10 +148,11 @@ header {
         }
     }
 }
+
 /*HEADER RESPONSİVE*/
 @media only screen and (max-width:600px) {
     header {
-
+        background-color: #000000;
         .container-xl {
             .row {
                 display: flex;
@@ -215,6 +238,7 @@ header {
         }
     }
 }
+
 /*CHECK İŞLEMLERİ HAMBURGER-MENU*/
 #check:checked+.hamburger-btn span {
     background-color: transparent;
@@ -236,15 +260,10 @@ header {
 #check:checked~nav {
     left: 0;
 }
+
 /*---------------------------------------HEADER END---------------------------------------*/
 
 
-
-
-
-/*---------------------------------------SWIPER START---------------------------------------*/
-
-/*---------------------------------------SWIPER END---------------------------------------*/
 
 
 
@@ -464,6 +483,7 @@ footer {
 
     }
 }
+
 @media only screen and (max-width:930px) {
     footer {
         margin-top: 100px;
@@ -601,6 +621,7 @@ footer {
         }
     }
 }
+
 @media only screen and (max-width:650px) {
     footer {
         margin-top: 100px;
@@ -760,4 +781,5 @@ footer {
         }
     }
 }
+
 /*---------------------------------------FOOTER END---------------------------------------*/
