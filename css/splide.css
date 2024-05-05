@@ -1,46 +1,428 @@
 /*KATEGORİLER1*/
 
-.category1{
+.category1 {
     margin-top: 50px;
     width: 100%;
     height: 550px;
-    background-color: aquamarine;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.category1 .text{
-    width: 95%;
+
+.category1 .text {
+    width: 93%;
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.splide{
-    width: 100%;
-    height: 500px;
+.category1 .text .all a{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
 }
-.splide .splide__list{
-    transition: all 300ms;
-    display: flex;
-    list-style-type: none;
-    width: 100%;
-    padding: 0;
-    position: relative;
-}
-.splide .splide__list::before,
-.splide .splide__list::after{
-    content: "";
-    display: block;
-    position: absolute
+.category1 .text .title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
-.splide .splide__list a{
+#category2{
+    margin-top: 100px !important;
+}
+
+.splide {
+    width: 100%;
+    height: 525px;
+}
+
+.splide__list {
+    height: 100%;
+    width: 100%;
+    transition: all 300ms;
+    list-style-type: none;
+    position: relative;
+}
+.splide .splide__list a {
     text-decoration: none;
+    color: #ffffff;
     width: 100%;
 }
-.splide .splide__list a img{
+
+.splide .splide__list a img {
     width: 100%;
     height: 480px;
     object-fit: cover;
+}
+
+.splide .splide__arrow--prev::before,
+.splide .splide__arrow--next::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 55px;
+    z-index: -1;
+}
+
+.splide .splide__arrow--prev::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 1%, #000000 100%);
+}
+
+.splide .splide__arrow--next::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
+}
+
+.category1 .splide .text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category1 .splide .text .title,
+.category1 .splide .text .season {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+
+@media only screen and (max-width:1500px) {
+    .category1 {
+        margin-top: 50px;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category1 .text {
+        width: 93%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    .splide {
+        width: 100%;
+        height: 475px;
+    }
+
+    .splide .splide__list a img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+    }
+
+    .splide .splide__arrow--prev::before,
+    .splide .splide__arrow--next::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 25px;
+        z-index: -1;
+    }
+
+    .splide .splide__arrow--prev::before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+
+    .splide .splide__arrow--next::after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+
+    .category1 .splide .text .title,
+    .category1 .splide .text .season {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width:1000px) {
+    .category1 {
+        margin-top: 30px;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category1 .text {
+        width: 93%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .splide {
+        width: 100%;
+        height: 475px;
+    }
+
+    .splide .splide__list a img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+    }
+
+    .splide .splide__arrow--prev::before,
+    .splide .splide__arrow--next::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 25px;
+        z-index: -1;
+    }
+
+    .splide .splide__arrow--prev::before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+
+    .splide .splide__arrow--next::after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+    .category1 .splide .text .title,
+    .category1 .splide .text .season {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+
+
+
+@media only screen and (max-width:900px) {
+    .category1 {
+        margin-top: 50px;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category1 .text {
+        width: 88%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .category1 .text .title {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .category1 .text .all a{
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .splide {
+        width: 100%;
+        height: 475px;
+    }
+
+    .splide .splide__list a img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+    }
+
+    .splide .splide__arrow--prev::before,
+    .splide .splide__arrow--next::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 25px;
+        z-index: -1;
+    }
+
+    .splide .splide__arrow--prev::before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+
+    .splide .splide__arrow--next::after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+    .category1 .splide .text .title,
+    .category1 .splide .text .season {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+
+
+@media only screen and (max-width:700px) {
+    .category1 {
+        margin-top: 30px;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category1 .text {
+        width: 85%;
+        height: 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    .category1 .text .title {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .splide {
+        width: 100%;
+        height: 375px;
+    }
+
+    .splide .splide__list a img {
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+    }
+
+    .splide .splide__arrow--prev::before,
+    .splide .splide__arrow--next::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 25px;
+        z-index: -1;
+    }
+
+    .splide .splide__arrow--prev::before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+
+    .splide .splide__arrow--next::after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+    .category1 .splide .text .title,
+    .category1 .splide .text .season {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+
+@media only screen and (max-width:500px) {
+    .category1 {
+        margin-top: 0px;
+        width: 100%;
+        height: 375px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #category2{
+        margin-top: 0px !important;
+    }
+
+    .category1 .text {
+        width: 80%;
+        height: 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    .category1 .text .title {
+        color: #ffffff;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    .category1 .text .all a{
+        color: #ffffff;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .splide {
+        width: 100%;
+        height: 275px;
+    }
+
+    .splide .splide__list a img {
+        width: 100%;
+        height: 245px;
+        object-fit: cover;
+    }
+
+    .splide .splide__arrow--prev::before,
+    .splide .splide__arrow--next::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 25px;
+        z-index: -1;
+    }
+
+    .splide .splide__arrow--prev::before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+
+    .splide .splide__arrow--next::after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
+    }
+    .category1 .splide .text .title,
+    .category1 .splide .text .season {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    .splide__arrow {
+        -ms-flex-align: center;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+        display: -ms-flexbox;
+        display: flex;
+        height: 275px;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.5em;
+        transition: all 300ms;
+    }
 }
