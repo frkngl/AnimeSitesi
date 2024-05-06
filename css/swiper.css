@@ -21,7 +21,7 @@
   }
   .swiper .swiper-slide::after{
       left: 0;
-      bottom: 0;
+      bottom: -5px;
       background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 1%,#000000 100%);
   }
   

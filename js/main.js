@@ -57,7 +57,7 @@ const video = document.querySelectorAll(".splide__slide .video");
  video.forEach(video => {
    video.onmouseenter = () => {
      video.play();
-     video.volume= 0.03;
+     video.volume= 0.05;
      video.classList.add("active");
    };
 
