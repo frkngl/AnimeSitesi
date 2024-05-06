@@ -505,7 +505,7 @@ footer .detail .container-xl .end .copyright {
 }
 @media only screen and (max-width: 650px) {
   footer {
-    margin-top: 100px;
+    margin-top: 70px;
     width: 100%;
     height: 500px;
     position: relative;

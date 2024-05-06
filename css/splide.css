@@ -16,20 +16,39 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
-.category1 .text .all a{
+
+.category1 .text .all a {
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: 500;
     text-decoration: none;
+    position: relative;
+    transition: all 300ms;
 }
+.category1 .text .all a:hover{
+    color: #FF7F00;
+}
+/* .category1 .text .all a::after{
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 300ms;
+}
+.category1 .text .all a:hover::after{
+    width: 100%;
+} */
 .category1 .text .title {
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-#category2{
+#category2 {
     margin-top: 100px !important;
 }
 
@@ -45,16 +64,41 @@
     list-style-type: none;
     position: relative;
 }
+
 .splide .splide__list a {
     text-decoration: none;
     color: #ffffff;
     width: 100%;
+    height: 100%;
+}
+
+.splide .splide__list a .videoimg {
+    width: 100%;
+    height: 480px;
+    position: relative;
 }
 
 .splide .splide__list a img {
     width: 100%;
-    height: 480px;
+    height: 100%;
     object-fit: cover;
+}
+
+.splide .splide__list a .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(1);
+    opacity: 0;
+    object-fit: cover;
+    transition: all 200ms ease-in;
+}
+
+.splide .splide__list a .video.active {
+    transform: scaleX(1.025);
+    opacity: 1;
 }
 
 .splide .splide__arrow--prev::before,
@@ -108,14 +152,21 @@
         display: flex;
         align-items: center;
     }
+
     .splide {
         width: 100%;
         height: 475px;
     }
 
-    .splide .splide__list a img {
+    .splide .splide__list a .videoimg {
         width: 100%;
         height: 430px;
+        position: relative;
+    }
+
+    .splide .splide__list a img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
@@ -147,7 +198,11 @@
 
 }
 
-
+/* @media only screen and (max-width:1200px) {
+    .splide .splide__list a .video {
+        display: none;
+    }
+} */
 
 
 @media only screen and (max-width:1000px) {
@@ -198,6 +253,7 @@
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
     }
+
     .category1 .splide .text .title,
     .category1 .splide .text .season {
         font-size: 1rem;
@@ -231,12 +287,14 @@
         font-size: 1.2rem;
         font-weight: 500;
     }
-    .category1 .text .all a{
+
+    .category1 .text .all a {
         color: #ffffff;
         font-size: 1.2rem;
         font-weight: 500;
         text-decoration: none;
     }
+
     .splide {
         width: 100%;
         height: 475px;
@@ -267,6 +325,7 @@
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
     }
+
     .category1 .splide .text .title,
     .category1 .splide .text .season {
         font-size: 1rem;
@@ -307,8 +366,14 @@
 
     .splide .splide__list a img {
         width: 100%;
-        height: 330px;
+        height: 100%;
         object-fit: cover;
+    }
+
+    .splide .splide__list a .videoimg {
+        width: 100%;
+        height: 330px;
+        position: relative;
     }
 
     .splide .splide__arrow--prev::before,
@@ -330,6 +395,7 @@
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
     }
+
     .category1 .splide .text .title,
     .category1 .splide .text .season {
         font-size: 1rem;
@@ -349,7 +415,7 @@
         align-items: center;
     }
 
-    #category2{
+    #category2 {
         margin-top: 0px !important;
     }
 
@@ -365,20 +431,28 @@
         font-size: 0.9rem;
         font-weight: 500;
     }
-    .category1 .text .all a{
+
+    .category1 .text .all a {
         color: #ffffff;
         font-size: 0.9rem;
-        font-weight: 500;
+        font-weight: 400;
         text-decoration: none;
     }
+
     .splide {
         width: 100%;
         height: 275px;
     }
 
-    .splide .splide__list a img {
+    .splide .splide__list a .videoimg {
         width: 100%;
         height: 245px;
+        position: relative;
+    }
+
+    .splide .splide__list a img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
@@ -401,11 +475,13 @@
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #000000 100%);
     }
+
     .category1 .splide .text .title,
     .category1 .splide .text .season {
         font-size: 0.8rem;
         font-weight: 500;
     }
+
     .splide__arrow {
         -ms-flex-align: center;
         align-items: center;

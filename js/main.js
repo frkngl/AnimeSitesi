@@ -47,3 +47,23 @@ var swiper = new Swiper(".mySwiper", {
         }
     }
 });
+
+
+
+
+/*KATEGORİLER DÖNGÜYE ALAN EDİTLER*/
+
+const video = document.querySelectorAll(".splide__slide .video");
+
+video.forEach(video => {
+  video.onmouseenter = () => {
+    video.play();
+    video.volume= 0;
+    video.classList.add("active");
+  };
+
+  video.onmouseleave = () => {
+    video.pause();
+    video.classList.remove("active");
+ };
+});
