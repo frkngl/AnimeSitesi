@@ -27,9 +27,11 @@
     position: relative;
     transition: all 300ms;
 }
-.category1 .text .all a:hover{
+
+.category1 .text .all a:hover {
     color: #FF7F00;
 }
+
 /* .category1 .text .all a::after{
     position: absolute;
     content: " ";
@@ -198,11 +200,11 @@
 
 }
 
-/* @media only screen and (max-width:1200px) {
+@media only screen and (max-width:1200px) {
     .splide .splide__list a .video {
         display: none;
     }
-} */
+}
 
 
 @media only screen and (max-width:1000px) {
