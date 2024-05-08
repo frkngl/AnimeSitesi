@@ -228,19 +228,15 @@
   @media only screen and (max-width:600px){
     .swiper {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       margin-top: 60px;
     }
     .swiper .swiper-slide img {
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         object-fit: cover;
         filter: brightness(0.7);
       }
-
-      .swiper .swiper-slide::before{
-        display: none;
-    }
 
       .autoplay-progress {
         position: absolute;
@@ -279,7 +275,7 @@
   @media only screen and (max-width:500px){
     .swiper {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
     }
     
     .swiper-slide {
@@ -301,7 +297,7 @@
     
     .swiper .swiper-slide img {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       object-fit: cover;
       filter: brightness(0.7);
     }
