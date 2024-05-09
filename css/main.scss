@@ -817,7 +817,6 @@ footer {
         }
 
         .subs {
-            display: none;
 
             .btn {
                 margin-right: 10px;
@@ -994,24 +993,6 @@ footer {
                     margin-top: -3px;
                 }
             }
-
-            .b {
-                color: #ffffff;
-                margin-bottom: 20px;
-                font-size: 1.3rem;
-                font-weight: 500;
-                position: relative;
-
-                &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: #ffffff;
-                    margin-top: -3px;
-                }
-            }
         }
 
         form {
@@ -1058,15 +1039,37 @@ footer {
             flex-direction: column;
             align-items: end;
 
+            .title{
+                margin: 10px 0px;
+
+                .b {
+                    color: #ffffff;
+                    margin-bottom: 20px;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    position: relative;
+    
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #ffffff;
+                        margin-top: -3px;
+                    }
+                }
+            }
+
             .comment-box {
                 width: 100%;
                 height: auto;
                 display: flex;
                 align-items: center;
-                border-top: none;
-                border-left: none;
-                border-right: none;
                 margin-bottom: 20px;
+                background-color: #313131;
+                border-radius: 10px;
+                padding: 10px;
 
 
                 img {
@@ -1083,10 +1086,21 @@ footer {
                     width: 100%;
                     padding-left: 30px;
 
-                    .username {
-                        color: #ffffff;
-                        font-size: 1.2rem;
-                        font-weight: 500;
+                    .tr{
+                        display: flex;
+                        align-items: center;
+                        .username {
+                            color: #ffffff;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                        }
+
+                        .date{
+                            color: #ffffff;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            margin: 0px 10px;
+                        }
                     }
 
                     .text {
@@ -1104,6 +1118,11 @@ footer {
                             a {
                                 color: #ffffff;
                                 text-decoration: none;
+                                transition: all 300ms;
+
+                                &:hover{
+                                    color: #FF7F00;
+                                }
                             }
                         }
 
@@ -1130,6 +1149,9 @@ footer {
                 display: flex;
                 align-items: center;
                 margin-bottom: 20px;
+                background-color: #313131;
+                border-radius: 10px;
+                padding: 10px;
 
 
                 img {
@@ -1146,10 +1168,21 @@ footer {
                     width: 100%;
                     padding-left: 30px;
 
-                    .username {
-                        color: #ffffff;
-                        font-size: 1.2rem;
-                        font-weight: 500;
+                    .tr{
+                        display: flex;
+                        align-items: center;
+                        .username {
+                            color: #ffffff;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                        }
+
+                        .date{
+                            color: #ffffff;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            margin: 0px 10px;
+                        }
                     }
 
                     .text {
@@ -1167,6 +1200,11 @@ footer {
                             a {
                                 color: #ffffff;
                                 text-decoration: none;
+                                transition: all 300ms;
+
+                                &:hover{
+                                    color: #FF7F00;
+                                }
                             }
                         }
 
@@ -1401,24 +1439,6 @@ footer {
                         margin-top: -3px;
                     }
                 }
-    
-                .b {
-                    color: #ffffff;
-                    margin-bottom: 20px;
-                    font-size: 1.3rem;
-                    font-weight: 500;
-                    position: relative;
-    
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        background-color: #ffffff;
-                        margin-top: -3px;
-                    }
-                }
             }
     
             form {
@@ -1464,7 +1484,27 @@ footer {
                 display: flex;
                 flex-direction: column;
                 align-items: end;
+                .title{
+                    margin: 10px 0px;
     
+                    .b {
+                        color: #ffffff;
+                        margin-bottom: 20px;
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        position: relative;
+        
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #ffffff;
+                            margin-top: -3px;
+                        }
+                    }
+                }
                 .comment-box {
                     width: 100%;
                     height: auto;
@@ -1490,10 +1530,21 @@ footer {
                         width: 100%;
                         padding-left: 30px;
     
-                        .username {
-                            color: #ffffff;
-                            font-size: 1.2rem;
-                            font-weight: 500;
+                        .tr{
+                            display: flex;
+                            align-items: center;
+                            .username {
+                                color: #ffffff;
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                            }
+    
+                            .date{
+                                color: #ffffff;
+                                font-size: 1rem;
+                                font-weight: 500;
+                                margin: 0px 10px;
+                            }
                         }
     
                         .text {
@@ -1553,10 +1604,21 @@ footer {
                         width: 100%;
                         padding-left: 30px;
     
-                        .username {
-                            color: #ffffff;
-                            font-size: 1.2rem;
-                            font-weight: 500;
+                        .tr{
+                            display: flex;
+                            align-items: center;
+                            .username {
+                                color: #ffffff;
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                            }
+    
+                            .date{
+                                color: #ffffff;
+                                font-size: 1rem;
+                                font-weight: 500;
+                                margin: 0px 10px;
+                            }
                         }
     
                         .text {
@@ -1872,7 +1934,28 @@ footer {
                 display: flex;
                 flex-direction: column;
                 align-items: end;
+
+                .title{
+                    margin: 10px 0px;
     
+                    .b {
+                        color: #ffffff;
+                        margin-bottom: 20px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        position: relative;
+        
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #ffffff;
+                            margin-top: -3px;
+                        }
+                    }
+                }
                 .comment-box {
                     width: 100%;
                     height: auto;
@@ -1898,10 +1981,21 @@ footer {
                         width: 100%;
                         padding-left: 30px;
     
-                        .username {
-                            color: #ffffff;
-                            font-size: 0.9rem;
-                            font-weight: 500;
+                        .tr{
+                            display: flex;
+                            align-items: center;
+                            .username {
+                                color: #ffffff;
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                            }
+    
+                            .date{
+                                color: #ffffff;
+                                font-size: 0.8rem;
+                                font-weight: 500;
+                                margin: 0px 10px;
+                            }
                         }
     
                         .text {
@@ -1919,6 +2013,7 @@ footer {
                                 a {
                                     color: #ffffff;
                                     text-decoration: none;
+                                    font-size: 0.9rem;
                                 }
                             }
     
@@ -1961,10 +2056,21 @@ footer {
                         width: 100%;
                         padding-left: 30px;
     
-                        .username {
-                            color: #ffffff;
-                            font-size: 0.9rem;
-                            font-weight: 500;
+                        .tr{
+                            display: flex;
+                            align-items: center;
+                            .username {
+                                color: #ffffff;
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                            }
+    
+                            .date{
+                                color: #ffffff;
+                                font-size: 0.8rem;
+                                font-weight: 500;
+                                margin: 0px 10px;
+                            }
                         }
     
                         .text {
@@ -1982,6 +2088,7 @@ footer {
                                 a {
                                     color: #ffffff;
                                     text-decoration: none;
+                                    font-size: 0.9rem;
                                 }
                             }
     
