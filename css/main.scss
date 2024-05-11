@@ -1039,7 +1039,7 @@ footer {
             flex-direction: column;
             align-items: end;
 
-            .title{
+            .title {
                 margin: 10px 0px;
 
                 .b {
@@ -1048,7 +1048,7 @@ footer {
                     font-size: 1.2rem;
                     font-weight: 500;
                     position: relative;
-    
+
                     &::after {
                         content: "";
                         display: block;
@@ -1086,16 +1086,17 @@ footer {
                     width: 100%;
                     padding-left: 30px;
 
-                    .tr{
+                    .tr {
                         display: flex;
                         align-items: center;
+
                         .username {
                             color: #ffffff;
                             font-size: 1.2rem;
                             font-weight: 500;
                         }
 
-                        .date{
+                        .date {
                             color: #ffffff;
                             font-size: 1rem;
                             font-weight: 500;
@@ -1120,7 +1121,7 @@ footer {
                                 text-decoration: none;
                                 transition: all 300ms;
 
-                                &:hover{
+                                &:hover {
                                     color: #FF7F00;
                                 }
                             }
@@ -1168,16 +1169,17 @@ footer {
                     width: 100%;
                     padding-left: 30px;
 
-                    .tr{
+                    .tr {
                         display: flex;
                         align-items: center;
+
                         .username {
                             color: #ffffff;
                             font-size: 1.2rem;
                             font-weight: 500;
                         }
 
-                        .date{
+                        .date {
                             color: #ffffff;
                             font-size: 1rem;
                             font-weight: 500;
@@ -1202,7 +1204,7 @@ footer {
                                 text-decoration: none;
                                 transition: all 300ms;
 
-                                &:hover{
+                                &:hover {
                                     color: #FF7F00;
                                 }
                             }
@@ -1231,7 +1233,7 @@ footer {
 
 
 
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:1200px) {
     .content {
         height: auto;
         display: flex;
@@ -1239,17 +1241,17 @@ footer {
         margin-top: 50px;
         justify-content: center;
         align-items: center;
-    
+
         .aa {
             width: 100%;
             display: flex;
             justify-content: space-between;
             margin: 20px 0px;
-    
+
             .title {
                 color: #ffffff;
                 position: relative;
-    
+
                 &::after {
                     content: "";
                     display: block;
@@ -1259,10 +1261,10 @@ footer {
                     background-color: #ffffff;
                 }
             }
-    
+
             .subs {
                 display: none;
-    
+
                 .btn {
                     margin-right: 10px;
                     background-color: #FF7F00;
@@ -1276,7 +1278,7 @@ footer {
                     transition: all 300ms;
                     padding-top: 2px;
                     padding-bottom: 2px;
-    
+
                     &:hover {
                         background-color: #000000;
                         color: #FF7F00;
@@ -1284,17 +1286,17 @@ footer {
                 }
             }
         }
-    
+
         .videos {
             display: flex;
             flex-direction: column;
             width: 100%;
-    
+
             .videom {
                 width: 100%;
                 height: 500px;
             }
-    
+
             .ww {
                 margin-top: 10px;
                 width: 100%;
@@ -1302,14 +1304,14 @@ footer {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-    
+
                 .title {
                     font-size: 1.2rem;
                     color: #ffffff;
                     font-weight: 400;
                     font-style: normal;
                     position: relative;
-    
+
                     &::after {
                         content: "";
                         display: block;
@@ -1319,10 +1321,10 @@ footer {
                         background-color: #ffffff;
                     }
                 }
-    
+
                 .nextandprev {
                     display: flex;
-    
+
                     .prev {
                         margin: 0px 10px;
                         border: none;
@@ -1333,13 +1335,13 @@ footer {
                         font-size: 0.9rem;
                         transition: all 300ms;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: #FF7F00;
                             color: #313131;
                         }
                     }
-    
+
                     .next {
                         border: none;
                         background-color: #313131;
@@ -1349,7 +1351,7 @@ footer {
                         font-size: 0.9rem;
                         transition: all 300ms;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: #FF7F00;
                             color: #313131;
@@ -1357,31 +1359,31 @@ footer {
                     }
                 }
             }
-    
+
             .episode {
                 display: flex;
                 width: 100%;
                 background-color: #000000;
                 overflow-x: scroll;
                 margin-top: 10px;
-    
+
                 &::-webkit-scrollbar {
                     width: 100%;
                     height: 10px;
                     border-radius: 15px;
                     background-color: #313131;
                 }
-    
+
                 &::-webkit-scrollbar-track {
                     -webkit-box-shadow: inset 0 0 20px #313131;
                     border-radius: 15px;
                 }
-    
+
                 &::-webkit-scrollbar-thumb {
                     background-color: #FF7F00;
                     border-radius: 15px;
                 }
-    
+
                 .btn {
                     background-color: #313131;
                     text-decoration: none;
@@ -1393,12 +1395,12 @@ footer {
                     height: 80px;
                     margin: 5px 6px;
                     transition: all 300ms;
-    
+
                     &:hover {
                         background-color: #ffffff;
                         color: #000000;
                     }
-    
+
                     .Q,
                     .title,
                     .date {
@@ -1410,25 +1412,25 @@ footer {
                 }
             }
         }
-    
+
         .comments {
             width: 100%;
             margin-top: 30px;
-    
+
             .title {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
                 height: 30px;
-    
+
                 .a {
                     color: #ffffff;
                     margin-bottom: 20px;
                     font-size: 1.3rem;
                     font-weight: 500;
                     position: relative;
-    
+
                     &::after {
                         content: "";
                         display: block;
@@ -1440,11 +1442,11 @@ footer {
                     }
                 }
             }
-    
+
             form {
                 display: flex;
                 flex-direction: column;
-    
+
                 textarea {
                     border: 2px solid #FF7F00;
                     border-radius: 20px;
@@ -1454,12 +1456,12 @@ footer {
                     padding: 0.8rem;
                     font-size: 1.2rem;
                     transition: all 300ms;
-    
+
                     &:focus {
                         background: #313131;
                     }
                 }
-    
+
                 button {
                     width: 100px;
                     height: 35px;
@@ -1469,14 +1471,14 @@ footer {
                     transition: all 300ms;
                     background-color: #313131;
                     color: #FF7F00;
-    
+
                     &:hover {
                         color: #313131;
                         background-color: #FF7F00;
                     }
                 }
             }
-    
+
             .comment {
                 width: 100%;
                 height: auto;
@@ -1484,16 +1486,17 @@ footer {
                 display: flex;
                 flex-direction: column;
                 align-items: end;
-                .title{
+
+                .title {
                     margin: 10px 0px;
-    
+
                     .b {
                         color: #ffffff;
                         margin-bottom: 20px;
                         font-size: 1.3rem;
                         font-weight: 500;
                         position: relative;
-        
+
                         &::after {
                             content: "";
                             display: block;
@@ -1505,6 +1508,7 @@ footer {
                         }
                     }
                 }
+
                 .comment-box {
                     width: 100%;
                     height: auto;
@@ -1514,66 +1518,67 @@ footer {
                     border-left: none;
                     border-right: none;
                     margin-bottom: 20px;
-    
-    
+
+
                     img {
                         border-radius: 50%;
                         width: 70px;
                         height: 70px;
                         object-fit: cover;
                     }
-    
+
                     .detail {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         width: 100%;
                         padding-left: 30px;
-    
-                        .tr{
+
+                        .tr {
                             display: flex;
                             align-items: center;
+
                             .username {
                                 color: #ffffff;
                                 font-size: 1.2rem;
                                 font-weight: 500;
                             }
-    
-                            .date{
+
+                            .date {
                                 color: #ffffff;
                                 font-size: 1rem;
                                 font-weight: 500;
                                 margin: 0px 10px;
                             }
                         }
-    
+
                         .text {
                             color: #ffffff;
                             font-size: 1rem;
                             font-weight: 400;
-    
+
                         }
-    
+
                         .r {
                             display: flex;
-    
+
                             .reply {
-    
+
                                 a {
                                     color: #ffffff;
                                     text-decoration: none;
                                 }
                             }
-    
+
                             .like {
                                 display: flex;
                                 color: #ffffff;
                                 padding: 0px 0px 0px 10px;
-    
+
                                 .bir {
                                     margin: 0px 10px;
                                 }
-    
+
                                 .iki {
                                     margin: 0px 10px;
                                 }
@@ -1581,73 +1586,74 @@ footer {
                         }
                     }
                 }
-    
+
                 .comment-box2 {
                     width: 95%;
                     height: auto;
                     display: flex;
                     align-items: center;
                     margin-bottom: 20px;
-    
-    
+
+
                     img {
                         border-radius: 50%;
                         width: 70px;
                         height: 70px;
                         object-fit: cover;
                     }
-    
+
                     .detail {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         width: 100%;
                         padding-left: 30px;
-    
-                        .tr{
+
+                        .tr {
                             display: flex;
                             align-items: center;
+
                             .username {
                                 color: #ffffff;
                                 font-size: 1.2rem;
                                 font-weight: 500;
                             }
-    
-                            .date{
+
+                            .date {
                                 color: #ffffff;
                                 font-size: 1rem;
                                 font-weight: 500;
                                 margin: 0px 10px;
                             }
                         }
-    
+
                         .text {
                             color: #ffffff;
                             font-size: 1rem;
                             font-weight: 400;
-    
+
                         }
-    
+
                         .r {
                             display: flex;
-    
+
                             .reply {
-    
+
                                 a {
                                     color: #ffffff;
                                     text-decoration: none;
                                 }
                             }
-    
+
                             .like {
                                 display: flex;
                                 color: #ffffff;
                                 padding: 0px 0px 0px 10px;
-    
+
                                 .bir {
                                     margin: 0px 10px;
                                 }
-    
+
                                 .iki {
                                     margin: 0px 10px;
                                 }
@@ -1657,13 +1663,13 @@ footer {
                 }
             }
         }
-    
+
     }
 }
 
 
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:900px) {
     .content {
         height: auto;
         display: flex;
@@ -1671,17 +1677,17 @@ footer {
         margin-top: 50px;
         justify-content: center;
         align-items: center;
-    
+
         .aa {
             width: 100%;
             display: flex;
             justify-content: space-between;
             margin: 20px 0px;
-    
+
             .title {
                 color: #ffffff;
                 position: relative;
-    
+
                 &::after {
                     content: "";
                     display: block;
@@ -1691,10 +1697,10 @@ footer {
                     background-color: #ffffff;
                 }
             }
-    
+
             .subs {
                 display: none;
-    
+
                 .btn {
                     margin-right: 10px;
                     background-color: #FF7F00;
@@ -1708,7 +1714,7 @@ footer {
                     transition: all 300ms;
                     padding-top: 2px;
                     padding-bottom: 2px;
-    
+
                     &:hover {
                         background-color: #000000;
                         color: #FF7F00;
@@ -1716,17 +1722,17 @@ footer {
                 }
             }
         }
-    
+
         .videos {
             display: flex;
             flex-direction: column;
             width: 100%;
-    
+
             .videom {
                 width: 100%;
                 height: 300px;
             }
-    
+
             .ww {
                 margin-top: 10px;
                 width: 100%;
@@ -1734,14 +1740,14 @@ footer {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-    
+
                 .title {
                     font-size: 1rem;
                     color: #ffffff;
                     font-weight: 400;
                     font-style: normal;
                     position: relative;
-    
+
                     &::after {
                         content: "";
                         display: block;
@@ -1751,10 +1757,10 @@ footer {
                         background-color: #ffffff;
                     }
                 }
-    
+
                 .nextandprev {
                     display: flex;
-    
+
                     .prev {
                         margin: 0px 10px;
                         border: none;
@@ -1765,13 +1771,13 @@ footer {
                         font-size: 0.9rem;
                         transition: all 300ms;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: #FF7F00;
                             color: #313131;
                         }
                     }
-    
+
                     .next {
                         border: none;
                         background-color: #313131;
@@ -1781,7 +1787,7 @@ footer {
                         font-size: 0.9rem;
                         transition: all 300ms;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: #FF7F00;
                             color: #313131;
@@ -1789,31 +1795,31 @@ footer {
                     }
                 }
             }
-    
+
             .episode {
                 display: flex;
                 width: 100%;
                 background-color: #000000;
                 overflow-x: scroll;
                 margin-top: 10px;
-    
+
                 &::-webkit-scrollbar {
                     width: 100%;
                     height: 10px;
                     border-radius: 15px;
                     background-color: #313131;
                 }
-    
+
                 &::-webkit-scrollbar-track {
                     -webkit-box-shadow: inset 0 0 20px #313131;
                     border-radius: 15px;
                 }
-    
+
                 &::-webkit-scrollbar-thumb {
                     background-color: #FF7F00;
                     border-radius: 15px;
                 }
-    
+
                 .btn {
                     background-color: #313131;
                     text-decoration: none;
@@ -1825,12 +1831,12 @@ footer {
                     height: 80px;
                     margin: 5px 6px;
                     transition: all 300ms;
-    
+
                     &:hover {
                         background-color: #ffffff;
                         color: #000000;
                     }
-    
+
                     .Q,
                     .title,
                     .date {
@@ -1842,25 +1848,25 @@ footer {
                 }
             }
         }
-    
+
         .comments {
             width: 100%;
             margin-top: 30px;
-    
+
             .title {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
                 height: 30px;
-    
+
                 .a {
                     color: #ffffff;
                     margin-bottom: 20px;
                     font-size: 0.8rem;
                     font-weight: 500;
                     position: relative;
-    
+
                     &::after {
                         content: "";
                         display: block;
@@ -1871,14 +1877,14 @@ footer {
                         margin-top: -3px;
                     }
                 }
-    
+
                 .b {
                     color: #ffffff;
                     margin-bottom: 20px;
                     font-size: 0.8rem;
                     font-weight: 500;
                     position: relative;
-    
+
                     &::after {
                         content: "";
                         display: block;
@@ -1890,11 +1896,11 @@ footer {
                     }
                 }
             }
-    
+
             form {
                 display: flex;
                 flex-direction: column;
-    
+
                 textarea {
                     border: 2px solid #FF7F00;
                     border-radius: 20px;
@@ -1904,12 +1910,12 @@ footer {
                     padding: 0.8rem;
                     font-size: 1.2rem;
                     transition: all 300ms;
-    
+
                     &:focus {
                         background: #313131;
                     }
                 }
-    
+
                 button {
                     width: 100px;
                     height: 35px;
@@ -1919,14 +1925,14 @@ footer {
                     transition: all 300ms;
                     background-color: #313131;
                     color: #FF7F00;
-    
+
                     &:hover {
                         color: #313131;
                         background-color: #FF7F00;
                     }
                 }
             }
-    
+
             .comment {
                 width: 100%;
                 height: auto;
@@ -1935,16 +1941,16 @@ footer {
                 flex-direction: column;
                 align-items: end;
 
-                .title{
+                .title {
                     margin: 10px 0px;
-    
+
                     .b {
                         color: #ffffff;
                         margin-bottom: 20px;
                         font-size: 0.8rem;
                         font-weight: 500;
                         position: relative;
-        
+
                         &::after {
                             content: "";
                             display: block;
@@ -1956,6 +1962,7 @@ footer {
                         }
                     }
                 }
+
                 .comment-box {
                     width: 100%;
                     height: auto;
@@ -1965,67 +1972,68 @@ footer {
                     border-left: none;
                     border-right: none;
                     margin-bottom: 20px;
-    
-    
+
+
                     img {
                         border-radius: 50%;
                         width: 70px;
                         height: 70px;
                         object-fit: cover;
                     }
-    
+
                     .detail {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         width: 100%;
                         padding-left: 30px;
-    
-                        .tr{
+
+                        .tr {
                             display: flex;
                             align-items: center;
+
                             .username {
                                 color: #ffffff;
                                 font-size: 0.9rem;
                                 font-weight: 500;
                             }
-    
-                            .date{
+
+                            .date {
                                 color: #ffffff;
                                 font-size: 0.8rem;
                                 font-weight: 500;
                                 margin: 0px 10px;
                             }
                         }
-    
+
                         .text {
                             color: #ffffff;
                             font-size: 0.8rem;
                             font-weight: 400;
-    
+
                         }
-    
+
                         .r {
                             display: flex;
-    
+
                             .reply {
-    
+
                                 a {
                                     color: #ffffff;
                                     text-decoration: none;
                                     font-size: 0.9rem;
                                 }
                             }
-    
+
                             .like {
                                 display: flex;
                                 color: #ffffff;
                                 padding: 0px 0px 0px 10px;
-    
+
                                 .bir {
                                     margin: 0px 10px;
                                 }
-    
+
                                 .iki {
                                     margin: 0px 10px;
                                 }
@@ -2033,74 +2041,75 @@ footer {
                         }
                     }
                 }
-    
+
                 .comment-box2 {
                     width: 95%;
                     height: auto;
                     display: flex;
                     align-items: center;
                     margin-bottom: 20px;
-    
-    
+
+
                     img {
                         border-radius: 50%;
                         width: 70px;
                         height: 70px;
                         object-fit: cover;
                     }
-    
+
                     .detail {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         width: 100%;
                         padding-left: 30px;
-    
-                        .tr{
+
+                        .tr {
                             display: flex;
                             align-items: center;
+
                             .username {
                                 color: #ffffff;
                                 font-size: 0.9rem;
                                 font-weight: 500;
                             }
-    
-                            .date{
+
+                            .date {
                                 color: #ffffff;
                                 font-size: 0.8rem;
                                 font-weight: 500;
                                 margin: 0px 10px;
                             }
                         }
-    
+
                         .text {
                             color: #ffffff;
                             font-size: 0.8rem;
                             font-weight: 400;
-    
+
                         }
-    
+
                         .r {
                             display: flex;
-    
+
                             .reply {
-    
+
                                 a {
                                     color: #ffffff;
                                     text-decoration: none;
                                     font-size: 0.9rem;
                                 }
                             }
-    
+
                             .like {
                                 display: flex;
                                 color: #ffffff;
                                 padding: 0px 0px 0px 10px;
-    
+
                                 .bir {
                                     margin: 0px 10px;
                                 }
-    
+
                                 .iki {
                                     margin: 0px 10px;
                                 }
@@ -2110,9 +2119,115 @@ footer {
                 }
             }
         }
-    
+
     }
 }
 
+/*---------------------------------------DETAİL END---------------------------------------*/
 
-/*---------------------------------------DETAİL START---------------------------------------*/
+
+
+
+
+
+/*---------------------------------------CATEGORY START---------------------------------------*/
+.content2 {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    .search {
+        margin-bottom: 50px;
+        background-color: #313131;
+        display: flex;
+        align-items: center;
+        border-radius: 50px;
+        padding: 10px;
+
+        i {
+            color: #FF7F00;
+            padding-left: 10px;
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            color: #ffffff;
+            padding-left: 20px;
+
+        }
+    }
+
+    #menuFull {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0rem;
+
+        .splide__slide {
+            height: 525px;
+            width: 275px;
+            list-style-type: none;
+            position: relative;
+            margin: 20px 16px;
+
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                width: 100%;
+                height: 100%;
+
+                .videoimg {
+                    width: 100%;
+                    height: 480px;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+
+                    .video {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transform: scaleX(1);
+                        opacity: 0;
+                        object-fit: cover;
+                        transition: all 200ms ease-in;
+                        border-radius: 10px;
+                    }
+
+                    .video.active {
+                        transform: scaleX(1.025);
+                        opacity: 1;
+                    }
+                }
+
+                .text {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .title,
+                    .season {
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                    }
+                }
+
+            }
+        }
+    }
+}
+/*---------------------------------------CATEGORY END---------------------------------------*/
