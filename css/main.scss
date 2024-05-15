@@ -806,14 +806,7 @@ footer {
             color: #ffffff;
             position: relative;
 
-            &::after {
-                content: "";
-                display: block;
-                width: 100%;
-                position: absolute;
-                height: 2px;
-                background-color: #ffffff;
-            }
+            
         }
 
         .subs {
@@ -821,7 +814,7 @@ footer {
             .btn {
                 margin-right: 10px;
                 background-color: #313131;
-                color: #FF7F00;
+                color: #ffffff;
                 border-radius: 5px;
                 text-decoration: none;
                 outline: none;
@@ -834,7 +827,7 @@ footer {
                 padding-bottom: 2px;
 
                 &:hover {
-                    background-color: #FF7F00;
+                    background-color: #ffffff;
                     color: #313131;
                 }
             }
@@ -865,14 +858,6 @@ footer {
                 font-style: normal;
                 position: relative;
 
-                &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: #ffffff;
-                }
             }
 
             .nextandprev {
@@ -882,7 +867,7 @@ footer {
                     margin: 0px 10px;
                     border: none;
                     background-color: #313131;
-                    color: #FF7F00;
+                    color: #ffffff;
                     padding: 3px;
                     border-radius: 5px;
                     font-size: 0.9rem;
@@ -890,7 +875,7 @@ footer {
                     cursor: pointer;
 
                     &:hover {
-                        background-color: #FF7F00;
+                        background-color: #ffffff;
                         color: #313131;
                     }
                 }
@@ -898,7 +883,7 @@ footer {
                 .next {
                     border: none;
                     background-color: #313131;
-                    color: #FF7F00;
+                    color: #ffffff;
                     padding: 3px;
                     border-radius: 5px;
                     font-size: 0.9rem;
@@ -906,7 +891,7 @@ footer {
                     cursor: pointer;
 
                     &:hover {
-                        background-color: #FF7F00;
+                        background-color: #ffffff;
                         color: #313131;
                     }
                 }
@@ -984,15 +969,7 @@ footer {
                 font-weight: 500;
                 position: relative;
 
-                &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: #ffffff;
-                    margin-top: -3px;
-                }
+                
             }
         }
 
@@ -1050,15 +1027,7 @@ footer {
                     font-weight: 500;
                     position: relative;
 
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        background-color: #ffffff;
-                        margin-top: -3px;
-                    }
+                    
                 }
             }
 
@@ -2150,7 +2119,7 @@ footer {
 
             .btn {
                 background-color: #313131;
-                color: #FF7F00;
+                color: #ffffff;
                 outline: none;
                 border: none;
                 margin-right: 10px;
@@ -2165,11 +2134,11 @@ footer {
                 li{
 
                     a{
-                        color: #FF7F00;
+                        color: #ffffff;
                         transition: all 300ms;
 
                         &:hover{
-                            background-color: #FF7F00;
+                            background-color: #ffffff;
                             color: #313131;
                         }
                     }
@@ -2280,29 +2249,66 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2rem;
+        padding: 0rem;
 
-        .search {
-            margin-bottom: 50px;
-            background-color: #313131;
+        .searchcategory {
+            width: 100%;
             display: flex;
-            align-items: center;
-            border-radius: 50px;
-            padding: 10px;
-
-            i {
-                color: #FF7F00;
-                padding-left: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+    
+            .dropdown {
+    
+                .btn {
+                    background-color: #313131;
+                    color: #ffffff;
+                    outline: none;
+                    border: none;
+                    margin-right: 10px;
+                    border-radius: 20px;
+                    padding: 10px;
+                    z-index: 99;
+                }
+                ul{
+                    background-color: #313131;
+                    border-radius: 10px !important;
+    
+                    li{
+    
+                        a{
+                            color: #ffffff;
+                            transition: all 300ms;
+    
+                            &:hover{
+                                background-color: #ffffff;
+                                color: #313131;
+                            }
+                        }
+                    }
+                }
             }
-
-            input {
-                background-color: transparent;
-                border: none;
-                outline: none;
-                font-size: 1.2rem;
-                color: #ffffff;
-                padding-left: 20px;
-
+    
+            .search {
+                background-color: #313131;
+                display: flex;
+                align-items: center;
+                border-radius: 50px;
+                padding: 10px;
+    
+                i {
+                    color: #FF7F00;
+                    padding-left: 10px;
+                }
+    
+                input {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 1rem;
+                    color: #ffffff;
+                    padding-left: 20px;
+    
+                }
             }
         }
 
@@ -2351,6 +2357,7 @@ footer {
                             object-fit: cover;
                             transition: all 200ms ease-in;
                             border-radius: 10px;
+                            display: none;
                         }
 
                         .video.active {
@@ -2378,6 +2385,153 @@ footer {
 
 }
 
+
+
+@media only screen and (max-width:700px) {
+    .content2 {
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem;
+
+        .searchcategory {
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-bottom: 30px;
+    
+            .dropdown {
+                margin-top: 10px;
+                .btn {
+                    background-color: #313131;
+                    color: #ffffff;
+                    outline: none;
+                    border: none;
+                    margin-right: 10px;
+                    border-radius: 20px;
+                    padding: 7px;
+                    z-index: 99;
+                    font-size: 0.9rem;
+                }
+                ul{
+                    background-color: #313131;
+                    border-radius: 10px !important;
+    
+                    li{
+    
+                        a{
+                            color: #ffffff;
+                            transition: all 300ms;
+                            font-size: 0.9rem;
+    
+                            &:hover{
+                                background-color: #ffffff;
+                                color: #313131;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .search {
+                background-color: #313131;
+                display: flex;
+                align-items: center;
+                border-radius: 50px;
+                padding: 10px;
+    
+                i {
+                    color: #FF7F00;
+                    padding-left: 10px;
+                }
+    
+                input {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 0.9rem;
+                    color: #ffffff;
+                    padding-left: 20px;
+    
+                }
+            }
+        }
+
+        #menuFull {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0rem;
+
+            .splide__slide {
+                height: 250px;
+                width: 150px;
+                list-style-type: none;
+                position: relative;
+                margin: 0px 10px;
+
+
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    width: 100%;
+                    height: 100%;
+
+                    .videoimg {
+                        width: 100%;
+                        height: 200px;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+
+                        .video {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            transform: scaleX(1);
+                            opacity: 0;
+                            object-fit: cover;
+                            transition: all 200ms ease-in;
+                            border-radius: 10px;
+                        }
+
+                        .video.active {
+                            transform: scaleX(1.025);
+                            opacity: 1;
+                        }
+                    }
+
+                    .text {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .title,
+                        .season {
+                            font-size: 0.9rem;
+                            font-weight: 400;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
 /*---------------------------------------CATEGORY END---------------------------------------*/
 
 
@@ -2395,21 +2549,14 @@ footer {
 
         .title {
             color: #ffffff;
-            font-size: 1.3rem;
+            font-size: 1.7rem;
             font-weight: 400;
             font-style: normal;
             margin-bottom: 20px;
             position: relative;
 
 
-            &::after {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 100%;
-                height: 2px;
-                background-color: #ffffff;
-            }
+            
         }
 
 
@@ -2420,6 +2567,7 @@ footer {
         height: auto;
         display: flex;
         background-color: #313131;
+        box-shadow: #ffffff 0px 0px 20px;
         border-radius: 10px;
 
         .img {
@@ -2437,7 +2585,21 @@ footer {
 
         .text {
             width: 100%;
-            margin: 0px 30px;
+            margin: 0px 0px 0px 30px;
+            overflow-x: auto;
+
+
+            &::-webkit-scrollbar {
+                width: 10px;
+                height: 100%;
+                border-radius: 10px;
+                background-color: #313131;
+            }
+    
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 20px #313131;
+                border-radius: 10px;
+            }
 
             .subtitle,
             .animename,
@@ -2473,14 +2635,7 @@ footer {
             position: relative;
 
 
-            &::after {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 100%;
-                height: 2px;
-                background-color: #ffffff;
-            }
+            
         }
     }
 
@@ -2569,4 +2724,580 @@ footer {
     }
 }
 
+@media only screen and (max-width:1300px){
+    .content3 {
+        width: 100%;
+        height: auto;
+        padding: 100px 20px 0px 20px !important;
+    
+    
+        .anititle {
+            width: 100%;
+            display: flex;
+    
+            .title {
+                color: #ffffff;
+                font-size: 1.7rem;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 20px;
+                position: relative;
+    
+    
+                
+            }
+    
+    
+        }
+    
+        .detail {
+            width: 100%;
+            height: auto;
+            display: flex;
+            background-color: #313131;
+            box-shadow: #ffffff 0px 0px 20px;
+            border-radius: 10px;
+    
+            .img {
+                width: 200px;
+                height: 330px;
+    
+    
+                img {
+                    width: 200px;
+                    height: 330px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+    
+            .text {
+                width: 100%;
+                margin: 0px 0px 0px 30px;
+                overflow-x: auto;
+
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    height: 100%;
+                    border-radius: 10px;
+                    background-color: #313131;
+                }
+        
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 20px #313131;
+                    border-radius: 10px;
+                }
+    
+                .subtitle,
+                .animename,
+                .year,
+                .type {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+    
+                .subtitle,
+                .animename,
+                .year,
+                .type {
+                    margin-top: 10px;
+                }
+            }
+        }
+    
+        .epititle {
+            width: 100%;
+            display: flex;
+            margin-top: 100px;
+            margin-left: 10px;
+    
+            .title {
+                color: #ffffff;
+                font-size: 1.3rem;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 20px;
+                position: relative;
+    
+    
+                
+            }
+        }
+    
+        .episode {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 650px;
+            background-color: #000000;
+            overflow-y: auto;
+    
+            &::-webkit-scrollbar {
+                width: 10px;
+                height: 100%;
+                border-radius: 15px;
+                background-color: #313131;
+            }
+    
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 20px #313131;
+                border-radius: 15px;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                background-color: #FF7F00;
+                border-radius: 15px;
+            }
+    
+            .btn {
+                background-color: #000000;
+                text-decoration: none;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                width: 170px;
+                height: 300px;
+                margin: 10px 8px;
+                padding: 0;
+                transition: all 300ms;
+                position: relative;
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 70px;
+                    left: 0;
+                    bottom: 0px;
+                    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
+                    border-radius: 0px 0px 10px 10px;
+    
+                }
+    
+                &:hover {
+                    box-shadow: #ffffff 0px 0px 20px;
+                }
+    
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    opacity: 0.6;
+                }
+    
+                .dd {
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 99;
+    
+                    .Q,
+                    .title,
+                    .date {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:920px){
+    .content3 {
+        width: 100%;
+        height: auto;
+        padding: 100px 20px 0px 20px !important;
+    
+    
+        .anititle {
+            width: 100%;
+            display: flex;
+    
+            .title {
+                color: #ffffff;
+                font-size: 1.3rem;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 20px;
+                position: relative;
+    
+    
+                
+            }
+    
+    
+        }
+    
+        .detail {
+            width: 100%;
+            height: 330px;
+            display: flex;
+            background-color: #313131;
+            box-shadow: #ffffff 0px 0px 20px;
+            border-radius: 10px;
+            position: relative;
+    
+            .img {
+                width: 200px;
+                height: 330px;
+                
+    
+    
+                img {
+                    width: 200px;
+                    height: 330px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+    
+            .text {
+                width: 100%;
+                margin: 0px 0px 0px 30px;
+                overflow-x: auto;
+
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    height: 100%;
+                    border-radius: 10px;
+                    background-color: #313131;
+                }
+        
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 20px #313131;
+                    border-radius: 10px;
+                }
+    
+                .subtitle,
+                .animename,
+                .year,
+                .type {
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+    
+                .subtitle,
+                .animename,
+                .year,
+                .type {
+                    margin-top: 10px;
+                }
+            }
+        }
+    
+        .epititle {
+            width: 100%;
+            display: flex;
+            margin-top: 100px;
+            margin-left: 10px;
+    
+            .title {
+                color: #ffffff;
+                font-size: 1.3rem;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 20px;
+                position: relative;
+    
+    
+                
+            }
+        }
+    
+        .episode {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 650px;
+            background-color: #000000;
+            overflow-y: auto;
+    
+            &::-webkit-scrollbar {
+                width: 10px;
+                height: 100%;
+                border-radius: 15px;
+                background-color: #313131;
+            }
+    
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 20px #313131;
+                border-radius: 15px;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                background-color: #FF7F00;
+                border-radius: 15px;
+            }
+    
+            .btn {
+                background-color: #000000;
+                text-decoration: none;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                width: 130px;
+                height: 200px;
+                margin: 10px 8px;
+                padding: 0;
+                transition: all 300ms;
+                position: relative;
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 70px;
+                    left: 0;
+                    bottom: 0px;
+                    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
+                    border-radius: 0px 0px 10px 10px;
+    
+                }
+    
+                &:hover {
+                    box-shadow: #ffffff 0px 0px 20px;
+                }
+    
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    opacity: 0.6;
+                }
+    
+                .dd {
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 99;
+    
+                    .Q,
+                    .title,
+                    .date {
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:600px){
+    .content3 {
+        width: 100%;
+        height: auto;
+        padding: 100px 20px 0px 20px !important;
+    
+    
+        .anititle {
+            width: 100%;
+            display: flex;
+    
+            .title {
+                color: #ffffff;
+                font-size: 1.3rem;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 20px;
+                position: relative;
+    
+    
+                
+            }
+    
+    
+        }
+    
+        .detail {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            background-color: #313131;
+            box-shadow: #ffffff 0px 0px 20px;
+            border-radius: 10px;
+    
+            .img {
+                width: 100px;
+                height: 200px;
+                
+    
+    
+                img {
+                    width: 100px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+    
+            .text {
+                width: 100%;
+                margin: 0px 0px 0px 10px;
+                overflow-x: auto;
+
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    height: 100%;
+                    border-radius: 10px;
+                    background-color: #313131;
+                }
+        
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 20px #313131;
+                    border-radius: 10px;
+                }
+    
+                .subtitle,
+                .animename,
+                .year,
+                .type {
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+    
+                .subtitle,
+                .animename,
+                .year,
+                .type {
+                    margin-top: 10px;
+                }
+            }
+        }
+    
+        .epititle {
+            width: 100%;
+            display: flex;
+            margin-top: 100px;
+            margin-left: 10px;
+    
+            .title {
+                color: #ffffff;
+                font-size: 1.3rem;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 20px;
+                position: relative;
+    
+    
+                
+            }
+        }
+    
+        .episode {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 650px;
+            background-color: #000000;
+            overflow-y: auto;
+    
+            &::-webkit-scrollbar {
+                width: 10px;
+                height: 100%;
+                border-radius: 15px;
+                background-color: #313131;
+            }
+    
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 20px #313131;
+                border-radius: 15px;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                background-color: #FF7F00;
+                border-radius: 15px;
+            }
+    
+            .btn {
+                background-color: #000000;
+                text-decoration: none;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                width: 130px;
+                height: 200px;
+                margin: 10px 8px;
+                padding: 0;
+                transition: all 300ms;
+                position: relative;
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 70px;
+                    left: 0;
+                    bottom: 0px;
+                    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
+                    border-radius: 0px 0px 10px 10px;
+    
+                }
+    
+                &:hover {
+                    box-shadow: #ffffff 0px 0px 20px;
+                }
+    
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    opacity: 0.6;
+                }
+    
+                .dd {
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 99;
+    
+                    .Q,
+                    .title,
+                    .date {
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                }
+    
+            }
+        }
+    }
+}
 /*---------------------------------------ANİMEDETAİL START---------------------------------------*/

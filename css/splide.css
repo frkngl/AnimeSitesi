@@ -21,7 +21,7 @@
 
 .category1 .text .all a {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     text-decoration: none;
     position: relative;
@@ -31,7 +31,11 @@
 .category1 .text .all a:hover {
     color: #FF7F00;
 }
-
+.category1 .text .title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 /* .category1 .text .all a::after{
     position: absolute;
     content: " ";
@@ -44,11 +48,7 @@
 .category1 .text .all a:hover::after{
     width: 100%;
 } */
-.category1 .text .title {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
+
 
 #category2 {
     margin-top: 100px !important;

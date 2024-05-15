@@ -650,18 +650,10 @@ footer .detail .container-xl .end .copyright {
   color: #ffffff;
   position: relative;
 }
-.content .aa .title::after {
-  content: "";
-  display: block;
-  width: 100%;
-  position: absolute;
-  height: 2px;
-  background-color: #ffffff;
-}
 .content .aa .subs .btn {
   margin-right: 10px;
   background-color: #313131;
-  color: #FF7F00;
+  color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
   outline: none;
@@ -674,7 +666,7 @@ footer .detail .container-xl .end .copyright {
   padding-bottom: 2px;
 }
 .content .aa .subs .btn:hover {
-  background-color: #FF7F00;
+  background-color: #ffffff;
   color: #313131;
 }
 .content .videos {
@@ -700,14 +692,6 @@ footer .detail .container-xl .end .copyright {
   font-style: normal;
   position: relative;
 }
-.content .videos .ww .title::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-}
 .content .videos .ww .nextandprev {
   display: flex;
 }
@@ -715,7 +699,7 @@ footer .detail .container-xl .end .copyright {
   margin: 0px 10px;
   border: none;
   background-color: #313131;
-  color: #FF7F00;
+  color: #ffffff;
   padding: 3px;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -723,13 +707,13 @@ footer .detail .container-xl .end .copyright {
   cursor: pointer;
 }
 .content .videos .ww .nextandprev .prev:hover {
-  background-color: #FF7F00;
+  background-color: #ffffff;
   color: #313131;
 }
 .content .videos .ww .nextandprev .next {
   border: none;
   background-color: #313131;
-  color: #FF7F00;
+  color: #ffffff;
   padding: 3px;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -737,7 +721,7 @@ footer .detail .container-xl .end .copyright {
   cursor: pointer;
 }
 .content .videos .ww .nextandprev .next:hover {
-  background-color: #FF7F00;
+  background-color: #ffffff;
   color: #313131;
 }
 .content .videos .episode {
@@ -803,15 +787,6 @@ footer .detail .container-xl .end .copyright {
   font-weight: 500;
   position: relative;
 }
-.content .comments .title .a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-  margin-top: -3px;
-}
 .content .comments form {
   display: flex;
   flex-direction: column;
@@ -860,15 +835,6 @@ footer .detail .container-xl .end .copyright {
   font-size: 1.2rem;
   font-weight: 500;
   position: relative;
-}
-.content .comments .comment .title .b::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-  margin-top: -3px;
 }
 .content .comments .comment .comment-box {
   width: 100%;
@@ -1767,7 +1733,7 @@ footer .detail .container-xl .end .copyright {
 }
 .content2 .searchcategory .dropdown .btn {
   background-color: #313131;
-  color: #FF7F00;
+  color: #ffffff;
   outline: none;
   border: none;
   margin-right: 10px;
@@ -1780,11 +1746,11 @@ footer .detail .container-xl .end .copyright {
   border-radius: 10px !important;
 }
 .content2 .searchcategory .dropdown ul li a {
-  color: #FF7F00;
+  color: #ffffff;
   transition: all 300ms;
 }
 .content2 .searchcategory .dropdown ul li a:hover {
-  background-color: #FF7F00;
+  background-color: #ffffff;
   color: #313131;
 }
 .content2 .searchcategory .search {
@@ -1874,25 +1840,52 @@ footer .detail .container-xl .end .copyright {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 0rem;
   }
-  .content2 .search {
-    margin-bottom: 50px;
+  .content2 .searchcategory {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .content2 .searchcategory .dropdown .btn {
+    background-color: #313131;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 99;
+  }
+  .content2 .searchcategory .dropdown ul {
+    background-color: #313131;
+    border-radius: 10px !important;
+  }
+  .content2 .searchcategory .dropdown ul li a {
+    color: #ffffff;
+    transition: all 300ms;
+  }
+  .content2 .searchcategory .dropdown ul li a:hover {
+    background-color: #ffffff;
+    color: #313131;
+  }
+  .content2 .searchcategory .search {
     background-color: #313131;
     display: flex;
     align-items: center;
     border-radius: 50px;
     padding: 10px;
   }
-  .content2 .search i {
+  .content2 .searchcategory .search i {
     color: #FF7F00;
     padding-left: 10px;
   }
-  .content2 .search input {
+  .content2 .searchcategory .search input {
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #ffffff;
     padding-left: 20px;
   }
@@ -1941,6 +1934,7 @@ footer .detail .container-xl .end .copyright {
        object-fit: cover;
     transition: all 200ms ease-in;
     border-radius: 10px;
+    display: none;
   }
   .content2 #menuFull .splide__slide a .videoimg .video.active {
     transform: scaleX(1.025);
@@ -1957,6 +1951,129 @@ footer .detail .container-xl .end .copyright {
     font-weight: 500;
   }
 }
+@media only screen and (max-width: 700px) {
+  .content2 {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem;
+  }
+  .content2 .searchcategory {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .content2 .searchcategory .dropdown {
+    margin-top: 10px;
+  }
+  .content2 .searchcategory .dropdown .btn {
+    background-color: #313131;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 7px;
+    z-index: 99;
+    font-size: 0.9rem;
+  }
+  .content2 .searchcategory .dropdown ul {
+    background-color: #313131;
+    border-radius: 10px !important;
+  }
+  .content2 .searchcategory .dropdown ul li a {
+    color: #ffffff;
+    transition: all 300ms;
+    font-size: 0.9rem;
+  }
+  .content2 .searchcategory .dropdown ul li a:hover {
+    background-color: #ffffff;
+    color: #313131;
+  }
+  .content2 .searchcategory .search {
+    background-color: #313131;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px;
+  }
+  .content2 .searchcategory .search i {
+    color: #FF7F00;
+    padding-left: 10px;
+  }
+  .content2 .searchcategory .search input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #ffffff;
+    padding-left: 20px;
+  }
+  .content2 #menuFull {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+  }
+  .content2 #menuFull .splide__slide {
+    height: 250px;
+    width: 150px;
+    list-style-type: none;
+    position: relative;
+    margin: 0px 10px;
+  }
+  .content2 #menuFull .splide__slide a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+  }
+  .content2 #menuFull .splide__slide a .videoimg {
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+  .content2 #menuFull .splide__slide a .videoimg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .content2 #menuFull .splide__slide a .videoimg .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(1);
+    opacity: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: all 200ms ease-in;
+    border-radius: 10px;
+  }
+  .content2 #menuFull .splide__slide a .videoimg .video.active {
+    transform: scaleX(1.025);
+    opacity: 1;
+  }
+  .content2 #menuFull .splide__slide a .text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content2 #menuFull .splide__slide a .text .title,
+  .content2 #menuFull .splide__slide a .text .season {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}
 /*---------------------------------------CATEGORY END---------------------------------------*/
 /*---------------------------------------ANİMEDETAİL START---------------------------------------*/
 .content3 {
@@ -1970,25 +2087,18 @@ footer .detail .container-xl .end .copyright {
 }
 .content3 .anititle .title {
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 400;
   font-style: normal;
   margin-bottom: 20px;
   position: relative;
-}
-.content3 .anititle .title::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
 }
 .content3 .detail {
   width: 100%;
   height: auto;
   display: flex;
   background-color: #313131;
+  box-shadow: #ffffff 0px 0px 20px;
   border-radius: 10px;
 }
 .content3 .detail .img {
@@ -2004,7 +2114,18 @@ footer .detail .container-xl .end .copyright {
 }
 .content3 .detail .text {
   width: 100%;
-  margin: 0px 30px;
+  margin: 0px 0px 0px 30px;
+  overflow-x: auto;
+}
+.content3 .detail .text::-webkit-scrollbar {
+  width: 10px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #313131;
+}
+.content3 .detail .text::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 20px #313131;
+  border-radius: 10px;
 }
 .content3 .detail .text .subtitle,
 .content3 .detail .text .animename,
@@ -2034,14 +2155,6 @@ footer .detail .container-xl .end .copyright {
   font-style: normal;
   margin-bottom: 20px;
   position: relative;
-}
-.content3 .epititle .title::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
 }
 .content3 .episode {
   display: flex;
@@ -2117,4 +2230,470 @@ footer .detail .container-xl .end .copyright {
   font-style: normal;
 }
 
+@media only screen and (max-width: 1300px) {
+  .content3 {
+    width: 100%;
+    height: auto;
+    padding: 100px 20px 0px 20px !important;
+  }
+  .content3 .anititle {
+    width: 100%;
+    display: flex;
+  }
+  .content3 .anititle .title {
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .content3 .detail {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #313131;
+    box-shadow: #ffffff 0px 0px 20px;
+    border-radius: 10px;
+  }
+  .content3 .detail .img {
+    width: 200px;
+    height: 330px;
+  }
+  .content3 .detail .img img {
+    width: 200px;
+    height: 330px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .content3 .detail .text {
+    width: 100%;
+    margin: 0px 0px 0px 30px;
+    overflow-x: auto;
+  }
+  .content3 .detail .text::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #313131;
+  }
+  .content3 .detail .text::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px #313131;
+    border-radius: 10px;
+  }
+  .content3 .detail .text .subtitle,
+  .content3 .detail .text .animename,
+  .content3 .detail .text .year,
+  .content3 .detail .text .type {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content3 .detail .text .subtitle,
+  .content3 .detail .text .animename,
+  .content3 .detail .text .year,
+  .content3 .detail .text .type {
+    margin-top: 10px;
+  }
+  .content3 .epititle {
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 10px;
+  }
+  .content3 .epititle .title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .content3 .episode {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 650px;
+    background-color: #000000;
+    overflow-y: auto;
+  }
+  .content3 .episode::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #313131;
+  }
+  .content3 .episode::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px #313131;
+    border-radius: 15px;
+  }
+  .content3 .episode::-webkit-scrollbar-thumb {
+    background-color: #FF7F00;
+    border-radius: 15px;
+  }
+  .content3 .episode .btn {
+    background-color: #000000;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width: 170px;
+    height: 300px;
+    margin: 10px 8px;
+    padding: 0;
+    transition: all 300ms;
+    position: relative;
+  }
+  .content3 .episode .btn::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    bottom: 0px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
+    border-radius: 0px 0px 10px 10px;
+  }
+  .content3 .episode .btn:hover {
+    box-shadow: #ffffff 0px 0px 20px;
+  }
+  .content3 .episode .btn img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.6;
+  }
+  .content3 .episode .btn .dd {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+  }
+  .content3 .episode .btn .dd .Q,
+  .content3 .episode .btn .dd .title,
+  .content3 .episode .btn .dd .date {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .content3 {
+    width: 100%;
+    height: auto;
+    padding: 100px 20px 0px 20px !important;
+  }
+  .content3 .anititle {
+    width: 100%;
+    display: flex;
+  }
+  .content3 .anititle .title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .content3 .detail {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    background-color: #313131;
+    box-shadow: #ffffff 0px 0px 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  .content3 .detail .img {
+    width: 200px;
+    height: 330px;
+  }
+  .content3 .detail .img img {
+    width: 200px;
+    height: 330px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .content3 .detail .text {
+    width: 100%;
+    margin: 0px 0px 0px 30px;
+    overflow-x: auto;
+  }
+  .content3 .detail .text::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #313131;
+  }
+  .content3 .detail .text::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px #313131;
+    border-radius: 10px;
+  }
+  .content3 .detail .text .subtitle,
+  .content3 .detail .text .animename,
+  .content3 .detail .text .year,
+  .content3 .detail .text .type {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content3 .detail .text .subtitle,
+  .content3 .detail .text .animename,
+  .content3 .detail .text .year,
+  .content3 .detail .text .type {
+    margin-top: 10px;
+  }
+  .content3 .epititle {
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 10px;
+  }
+  .content3 .epititle .title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .content3 .episode {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 650px;
+    background-color: #000000;
+    overflow-y: auto;
+  }
+  .content3 .episode::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #313131;
+  }
+  .content3 .episode::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px #313131;
+    border-radius: 15px;
+  }
+  .content3 .episode::-webkit-scrollbar-thumb {
+    background-color: #FF7F00;
+    border-radius: 15px;
+  }
+  .content3 .episode .btn {
+    background-color: #000000;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width: 130px;
+    height: 200px;
+    margin: 10px 8px;
+    padding: 0;
+    transition: all 300ms;
+    position: relative;
+  }
+  .content3 .episode .btn::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    bottom: 0px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
+    border-radius: 0px 0px 10px 10px;
+  }
+  .content3 .episode .btn:hover {
+    box-shadow: #ffffff 0px 0px 20px;
+  }
+  .content3 .episode .btn img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.6;
+  }
+  .content3 .episode .btn .dd {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+  }
+  .content3 .episode .btn .dd .Q,
+  .content3 .episode .btn .dd .title,
+  .content3 .episode .btn .dd .date {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .content3 {
+    width: 100%;
+    height: auto;
+    padding: 100px 20px 0px 20px !important;
+  }
+  .content3 .anititle {
+    width: 100%;
+    display: flex;
+  }
+  .content3 .anititle .title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .content3 .detail {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background-color: #313131;
+    box-shadow: #ffffff 0px 0px 20px;
+    border-radius: 10px;
+  }
+  .content3 .detail .img {
+    width: 100px;
+    height: 200px;
+  }
+  .content3 .detail .img img {
+    width: 100px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .content3 .detail .text {
+    width: 100%;
+    margin: 0px 0px 0px 10px;
+    overflow-x: auto;
+  }
+  .content3 .detail .text::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #313131;
+  }
+  .content3 .detail .text::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px #313131;
+    border-radius: 10px;
+  }
+  .content3 .detail .text .subtitle,
+  .content3 .detail .text .animename,
+  .content3 .detail .text .year,
+  .content3 .detail .text .type {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content3 .detail .text .subtitle,
+  .content3 .detail .text .animename,
+  .content3 .detail .text .year,
+  .content3 .detail .text .type {
+    margin-top: 10px;
+  }
+  .content3 .epititle {
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 10px;
+  }
+  .content3 .epititle .title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .content3 .episode {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 650px;
+    background-color: #000000;
+    overflow-y: auto;
+  }
+  .content3 .episode::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #313131;
+  }
+  .content3 .episode::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px #313131;
+    border-radius: 15px;
+  }
+  .content3 .episode::-webkit-scrollbar-thumb {
+    background-color: #FF7F00;
+    border-radius: 15px;
+  }
+  .content3 .episode .btn {
+    background-color: #000000;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width: 130px;
+    height: 200px;
+    margin: 10px 8px;
+    padding: 0;
+    transition: all 300ms;
+    position: relative;
+  }
+  .content3 .episode .btn::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    bottom: 0px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
+    border-radius: 0px 0px 10px 10px;
+  }
+  .content3 .episode .btn:hover {
+    box-shadow: #ffffff 0px 0px 20px;
+  }
+  .content3 .episode .btn img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.6;
+  }
+  .content3 .episode .btn .dd {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+  }
+  .content3 .episode .btn .dd .Q,
+  .content3 .episode .btn .dd .title,
+  .content3 .episode .btn .dd .date {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 /*---------------------------------------ANİMEDETAİL START---------------------------------------*//*# sourceMappingURL=main.css.map */
