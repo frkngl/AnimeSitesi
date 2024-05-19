@@ -812,11 +812,11 @@ footer .detail .container-xl .end .copyright {
   border: none;
   transition: all 300ms;
   background-color: #313131;
-  color: #FF7F00;
+  color: #ffffff;
 }
 .content .comments form button:hover {
   color: #313131;
-  background-color: #FF7F00;
+  background-color: #ffffff;
 }
 .content .comments .comment {
   width: 100%;
@@ -1001,7 +1001,8 @@ footer .detail .container-xl .end .copyright {
   }
   .content .aa .subs .btn {
     margin-right: 10px;
-    background-color: #FF7F00;
+    background-color: #313131;
+    color: #ffffff;
     border-radius: 5px;
     text-decoration: none;
     outline: none;
@@ -1014,8 +1015,8 @@ footer .detail .container-xl .end .copyright {
     padding-bottom: 2px;
   }
   .content .aa .subs .btn:hover {
-    background-color: #000000;
-    color: #FF7F00;
+    background-color: #ffffff;
+    color: #313131;
   }
   .content .videos {
     display: flex;
@@ -1056,7 +1057,7 @@ footer .detail .container-xl .end .copyright {
     margin: 0px 10px;
     border: none;
     background-color: #313131;
-    color: #FF7F00;
+    color: #ffffff;
     padding: 3px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -1064,13 +1065,13 @@ footer .detail .container-xl .end .copyright {
     cursor: pointer;
   }
   .content .videos .ww .nextandprev .prev:hover {
-    background-color: #FF7F00;
+    background-color: #ffffff;
     color: #313131;
   }
   .content .videos .ww .nextandprev .next {
     border: none;
     background-color: #313131;
-    color: #FF7F00;
+    color: #ffffff;
     padding: 3px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -1078,7 +1079,7 @@ footer .detail .container-xl .end .copyright {
     cursor: pointer;
   }
   .content .videos .ww .nextandprev .next:hover {
-    background-color: #FF7F00;
+    background-color: #ffffff;
     color: #313131;
   }
   .content .videos .episode {
@@ -1178,11 +1179,11 @@ footer .detail .container-xl .end .copyright {
     border: none;
     transition: all 300ms;
     background-color: #313131;
-    color: #FF7F00;
+    color: #ffffff;
   }
   .content .comments form button:hover {
     color: #313131;
-    background-color: #FF7F00;
+    background-color: #ffffff;
   }
   .content .comments .comment {
     width: 100%;
@@ -1365,7 +1366,8 @@ footer .detail .container-xl .end .copyright {
   }
   .content .aa .subs .btn {
     margin-right: 10px;
-    background-color: #FF7F00;
+    background-color: #313131;
+    color: #ffffff;
     border-radius: 5px;
     text-decoration: none;
     outline: none;
@@ -1378,8 +1380,8 @@ footer .detail .container-xl .end .copyright {
     padding-bottom: 2px;
   }
   .content .aa .subs .btn:hover {
-    background-color: #000000;
-    color: #FF7F00;
+    background-color: #ffffff;
+    color: #313131;
   }
   .content .videos {
     display: flex;
@@ -1420,7 +1422,7 @@ footer .detail .container-xl .end .copyright {
     margin: 0px 10px;
     border: none;
     background-color: #313131;
-    color: #FF7F00;
+    color: #ffffff;
     padding: 3px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -1428,13 +1430,13 @@ footer .detail .container-xl .end .copyright {
     cursor: pointer;
   }
   .content .videos .ww .nextandprev .prev:hover {
-    background-color: #FF7F00;
+    background-color: #ffffff;
     color: #313131;
   }
   .content .videos .ww .nextandprev .next {
     border: none;
     background-color: #313131;
-    color: #FF7F00;
+    color: #ffffff;
     padding: 3px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -1442,7 +1444,7 @@ footer .detail .container-xl .end .copyright {
     cursor: pointer;
   }
   .content .videos .ww .nextandprev .next:hover {
-    background-color: #FF7F00;
+    background-color: #ffffff;
     color: #313131;
   }
   .content .videos .episode {
@@ -1558,11 +1560,11 @@ footer .detail .container-xl .end .copyright {
     border: none;
     transition: all 300ms;
     background-color: #313131;
-    color: #FF7F00;
+    color: #ffffff;
   }
   .content .comments form button:hover {
     color: #313131;
-    background-color: #FF7F00;
+    background-color: #ffffff;
   }
   .content .comments .comment {
     width: 100%;
