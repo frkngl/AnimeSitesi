@@ -2747,7 +2747,7 @@ footer .detail .container-xl .end .copyright {
   outline: none;
   border: none;
   border-radius: 20px;
-  background-color: #f8f2e3;
+  background-color: #F2F4F3;
 }
 .content4 .SignIn form .E-mail {
   display: flex;
@@ -2766,7 +2766,7 @@ footer .detail .container-xl .end .copyright {
   outline: none;
   border: none;
   border-radius: 20px;
-  background-color: #f8f2e3;
+  background-color: #F2F4F3;
 }
 .content4 .SignIn form .Password {
   display: flex;
@@ -2779,19 +2779,28 @@ footer .detail .container-xl .end .copyright {
   font-style: normal;
   color: #ffffff;
 }
-.content4 .SignIn form .Password input {
-  padding: 5px 40px 5px 10px;
+.content4 .SignIn form .Password .box {
+  position: relative;
+}
+.content4 .SignIn form .Password .box input {
+  padding: 5px 35px 5px 10px;
   font-size: 1rem;
   outline: none;
   border: none;
   border-radius: 20px;
-  background-color: #f8f2e3;
+  background-color: #F2F4F3;
+}
+.content4 .SignIn form .Password .box img {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
 }
 .content4 .SignIn form button {
   margin-top: 10px;
   outline: none;
   border: none;
-  background-color: #f8f2e3;
+  background-color: #F2F4F3;
   color: #313131;
   padding: 5px;
   border-radius: 20px;
@@ -2872,7 +2881,7 @@ footer .detail .container-xl .end .copyright {
     outline: none;
     border: none;
     border-radius: 20px;
-    background-color: #f8f2e3;
+    background-color: #F2F4F3;
   }
   .content4 .SignIn form .E-mail {
     display: flex;
@@ -2891,7 +2900,7 @@ footer .detail .container-xl .end .copyright {
     outline: none;
     border: none;
     border-radius: 20px;
-    background-color: #f8f2e3;
+    background-color: #F2F4F3;
   }
   .content4 .SignIn form .Password {
     display: flex;
@@ -2904,20 +2913,29 @@ footer .detail .container-xl .end .copyright {
     font-style: normal;
     color: #ffffff;
   }
-  .content4 .SignIn form .Password input {
-    padding: 5px 40px 5px 10px;
-    font-size: 0.8rem;
+  .content4 .SignIn form .Password .box {
+    position: relative;
+  }
+  .content4 .SignIn form .Password .box input {
+    padding: 5px 35px 5px 10px;
+    font-size: 1rem;
     outline: none;
     border: none;
     border-radius: 20px;
-    background-color: #f8f2e3;
+    background-color: #F2F4F3;
+  }
+  .content4 .SignIn form .Password .box img {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
   }
   .content4 .SignIn form button {
     margin-top: 10px;
     font-size: 0.8rem;
     outline: none;
     border: none;
-    background-color: #f8f2e3;
+    background-color: #F2F4F3;
     color: #313131;
     padding: 5px;
     border-radius: 20px;
@@ -3003,7 +3021,7 @@ footer .detail .container-xl .end .copyright {
   outline: none;
   border: none;
   border-radius: 20px;
-  background-color: #f8f2e3;
+  background-color: #F2F4F3;
 }
 .content5 .SignIn form .E-mail {
   display: flex;
@@ -3022,7 +3040,7 @@ footer .detail .container-xl .end .copyright {
   outline: none;
   border: none;
   border-radius: 20px;
-  background-color: #f8f2e3;
+  background-color: #F2F4F3;
 }
 .content5 .SignIn form .Password {
   display: flex;
@@ -3035,19 +3053,28 @@ footer .detail .container-xl .end .copyright {
   font-style: normal;
   color: #ffffff;
 }
-.content5 .SignIn form .Password input {
-  padding: 5px 40px 5px 10px;
+.content5 .SignIn form .Password .box {
+  position: relative;
+}
+.content5 .SignIn form .Password .box input {
+  padding: 5px 35px 5px 10px;
   font-size: 1rem;
   outline: none;
   border: none;
   border-radius: 20px;
-  background-color: #f8f2e3;
+  background-color: #F2F4F3;
+}
+.content5 .SignIn form .Password .box img {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
 }
 .content5 .SignIn form button {
   margin-top: 10px;
   outline: none;
   border: none;
-  background-color: #f8f2e3;
+  background-color: #F2F4F3;
   color: #313131;
   padding: 5px;
   border-radius: 20px;
@@ -3128,7 +3155,7 @@ footer .detail .container-xl .end .copyright {
     outline: none;
     border: none;
     border-radius: 20px;
-    background-color: #f8f2e3;
+    background-color: #F2F4F3;
   }
   .content5 .SignIn form .E-mail {
     display: flex;
@@ -3147,7 +3174,7 @@ footer .detail .container-xl .end .copyright {
     outline: none;
     border: none;
     border-radius: 20px;
-    background-color: #f8f2e3;
+    background-color: #F2F4F3;
   }
   .content5 .SignIn form .Password {
     display: flex;
@@ -3160,20 +3187,29 @@ footer .detail .container-xl .end .copyright {
     font-style: normal;
     color: #ffffff;
   }
-  .content5 .SignIn form .Password input {
-    padding: 5px 40px 5px 10px;
-    font-size: 0.8rem;
+  .content5 .SignIn form .Password .box {
+    position: relative;
+  }
+  .content5 .SignIn form .Password .box input {
+    padding: 5px 35px 5px 10px;
+    font-size: 1rem;
     outline: none;
     border: none;
     border-radius: 20px;
-    background-color: #f8f2e3;
+    background-color: #F2F4F3;
+  }
+  .content5 .SignIn form .Password .box img {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
   }
   .content5 .SignIn form button {
     margin-top: 10px;
     font-size: 0.8rem;
     outline: none;
     border: none;
-    background-color: #f8f2e3;
+    background-color: #F2F4F3;
     color: #313131;
     padding: 5px;
     border-radius: 20px;
@@ -3210,4 +3246,43 @@ footer .detail .container-xl .end .copyright {
     right: 0;
   }
 }
-/*---------------------------------------LOGIN END---------------------------------------*//*# sourceMappingURL=main.css.map */
+/*---------------------------------------LOGIN END---------------------------------------*/
+/*---------------------------------------PRIVACY AND POLITIC START---------------------------------------*/
+.content6 {
+  width: 100%;
+  margin-top: 130px;
+  color: #F2F4F3;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #313131;
+  border-radius: 20px;
+  box-shadow: #ffffff 0px 0px 20px;
+}
+.content6 .title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: normal;
+  margin: 20px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content6 {
+    width: 100%;
+    margin-top: 130px;
+    color: #F2F4F3;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #313131;
+    border-radius: 20px;
+    box-shadow: #ffffff 0px 0px 20px;
+  }
+  .content6 .title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-style: normal;
+    margin: 20px 0px;
+  }
+}
+/*---------------------------------------PRIVACY AND POLITIC END---------------------------------------*//*# sourceMappingURL=main.css.map */

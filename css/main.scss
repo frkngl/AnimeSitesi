@@ -3360,7 +3360,7 @@ footer {
                     outline: none;
                     border: none;
                     border-radius: 20px;
-                    background-color: #f8f2e3;
+                    background-color: #F2F4F3;
                 }
             }
 
@@ -3382,7 +3382,7 @@ footer {
                     outline: none;
                     border: none;
                     border-radius: 20px;
-                    background-color: #f8f2e3;
+                    background-color: #F2F4F3;
                 }
             }
 
@@ -3399,13 +3399,24 @@ footer {
                     color: #ffffff;
                 }
 
-                input {
-                    padding: 5px 40px 5px 10px;
-                    font-size: 1rem;
-                    outline: none;
-                    border: none;
-                    border-radius: 20px;
-                    background-color: #f8f2e3;
+                .box {
+                    position: relative;
+
+                    input {
+                        padding: 5px 35px 5px 10px;
+                        font-size: 1rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #F2F4F3;
+                    }
+
+                    img{
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -3413,7 +3424,7 @@ footer {
                 margin-top: 10px;
                 outline: none;
                 border: none;
-                background-color: #f8f2e3;
+                background-color: #F2F4F3;
                 color: #313131;
                 padding: 5px;
                 border-radius: 20px;
@@ -3502,7 +3513,7 @@ footer {
                         outline: none;
                         border: none;
                         border-radius: 20px;
-                        background-color: #f8f2e3;
+                        background-color: #F2F4F3;
                     }
                 }
 
@@ -3524,7 +3535,7 @@ footer {
                         outline: none;
                         border: none;
                         border-radius: 20px;
-                        background-color: #f8f2e3;
+                        background-color: #F2F4F3;
                     }
                 }
 
@@ -3541,13 +3552,24 @@ footer {
                         color: #ffffff;
                     }
 
-                    input {
-                        padding: 5px 40px 5px 10px;
-                        font-size: 0.8rem;
-                        outline: none;
-                        border: none;
-                        border-radius: 20px;
-                        background-color: #f8f2e3;
+                    .box {
+                        position: relative;
+    
+                        input {
+                            padding: 5px 35px 5px 10px;
+                            font-size: 1rem;
+                            outline: none;
+                            border: none;
+                            border-radius: 20px;
+                            background-color: #F2F4F3;
+                        }
+    
+                        img{
+                            position: absolute;
+                            right: 10px;
+                            top: 5px;
+                            cursor: pointer;
+                        }
                     }
                 }
 
@@ -3556,7 +3578,7 @@ footer {
                     font-size: 0.8rem;
                     outline: none;
                     border: none;
-                    background-color: #f8f2e3;
+                    background-color: #F2F4F3;
                     color: #313131;
                     padding: 5px;
                     border-radius: 20px;
@@ -3652,7 +3674,7 @@ footer {
                     outline: none;
                     border: none;
                     border-radius: 20px;
-                    background-color: #f8f2e3;
+                    background-color: #F2F4F3;
                 }
             }
 
@@ -3674,7 +3696,7 @@ footer {
                     outline: none;
                     border: none;
                     border-radius: 20px;
-                    background-color: #f8f2e3;
+                    background-color: #F2F4F3;
                 }
             }
 
@@ -3691,21 +3713,33 @@ footer {
                     color: #ffffff;
                 }
 
-                input {
-                    padding: 5px 40px 5px 10px;
-                    font-size: 1rem;
-                    outline: none;
-                    border: none;
-                    border-radius: 20px;
-                    background-color: #f8f2e3;
+                .box {
+                    position: relative;
+
+                    input {
+                        padding: 5px 35px 5px 10px;
+                        font-size: 1rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #F2F4F3;
+                    }
+
+                    img{
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                        cursor: pointer;
+                    }
                 }
             }
+
 
             button {
                 margin-top: 10px;
                 outline: none;
                 border: none;
-                background-color: #f8f2e3;
+                background-color: #F2F4F3;
                 color: #313131;
                 padding: 5px;
                 border-radius: 20px;
@@ -3794,7 +3828,7 @@ footer {
                         outline: none;
                         border: none;
                         border-radius: 20px;
-                        background-color: #f8f2e3;
+                        background-color: #F2F4F3;
                     }
                 }
 
@@ -3816,7 +3850,7 @@ footer {
                         outline: none;
                         border: none;
                         border-radius: 20px;
-                        background-color: #f8f2e3;
+                        background-color: #F2F4F3;
                     }
                 }
 
@@ -3833,14 +3867,25 @@ footer {
                         color: #ffffff;
                     }
 
+                    .box {
+                    position: relative;
+
                     input {
-                        padding: 5px 40px 5px 10px;
-                        font-size: 0.8rem;
+                        padding: 5px 35px 5px 10px;
+                        font-size: 1rem;
                         outline: none;
                         border: none;
                         border-radius: 20px;
-                        background-color: #f8f2e3;
+                        background-color: #F2F4F3;
                     }
+
+                    img{
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                        cursor: pointer;
+                    }
+                }
                 }
 
                 button {
@@ -3848,7 +3893,7 @@ footer {
                     font-size: 0.8rem;
                     outline: none;
                     border: none;
-                    background-color: #f8f2e3;
+                    background-color: #F2F4F3;
                     color: #313131;
                     padding: 5px;
                     border-radius: 20px;
@@ -3894,3 +3939,45 @@ footer {
 }
 
 /*---------------------------------------LOGIN END---------------------------------------*/
+
+/*---------------------------------------PRIVACY AND POLITIC START---------------------------------------*/
+.content6{
+    width: 100%;
+    margin-top: 130px;
+    color: #F2F4F3;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #313131;
+    border-radius: 20px;
+    box-shadow: #ffffff 0px 0px 20px;
+
+    .title{
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-style: normal;
+        margin: 20px 0px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .content6{
+        width: 100%;
+        margin-top: 130px;
+        color: #F2F4F3;
+        font-size: 0.8rem;
+        font-weight: 400;
+        font-style: normal;
+        background-color: #313131;
+        border-radius: 20px;
+        box-shadow: #ffffff 0px 0px 20px;
+    
+        .title{
+            font-size: 1.2rem;
+            font-weight: 500;
+            font-style: normal;
+            margin: 20px 0px;
+        }
+    }
+}
+/*---------------------------------------PRIVACY AND POLITIC END---------------------------------------*/
