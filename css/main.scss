@@ -806,7 +806,7 @@ footer {
             color: #ffffff;
             position: relative;
 
-            
+
         }
 
         .subs {
@@ -969,7 +969,7 @@ footer {
                 font-weight: 500;
                 position: relative;
 
-                
+
             }
         }
 
@@ -1027,7 +1027,7 @@ footer {
                     font-weight: 500;
                     position: relative;
 
-                    
+
                 }
             }
 
@@ -2129,17 +2129,18 @@ footer {
                 padding: 10px;
                 z-index: 99;
             }
-            ul{
+
+            ul {
                 background-color: #313131;
                 border-radius: 10px !important;
 
-                li{
+                li {
 
-                    a{
+                    a {
                         color: #ffffff;
                         transition: all 300ms;
 
-                        &:hover{
+                        &:hover {
                             background-color: #ffffff;
                             color: #313131;
                         }
@@ -2258,9 +2259,9 @@ footer {
             display: flex;
             justify-content: center;
             margin-bottom: 30px;
-    
+
             .dropdown {
-    
+
                 .btn {
                     background-color: #313131;
                     color: #ffffff;
@@ -2271,17 +2272,18 @@ footer {
                     padding: 10px;
                     z-index: 99;
                 }
-                ul{
+
+                ul {
                     background-color: #313131;
                     border-radius: 10px !important;
-    
-                    li{
-    
-                        a{
+
+                    li {
+
+                        a {
                             color: #ffffff;
                             transition: all 300ms;
-    
-                            &:hover{
+
+                            &:hover {
                                 background-color: #ffffff;
                                 color: #313131;
                             }
@@ -2289,19 +2291,19 @@ footer {
                     }
                 }
             }
-    
+
             .search {
                 background-color: #313131;
                 display: flex;
                 align-items: center;
                 border-radius: 50px;
                 padding: 10px;
-    
+
                 i {
                     color: #FF7F00;
                     padding-left: 10px;
                 }
-    
+
                 input {
                     background-color: transparent;
                     border: none;
@@ -2309,7 +2311,7 @@ footer {
                     font-size: 1rem;
                     color: #ffffff;
                     padding-left: 20px;
-    
+
                 }
             }
         }
@@ -2404,9 +2406,10 @@ footer {
             flex-direction: column-reverse;
             align-items: center;
             margin-bottom: 30px;
-    
+
             .dropdown {
                 margin-top: 10px;
+
                 .btn {
                     background-color: #313131;
                     color: #ffffff;
@@ -2418,18 +2421,19 @@ footer {
                     z-index: 99;
                     font-size: 0.9rem;
                 }
-                ul{
+
+                ul {
                     background-color: #313131;
                     border-radius: 10px !important;
-    
-                    li{
-    
-                        a{
+
+                    li {
+
+                        a {
                             color: #ffffff;
                             transition: all 300ms;
                             font-size: 0.9rem;
-    
-                            &:hover{
+
+                            &:hover {
                                 background-color: #ffffff;
                                 color: #313131;
                             }
@@ -2437,19 +2441,19 @@ footer {
                     }
                 }
             }
-    
+
             .search {
                 background-color: #313131;
                 display: flex;
                 align-items: center;
                 border-radius: 50px;
                 padding: 10px;
-    
+
                 i {
                     color: #FF7F00;
                     padding-left: 10px;
                 }
-    
+
                 input {
                     background-color: transparent;
                     border: none;
@@ -2457,7 +2461,7 @@ footer {
                     font-size: 0.9rem;
                     color: #ffffff;
                     padding-left: 20px;
-    
+
                 }
             }
         }
@@ -2558,7 +2562,7 @@ footer {
             position: relative;
 
 
-            
+
         }
 
 
@@ -2597,7 +2601,7 @@ footer {
                 border-radius: 10px;
                 background-color: #313131;
             }
-    
+
             &::-webkit-scrollbar-track {
                 -webkit-box-shadow: inset 0 0 20px #313131;
                 border-radius: 10px;
@@ -2637,7 +2641,7 @@ footer {
             position: relative;
 
 
-            
+
         }
     }
 
@@ -2726,17 +2730,17 @@ footer {
     }
 }
 
-@media only screen and (max-width:1300px){
+@media only screen and (max-width:1300px) {
     .content3 {
         width: 100%;
         height: auto;
         padding: 100px 20px 0px 20px !important;
-    
-    
+
+
         .anititle {
             width: 100%;
             display: flex;
-    
+
             .title {
                 color: #ffffff;
                 font-size: 1.7rem;
@@ -2744,14 +2748,14 @@ footer {
                 font-style: normal;
                 margin-bottom: 20px;
                 position: relative;
-    
-    
-                
+
+
+
             }
-    
-    
+
+
         }
-    
+
         .detail {
             width: 100%;
             height: auto;
@@ -2759,12 +2763,12 @@ footer {
             background-color: #313131;
             box-shadow: #ffffff 0px 0px 20px;
             border-radius: 10px;
-    
+
             .img {
                 width: 200px;
                 height: 330px;
-    
-    
+
+
                 img {
                     width: 200px;
                     height: 330px;
@@ -2772,7 +2776,7 @@ footer {
                     border-radius: 10px;
                 }
             }
-    
+
             .text {
                 width: 100%;
                 margin: 0px 0px 0px 30px;
@@ -2785,12 +2789,12 @@ footer {
                     border-radius: 10px;
                     background-color: #313131;
                 }
-        
+
                 &::-webkit-scrollbar-track {
                     -webkit-box-shadow: inset 0 0 20px #313131;
                     border-radius: 10px;
                 }
-    
+
                 .subtitle,
                 .animename,
                 .year,
@@ -2800,7 +2804,7 @@ footer {
                     font-style: normal;
                     color: #ffffff;
                 }
-    
+
                 .subtitle,
                 .animename,
                 .year,
@@ -2809,13 +2813,13 @@ footer {
                 }
             }
         }
-    
+
         .epititle {
             width: 100%;
             display: flex;
             margin-top: 100px;
             margin-left: 10px;
-    
+
             .title {
                 color: #ffffff;
                 font-size: 1.3rem;
@@ -2823,12 +2827,12 @@ footer {
                 font-style: normal;
                 margin-bottom: 20px;
                 position: relative;
-    
-    
-                
+
+
+
             }
         }
-    
+
         .episode {
             display: flex;
             flex-wrap: wrap;
@@ -2837,24 +2841,24 @@ footer {
             height: 650px;
             background-color: #000000;
             overflow-y: auto;
-    
+
             &::-webkit-scrollbar {
                 width: 10px;
                 height: 100%;
                 border-radius: 15px;
                 background-color: #313131;
             }
-    
+
             &::-webkit-scrollbar-track {
                 -webkit-box-shadow: inset 0 0 20px #313131;
                 border-radius: 15px;
             }
-    
+
             &::-webkit-scrollbar-thumb {
                 background-color: #FF7F00;
                 border-radius: 15px;
             }
-    
+
             .btn {
                 background-color: #000000;
                 text-decoration: none;
@@ -2870,7 +2874,7 @@ footer {
                 padding: 0;
                 transition: all 300ms;
                 position: relative;
-    
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -2881,13 +2885,13 @@ footer {
                     bottom: 0px;
                     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
                     border-radius: 0px 0px 10px 10px;
-    
+
                 }
-    
+
                 &:hover {
                     box-shadow: #ffffff 0px 0px 20px;
                 }
-    
+
                 img {
                     width: 100%;
                     height: 300px;
@@ -2895,12 +2899,12 @@ footer {
                     border-radius: 10px;
                     opacity: 0.6;
                 }
-    
+
                 .dd {
                     position: absolute;
                     bottom: 0;
                     z-index: 99;
-    
+
                     .Q,
                     .title,
                     .date {
@@ -2909,24 +2913,24 @@ footer {
                         font-style: normal;
                     }
                 }
-    
+
             }
         }
     }
 }
 
 
-@media only screen and (max-width:920px){
+@media only screen and (max-width:920px) {
     .content3 {
         width: 100%;
         height: auto;
         padding: 100px 20px 0px 20px !important;
-    
-    
+
+
         .anititle {
             width: 100%;
             display: flex;
-    
+
             .title {
                 color: #ffffff;
                 font-size: 1.3rem;
@@ -2934,14 +2938,14 @@ footer {
                 font-style: normal;
                 margin-bottom: 20px;
                 position: relative;
-    
-    
-                
+
+
+
             }
-    
-    
+
+
         }
-    
+
         .detail {
             width: 100%;
             height: 330px;
@@ -2950,13 +2954,13 @@ footer {
             box-shadow: #ffffff 0px 0px 20px;
             border-radius: 10px;
             position: relative;
-    
+
             .img {
                 width: 200px;
                 height: 330px;
-                
-    
-    
+
+
+
                 img {
                     width: 200px;
                     height: 330px;
@@ -2964,7 +2968,7 @@ footer {
                     border-radius: 10px;
                 }
             }
-    
+
             .text {
                 width: 100%;
                 margin: 0px 0px 0px 30px;
@@ -2977,12 +2981,12 @@ footer {
                     border-radius: 10px;
                     background-color: #313131;
                 }
-        
+
                 &::-webkit-scrollbar-track {
                     -webkit-box-shadow: inset 0 0 20px #313131;
                     border-radius: 10px;
                 }
-    
+
                 .subtitle,
                 .animename,
                 .year,
@@ -2992,7 +2996,7 @@ footer {
                     font-style: normal;
                     color: #ffffff;
                 }
-    
+
                 .subtitle,
                 .animename,
                 .year,
@@ -3001,13 +3005,13 @@ footer {
                 }
             }
         }
-    
+
         .epititle {
             width: 100%;
             display: flex;
             margin-top: 100px;
             margin-left: 10px;
-    
+
             .title {
                 color: #ffffff;
                 font-size: 1.3rem;
@@ -3015,12 +3019,12 @@ footer {
                 font-style: normal;
                 margin-bottom: 20px;
                 position: relative;
-    
-    
-                
+
+
+
             }
         }
-    
+
         .episode {
             display: flex;
             flex-wrap: wrap;
@@ -3029,24 +3033,24 @@ footer {
             height: 650px;
             background-color: #000000;
             overflow-y: auto;
-    
+
             &::-webkit-scrollbar {
                 width: 10px;
                 height: 100%;
                 border-radius: 15px;
                 background-color: #313131;
             }
-    
+
             &::-webkit-scrollbar-track {
                 -webkit-box-shadow: inset 0 0 20px #313131;
                 border-radius: 15px;
             }
-    
+
             &::-webkit-scrollbar-thumb {
                 background-color: #FF7F00;
                 border-radius: 15px;
             }
-    
+
             .btn {
                 background-color: #000000;
                 text-decoration: none;
@@ -3062,7 +3066,7 @@ footer {
                 padding: 0;
                 transition: all 300ms;
                 position: relative;
-    
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -3073,13 +3077,13 @@ footer {
                     bottom: 0px;
                     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
                     border-radius: 0px 0px 10px 10px;
-    
+
                 }
-    
+
                 &:hover {
                     box-shadow: #ffffff 0px 0px 20px;
                 }
-    
+
                 img {
                     width: 100%;
                     height: 300px;
@@ -3087,12 +3091,12 @@ footer {
                     border-radius: 10px;
                     opacity: 0.6;
                 }
-    
+
                 .dd {
                     position: absolute;
                     bottom: 0;
                     z-index: 99;
-    
+
                     .Q,
                     .title,
                     .date {
@@ -3101,7 +3105,7 @@ footer {
                         font-style: normal;
                     }
                 }
-    
+
             }
         }
     }
@@ -3113,17 +3117,17 @@ footer {
 
 
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:600px) {
     .content3 {
         width: 100%;
         height: auto;
         padding: 100px 20px 0px 20px !important;
-    
-    
+
+
         .anititle {
             width: 100%;
             display: flex;
-    
+
             .title {
                 color: #ffffff;
                 font-size: 1.3rem;
@@ -3131,14 +3135,14 @@ footer {
                 font-style: normal;
                 margin-bottom: 20px;
                 position: relative;
-    
-    
-                
+
+
+
             }
-    
-    
+
+
         }
-    
+
         .detail {
             width: 100%;
             height: 200px;
@@ -3146,13 +3150,13 @@ footer {
             background-color: #313131;
             box-shadow: #ffffff 0px 0px 20px;
             border-radius: 10px;
-    
+
             .img {
                 width: 100px;
                 height: 200px;
-                
-    
-    
+
+
+
                 img {
                     width: 100px;
                     height: 200px;
@@ -3160,7 +3164,7 @@ footer {
                     border-radius: 10px;
                 }
             }
-    
+
             .text {
                 width: 100%;
                 margin: 0px 0px 0px 10px;
@@ -3173,12 +3177,12 @@ footer {
                     border-radius: 10px;
                     background-color: #313131;
                 }
-        
+
                 &::-webkit-scrollbar-track {
                     -webkit-box-shadow: inset 0 0 20px #313131;
                     border-radius: 10px;
                 }
-    
+
                 .subtitle,
                 .animename,
                 .year,
@@ -3188,7 +3192,7 @@ footer {
                     font-style: normal;
                     color: #ffffff;
                 }
-    
+
                 .subtitle,
                 .animename,
                 .year,
@@ -3197,13 +3201,13 @@ footer {
                 }
             }
         }
-    
+
         .epititle {
             width: 100%;
             display: flex;
             margin-top: 100px;
             margin-left: 10px;
-    
+
             .title {
                 color: #ffffff;
                 font-size: 1.3rem;
@@ -3211,12 +3215,12 @@ footer {
                 font-style: normal;
                 margin-bottom: 20px;
                 position: relative;
-    
-    
-                
+
+
+
             }
         }
-    
+
         .episode {
             display: flex;
             flex-wrap: wrap;
@@ -3225,24 +3229,24 @@ footer {
             height: 650px;
             background-color: #000000;
             overflow-y: auto;
-    
+
             &::-webkit-scrollbar {
                 width: 10px;
                 height: 100%;
                 border-radius: 15px;
                 background-color: #313131;
             }
-    
+
             &::-webkit-scrollbar-track {
                 -webkit-box-shadow: inset 0 0 20px #313131;
                 border-radius: 15px;
             }
-    
+
             &::-webkit-scrollbar-thumb {
                 background-color: #FF7F00;
                 border-radius: 15px;
             }
-    
+
             .btn {
                 background-color: #000000;
                 text-decoration: none;
@@ -3258,7 +3262,7 @@ footer {
                 padding: 0;
                 transition: all 300ms;
                 position: relative;
-    
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -3269,13 +3273,13 @@ footer {
                     bottom: 0px;
                     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 60%);
                     border-radius: 0px 0px 10px 10px;
-    
+
                 }
-    
+
                 &:hover {
                     box-shadow: #ffffff 0px 0px 20px;
                 }
-    
+
                 img {
                     width: 100%;
                     height: 300px;
@@ -3283,12 +3287,12 @@ footer {
                     border-radius: 10px;
                     opacity: 0.6;
                 }
-    
+
                 .dd {
                     position: absolute;
                     bottom: 0;
                     z-index: 99;
-    
+
                     .Q,
                     .title,
                     .date {
@@ -3297,9 +3301,596 @@ footer {
                         font-style: normal;
                     }
                 }
-    
+
             }
         }
     }
 }
-/*---------------------------------------ANİMEDETAİL START---------------------------------------*/
+
+/*---------------------------------------ANİMEDETAİL END---------------------------------------*/
+
+
+
+/*---------------------------------------SIGN IN START---------------------------------------*/
+.content4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 100px;
+    background-image: url(../img/militaryanime.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .SignIn {
+        width: 400px;
+        height: 500px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+
+        .title {
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        form {
+            margin: 20px 0px;
+
+            .KullaniciAdi {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0px;
+
+                label {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+
+                input {
+                    padding: 5px 40px 5px 10px;
+                    font-size: 1rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #f8f2e3;
+                }
+            }
+
+            .E-mail {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0px;
+
+                label {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+
+                input {
+                    padding: 5px 40px 5px 10px;
+                    font-size: 1rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #f8f2e3;
+                }
+            }
+
+            .Password {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0px;
+
+
+                label {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+
+                input {
+                    padding: 5px 40px 5px 10px;
+                    font-size: 1rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #f8f2e3;
+                }
+            }
+
+            button {
+                margin-top: 10px;
+                outline: none;
+                border: none;
+                background-color: #f8f2e3;
+                color: #313131;
+                padding: 5px;
+                border-radius: 20px;
+                font-weight: 500;
+                transition: all 300ms;
+                width: 80px;
+
+                &:hover {
+                    background-color: #313131;
+                    color: #f8f2e3;
+                }
+            }
+        }
+
+        .login {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            font-style: normal;
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    background-color: #ffffff;
+                    bottom: -3px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .content4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-top: 100px;
+        background-image: url(../img/militaryanime.jpg);
+        background-size: cover;
+        background-position: center;
+
+        .SignIn {
+            width: 100%;
+            height: auto;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+
+            .title {
+                font-size: 1rem;
+                color: #ffffff;
+                font-weight: 500;
+            }
+
+            form {
+                margin: 5px 0px;
+
+                .KullaniciAdi {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px 0px;
+
+                    label {
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    input {
+                        padding: 5px 10px;
+                        font-size: 0.8rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #f8f2e3;
+                    }
+                }
+
+                .E-mail {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px 0px;
+
+                    label {
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    input {
+                        padding: 5px 10px;
+                        font-size: 0.8rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #f8f2e3;
+                    }
+                }
+
+                .Password {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px 0px;
+
+
+                    label {
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    input {
+                        padding: 5px 40px 5px 10px;
+                        font-size: 0.8rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #f8f2e3;
+                    }
+                }
+
+                button {
+                    margin-top: 10px;
+                    font-size: 0.8rem;
+                    outline: none;
+                    border: none;
+                    background-color: #f8f2e3;
+                    color: #313131;
+                    padding: 5px;
+                    border-radius: 20px;
+                    font-weight: 400;
+                    transition: all 300ms;
+                    width: 60px;
+                    height: 28px;
+
+                    &:hover {
+                        background-color: #313131;
+                        color: #f8f2e3;
+                    }
+                }
+            }
+        }
+
+        .login {
+            color: #ffffff;
+            font-size: 0.8rem !important;
+            font-weight: 400;
+            font-style: normal;
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                position: relative;
+                font-size: 0.8rem;
+                font-weight: 400;
+                font-style: normal;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    background-color: #ffffff;
+                    bottom: -3px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+/*---------------------------------------SIGN IN END---------------------------------------*/
+
+/*---------------------------------------LOGIN START---------------------------------------*/
+.content5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 100px;
+    background-image: url(../img/militaryanime.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .SignIn {
+        width: 400px;
+        height: 500px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+
+        .title {
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        form {
+            margin: 20px 0px;
+
+            .KullaniciAdi {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0px;
+
+                label {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+
+                input {
+                    padding: 5px 40px 5px 10px;
+                    font-size: 1rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #f8f2e3;
+                }
+            }
+
+            .E-mail {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0px;
+
+                label {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+
+                input {
+                    padding: 5px 40px 5px 10px;
+                    font-size: 1rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #f8f2e3;
+                }
+            }
+
+            .Password {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0px;
+
+
+                label {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: #ffffff;
+                }
+
+                input {
+                    padding: 5px 40px 5px 10px;
+                    font-size: 1rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #f8f2e3;
+                }
+            }
+
+            button {
+                margin-top: 10px;
+                outline: none;
+                border: none;
+                background-color: #f8f2e3;
+                color: #313131;
+                padding: 5px;
+                border-radius: 20px;
+                font-weight: 500;
+                transition: all 300ms;
+                width: 80px;
+
+                &:hover {
+                    background-color: #313131;
+                    color: #f8f2e3;
+                }
+            }
+        }
+
+        .login {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            font-style: normal;
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    background-color: #ffffff;
+                    bottom: -3px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .content5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-top: 100px;
+        background-image: url(../img/militaryanime.jpg);
+        background-size: cover;
+        background-position: center;
+
+        .SignIn {
+            width: 100%;
+            height: auto;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+
+            .title {
+                font-size: 1rem;
+                color: #ffffff;
+                font-weight: 500;
+            }
+
+            form {
+                margin: 5px 0px;
+
+                .KullaniciAdi {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px 0px;
+
+                    label {
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    input {
+                        padding: 5px 10px;
+                        font-size: 0.8rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #f8f2e3;
+                    }
+                }
+
+                .E-mail {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px 0px;
+
+                    label {
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    input {
+                        padding: 5px 10px;
+                        font-size: 0.8rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #f8f2e3;
+                    }
+                }
+
+                .Password {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px 0px;
+
+
+                    label {
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    input {
+                        padding: 5px 40px 5px 10px;
+                        font-size: 0.8rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #f8f2e3;
+                    }
+                }
+
+                button {
+                    margin-top: 10px;
+                    font-size: 0.8rem;
+                    outline: none;
+                    border: none;
+                    background-color: #f8f2e3;
+                    color: #313131;
+                    padding: 5px;
+                    border-radius: 20px;
+                    font-weight: 400;
+                    transition: all 300ms;
+                    width: 60px;
+                    height: 28px;
+
+                    &:hover {
+                        background-color: #313131;
+                        color: #f8f2e3;
+                    }
+                }
+            }
+        }
+
+        .login {
+            color: #ffffff;
+            font-size: 0.8rem !important;
+            font-weight: 400;
+            font-style: normal;
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                position: relative;
+                font-size: 0.8rem;
+                font-weight: 400;
+                font-style: normal;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    background-color: #ffffff;
+                    bottom: -3px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+/*---------------------------------------LOGIN END---------------------------------------*/

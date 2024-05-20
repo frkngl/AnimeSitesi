@@ -2698,4 +2698,516 @@ footer .detail .container-xl .end .copyright {
     font-style: normal;
   }
 }
-/*---------------------------------------ANİMEDETAİL START---------------------------------------*//*# sourceMappingURL=main.css.map */
+/*---------------------------------------ANİMEDETAİL END---------------------------------------*/
+/*---------------------------------------SIGN IN START---------------------------------------*/
+.content4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 100px;
+  background-image: url(../img/militaryanime.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.content4 .SignIn {
+  width: 400px;
+  height: 500px;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.content4 .SignIn .title {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+.content4 .SignIn form {
+  margin: 20px 0px;
+}
+.content4 .SignIn form .KullaniciAdi {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.content4 .SignIn form .KullaniciAdi label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content4 .SignIn form .KullaniciAdi input {
+  padding: 5px 40px 5px 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #f8f2e3;
+}
+.content4 .SignIn form .E-mail {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.content4 .SignIn form .E-mail label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content4 .SignIn form .E-mail input {
+  padding: 5px 40px 5px 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #f8f2e3;
+}
+.content4 .SignIn form .Password {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.content4 .SignIn form .Password label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content4 .SignIn form .Password input {
+  padding: 5px 40px 5px 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #f8f2e3;
+}
+.content4 .SignIn form button {
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  background-color: #f8f2e3;
+  color: #313131;
+  padding: 5px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 300ms;
+  width: 80px;
+}
+.content4 .SignIn form button:hover {
+  background-color: #313131;
+  color: #f8f2e3;
+}
+.content4 .SignIn .login {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.content4 .SignIn .login a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+.content4 .SignIn .login a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: #ffffff;
+  bottom: -3px;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .content4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 100px;
+    background-image: url(../img/militaryanime.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .content4 .SignIn {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  .content4 .SignIn .title {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .content4 .SignIn form {
+    margin: 5px 0px;
+  }
+  .content4 .SignIn form .KullaniciAdi {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+  }
+  .content4 .SignIn form .KullaniciAdi label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content4 .SignIn form .KullaniciAdi input {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #f8f2e3;
+  }
+  .content4 .SignIn form .E-mail {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+  }
+  .content4 .SignIn form .E-mail label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content4 .SignIn form .E-mail input {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #f8f2e3;
+  }
+  .content4 .SignIn form .Password {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+  }
+  .content4 .SignIn form .Password label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content4 .SignIn form .Password input {
+    padding: 5px 40px 5px 10px;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #f8f2e3;
+  }
+  .content4 .SignIn form button {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    background-color: #f8f2e3;
+    color: #313131;
+    padding: 5px;
+    border-radius: 20px;
+    font-weight: 400;
+    transition: all 300ms;
+    width: 60px;
+    height: 28px;
+  }
+  .content4 .SignIn form button:hover {
+    background-color: #313131;
+    color: #f8f2e3;
+  }
+  .content4 .login {
+    color: #ffffff;
+    font-size: 0.8rem !important;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .content4 .login a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .content4 .login a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #ffffff;
+    bottom: -3px;
+    right: 0;
+  }
+}
+/*---------------------------------------SIGN IN END---------------------------------------*/
+/*---------------------------------------LOGIN START---------------------------------------*/
+.content5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 100px;
+  background-image: url(../img/militaryanime.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.content5 .SignIn {
+  width: 400px;
+  height: 500px;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.content5 .SignIn .title {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+.content5 .SignIn form {
+  margin: 20px 0px;
+}
+.content5 .SignIn form .KullaniciAdi {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.content5 .SignIn form .KullaniciAdi label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content5 .SignIn form .KullaniciAdi input {
+  padding: 5px 40px 5px 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #f8f2e3;
+}
+.content5 .SignIn form .E-mail {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.content5 .SignIn form .E-mail label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content5 .SignIn form .E-mail input {
+  padding: 5px 40px 5px 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #f8f2e3;
+}
+.content5 .SignIn form .Password {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.content5 .SignIn form .Password label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content5 .SignIn form .Password input {
+  padding: 5px 40px 5px 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #f8f2e3;
+}
+.content5 .SignIn form button {
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  background-color: #f8f2e3;
+  color: #313131;
+  padding: 5px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 300ms;
+  width: 80px;
+}
+.content5 .SignIn form button:hover {
+  background-color: #313131;
+  color: #f8f2e3;
+}
+.content5 .SignIn .login {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.content5 .SignIn .login a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+.content5 .SignIn .login a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: #ffffff;
+  bottom: -3px;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .content5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 100px;
+    background-image: url(../img/militaryanime.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .content5 .SignIn {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  .content5 .SignIn .title {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .content5 .SignIn form {
+    margin: 5px 0px;
+  }
+  .content5 .SignIn form .KullaniciAdi {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+  }
+  .content5 .SignIn form .KullaniciAdi label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content5 .SignIn form .KullaniciAdi input {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #f8f2e3;
+  }
+  .content5 .SignIn form .E-mail {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+  }
+  .content5 .SignIn form .E-mail label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content5 .SignIn form .E-mail input {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #f8f2e3;
+  }
+  .content5 .SignIn form .Password {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+  }
+  .content5 .SignIn form .Password label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .content5 .SignIn form .Password input {
+    padding: 5px 40px 5px 10px;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #f8f2e3;
+  }
+  .content5 .SignIn form button {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    background-color: #f8f2e3;
+    color: #313131;
+    padding: 5px;
+    border-radius: 20px;
+    font-weight: 400;
+    transition: all 300ms;
+    width: 60px;
+    height: 28px;
+  }
+  .content5 .SignIn form button:hover {
+    background-color: #313131;
+    color: #f8f2e3;
+  }
+  .content5 .login {
+    color: #ffffff;
+    font-size: 0.8rem !important;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .content5 .login a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .content5 .login a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #ffffff;
+    bottom: -3px;
+    right: 0;
+  }
+}
+/*---------------------------------------LOGIN END---------------------------------------*//*# sourceMappingURL=main.css.map */
