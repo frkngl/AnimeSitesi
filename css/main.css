@@ -27,6 +27,35 @@ body {
   border-radius: 20px;
 }
 
+/*---------------------------------------LOADING START---------------------------------------*/
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#loader #box1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid #313131;
+  border-top: 10px solid #FF7F00;
+  animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*---------------------------------------LOADING END---------------------------------------*/
 /*---------------------------------------HEADER START---------------------------------------*/
 .header-change {
   box-shadow: #000000 0px 20px 30px -10px;
@@ -90,6 +119,10 @@ header .container-xl nav ul li a {
   border-radius: 20px;
 }
 header .container-xl nav ul li a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+header .container-xl nav ul li a.active {
   background-color: #ffffff;
   color: #000000;
 }
@@ -185,9 +218,9 @@ header .box .user a:hover {
     width: 100%;
     height: auto;
     background-color: #000000;
-    left: -100%;
+    opacity: 0;
     transition: all 300ms ease-in-out;
-    z-index: 9999;
+    z-index: 99;
   }
   header .container-xl .row nav ul {
     display: flex;
@@ -220,7 +253,8 @@ header .box .user a:hover {
 }
 
 #check:checked ~ nav {
-  left: 0;
+  top: 100%;
+  opacity: 1;
 }
 
 /*---------------------------------------HEADER END---------------------------------------*/
@@ -650,6 +684,9 @@ footer .detail .container-xl .end .copyright {
   color: #ffffff;
   position: relative;
 }
+.content .aa .subs {
+  display: none;
+}
 .content .aa .subs .btn {
   margin-right: 10px;
   background-color: #313131;
@@ -768,6 +805,10 @@ footer .detail .container-xl .end .copyright {
   font-size: 0.8rem;
   font-weight: 400;
   font-style: normal;
+}
+.content .videos .episode .btn.active {
+  background-color: #ffffff;
+  color: #000000;
 }
 .content .comments {
   width: 100%;
@@ -1017,6 +1058,10 @@ footer .detail .container-xl .end .copyright {
   .content .aa .subs .btn:hover {
     background-color: #ffffff;
     color: #313131;
+  }
+  .content .aa .subs .btn.active {
+    background-color: #ffffff;
+    color: #000000;
   }
   .content .videos {
     display: flex;
@@ -1382,6 +1427,10 @@ footer .detail .container-xl .end .copyright {
   .content .aa .subs .btn:hover {
     background-color: #ffffff;
     color: #313131;
+  }
+  .content .aa .subs .btn.active {
+    background-color: #ffffff;
+    color: #000000;
   }
   .content .videos {
     display: flex;
@@ -2144,10 +2193,42 @@ footer .detail .container-xl .end .copyright {
 .content3 .detail .text .type {
   margin-top: 10px;
 }
+.content3 .season {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px 20px 0px;
+  border-radius: 10px;
+  background-color: #313131;
+  box-shadow: #ffffff 0px 0px 20px;
+  padding: 10px;
+}
+.content3 .season .box {
+  margin: 0px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #000000;
+  color: #F2F4F3;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  padding: 7px;
+  text-decoration: none;
+  transition: all 300ms;
+}
+.content3 .season .box:hover {
+  background-color: #ffffff;
+  color: #313131;
+}
+.content3 .season .box.active {
+  background-color: #ffffff;
+  color: #313131;
+}
 .content3 .epititle {
   width: 100%;
   display: flex;
-  margin-top: 100px;
   margin-left: 10px;
 }
 .content3 .epititle .title {
@@ -2299,10 +2380,67 @@ footer .detail .container-xl .end .copyright {
   .content3 .detail .text .type {
     margin-top: 10px;
   }
+  .content3 .season {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 20px 0px;
+  }
+  .content3 .season .box {
+    margin: 0px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #313131;
+    color: #F2F4F3;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    padding: 7px;
+    text-decoration: none;
+    transition: all 300ms;
+  }
+  .content3 .season .box:hover {
+    background-color: #ffffff;
+    color: #313131;
+  }
+  .content3 .season .box.active {
+    background-color: #ffffff;
+    color: #313131;
+  }
+  .content3 .season {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 20px 0px;
+  }
+  .content3 .season .box {
+    margin: 0px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #313131;
+    color: #F2F4F3;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    padding: 7px;
+    text-decoration: none;
+    transition: all 300ms;
+  }
+  .content3 .season .box:hover {
+    background-color: #ffffff;
+    color: #313131;
+  }
+  .content3 .season .box.active {
+    background-color: #ffffff;
+    color: #313131;
+  }
   .content3 .epititle {
     width: 100%;
     display: flex;
-    margin-top: 100px;
     margin-left: 10px;
   }
   .content3 .epititle .title {
@@ -2455,10 +2593,38 @@ footer .detail .container-xl .end .copyright {
   .content3 .detail .text .type {
     margin-top: 10px;
   }
+  .content3 .season {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 20px 0px;
+  }
+  .content3 .season .box {
+    margin: 0px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #313131;
+    color: #F2F4F3;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    padding: 7px;
+    text-decoration: none;
+    transition: all 300ms;
+  }
+  .content3 .season .box:hover {
+    background-color: #ffffff;
+    color: #313131;
+  }
+  .content3 .season .box.active {
+    background-color: #ffffff;
+    color: #313131;
+  }
   .content3 .epititle {
     width: 100%;
     display: flex;
-    margin-top: 100px;
     margin-left: 10px;
   }
   .content3 .epititle .title {
@@ -2610,15 +2776,44 @@ footer .detail .container-xl .end .copyright {
   .content3 .detail .text .type {
     margin-top: 10px;
   }
+  .content3 .season {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 20px 0px;
+  }
+  .content3 .season .box {
+    margin: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #313131;
+    color: #F2F4F3;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-style: normal;
+    padding: 5px;
+    text-decoration: none;
+    transition: all 300ms;
+  }
+  .content3 .season .box:hover {
+    background-color: #ffffff;
+    color: #313131;
+  }
+  .content3 .season .box.active {
+    background-color: #ffffff;
+    color: #313131;
+  }
   .content3 .epititle {
     width: 100%;
     display: flex;
-    margin-top: 100px;
     margin-left: 10px;
   }
   .content3 .epititle .title {
     color: #ffffff;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 400;
     font-style: normal;
     margin-bottom: 20px;

@@ -24,6 +24,12 @@
 </head>
 
 <body>
+    <div id="loader">
+        <div id="box1">
+
+            </div>
+        </div>
+    </div>
     <!----------------------------------------------------HEADER START---------------------------------------------------->
     <header>
         <div class="container-xl">
@@ -97,29 +103,5 @@
 <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
 <!--JS-->
 <script src="js/main.js"></script>
+<script src="js/main2.js"></script>
 <script src="js/splide.js"></script>
-
-
-
-<script>
-    const img = document.getElementById('images');
-    let toggle = true;
-    img.addEventListener('click',function()
-    {
-        toggle = !toggle;
-        if(toggle){
-            img.src = 'img\\Eye.svg';
-        }
-        else{
-            img.src = 'img\\Eye Off.svg';
-        }
-    })
-    function parolaGoster(id) {
-		  let x = document.getElementById(id);
-		  if (x.type === "password") {
-			x.type = "text";
-		  } else {
-			x.type = "password";
-		  }
-}
-</script>

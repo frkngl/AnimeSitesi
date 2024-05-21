@@ -52,7 +52,6 @@ var swiper = new Swiper(".mySwiper", {
 
 
 /*KATEGORİLER DÖNGÜYE ALAN EDİTLER*/
-
 const video = document.querySelectorAll(".splide__slide .video");
 video.forEach(video => {
     video.onmouseenter = () => {
@@ -98,3 +97,12 @@ $(document).ready(function () {
     });
 
 });
+
+
+
+
+
+
+
+
+
