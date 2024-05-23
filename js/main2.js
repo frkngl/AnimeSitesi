@@ -18,7 +18,7 @@ document.querySelectorAll('content3 season box').forEach(links => {
 
 
 /*EPISODE ACTİVE KISMI*/
-document.querySelectorAll('content episode box').forEach(linkss => {
+document.querySelectorAll('content episode btn').forEach(linkss => {
     linkss.classList.remove('active');
 
     if(linkss.href === window.location.href){

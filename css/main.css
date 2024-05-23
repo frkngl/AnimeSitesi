@@ -684,6 +684,20 @@ footer .detail .container-xl .end .copyright {
   color: #ffffff;
   position: relative;
 }
+.content .aa .title a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+.content .aa .title a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  left: 0;
+}
 .content .aa .subs {
   display: none;
 }
@@ -1029,13 +1043,19 @@ footer .detail .container-xl .end .copyright {
     color: #ffffff;
     position: relative;
   }
-  .content .aa .title::after {
+  .content .aa .title a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+  }
+  .content .aa .title a::after {
     content: "";
     display: block;
-    width: 100%;
     position: absolute;
+    width: 100%;
     height: 2px;
     background-color: #ffffff;
+    left: 0;
   }
   .content .aa .subs {
     display: none;
@@ -1398,13 +1418,19 @@ footer .detail .container-xl .end .copyright {
     color: #ffffff;
     position: relative;
   }
-  .content .aa .title::after {
+  .content .aa .title a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+  }
+  .content .aa .title a::after {
     content: "";
     display: block;
-    width: 100%;
     position: absolute;
+    width: 100%;
     height: 2px;
     background-color: #ffffff;
+    left: 0;
   }
   .content .aa .subs {
     display: none;
