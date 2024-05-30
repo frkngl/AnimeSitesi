@@ -14,17 +14,8 @@ document.querySelectorAll('content3 season box').forEach(links => {
     if(links.href === window.location.href){
         links.classList.add('active');
     }
-})
+});
 
-
-/*EPISODE ACTİVE KISMI*/
-document.querySelectorAll('content episode btn').forEach(linkss => {
-    linkss.classList.remove('active');
-
-    if(linkss.href === window.location.href){
-        linkss.classList.add('active');
-    }
-})
 
 
 /*YÜKLEME EKRANI KODU*/

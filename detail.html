@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--VIDEO CSS-->
-    <link rel="stylesheet" href="node_modules/video.js/dist/video-js.min.css" type="text/css">
-    <link rel="stylesheet" href="node_modules/@videojs/themes/forest/index.css" type="text/css">
+    <!--GOOGLE ICON FONT-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <!--SPLIDE CSS-->
     <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css" type="text/css">
     <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/themes/splide-skyblue.min.css" type="text/css">
@@ -19,19 +19,18 @@
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" type="text/css">
     <!--BOOTSTRAP CSS-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
-    <!--CSS-->
+    <!--CSS-->>
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/main.css.map" type="text/css">
-    <link rel="stylesheet" href="css/swiper.css" type="text/css">
-    <link rel="stylesheet" href="css/splide.css" type="text/css">
+    <link rel="stylesheet" href="css/video.css" type="text/css">
 </head>
 
 <body>
     <div id="loader">
         <div id="box1">
 
-            </div>
         </div>
+    </div>
     </div>
     <!----------------------------------------------------HEADER START---------------------------------------------------->
     <header>
@@ -50,7 +49,7 @@
                     <ul>
                         <li><a href="index.html"><i class="fa-solid fa-house"></i> Anasayfa</a></li>
                         <li><a href="calender.html"><i class="fa-regular fa-calendar"></i> Takvim</a></li>
-                        <li><a href="category.html"><i class="fa-solid fa-list"></i> Kategoriler</a></li>
+                        <li><a href="category.html"><i class="fa-solid fa-list"></i> Animeler</a></li>
                     </ul>
                 </nav>
                 <div class="box col-2">
@@ -70,7 +69,8 @@
     <div class="content container-xl">
         <div class="aa">
             <div class="title">
-                <i class="fa-solid fa-desktop fa-sm" style="color: #ffffff;"></i> <a href="animedetail.html">Solo Levelling</a> / Solo Levelling 1. Bölüm
+                <i class="fa-solid fa-desktop fa-sm" style="color: #ffffff;"></i> <a href="animedetail.html">Solo
+                    Levelling</a> / Solo Levelling 1. Bölüm
             </div>
             <div class="subs">
                 <a class="btn" href="#">Sub1</a>
@@ -79,114 +79,61 @@
                 <a class="btn" href="#">Sub1</a>
             </div>
         </div>
-        <div class="videos">
-            <video class="video-js vjs-theme-forest videom" preload="auto" poster="img/1.png" data-setup="{}" controls>
-                <source src="video/sukuna.mp4">
-            </video>
-            <div class="ww">
-                <div class="title">
-                    <i class="fa-solid fa-play fa-sm" style="color: #ffffff;"></i> Bölümler
-                </div>
-                <div class="nextandprev">
-                    <div class="prev">
-                        Önceki Bölüm
-                    </div>
-                    <div class="next">
-                        Sonraki Bölüm
+        <div id="videoplayer">
+            <video src="/video/720p.mp4" id="main-video"></video>
+            <div class="progressAreaTime"></div>
+            <div class="controls">
+                <div class="progress_area">
+                    <div class="progress_bar">
+                       <span></span>
                     </div>
                 </div>
-            </div>
-            <div class="episode">
-                <a class="btn active" href="#">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 2B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 3B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 4B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>    
-                <a class="btn"  href="#">
-                    <div class="Q">1S 5B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 6B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 7B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 8B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 9B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 10B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn"  href="#">
-                    <div class="Q">1S 11B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn" href="#">
-                    <div class="Q">1S 12B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn" href="#">
-                    <div class="Q">1S 13B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn" href="#">
-                    <div class="Q">1S 14B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn" href="#">
-                    <div class="Q">1S 15B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn" href="#">
-                    <div class="Q">1S 16B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn" href="#">
-                    <div class="Q">1S 17B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
-                <a class="btn" href="#">
-                    <div class="Q">1S 18B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </a>
+                <div class="control-list">
+                    <div class="control-left">
+                        <span class="icon">
+                            <i class="material-symbols-outlined fast-rewind">replay_10</i>
+                        </span>
+                        <span class="icon">
+                            <i class="material-symbols-outlined play_pause">play_arrow</i>
+                        </span>
+                        <span class="icon">
+                            <i class="material-symbols-outlined fast-forward">forward_10</i>
+                        </span>
+                        <span class="icon">
+                            <i class="material-symbols-outlined volume">volume_up</i>
+                            <input type="range" min="0" max="100" class="volume_range">
+                        </span>
+                        <div class="timer">
+                            <span class="current">0:00</span> / <span class="duration">0:00</span>
+                        </div>
+                    </div>
+                    <div class="control-right">
+                        <span class="icon">
+                            <i class="material-symbols-outlined settingsBtn">settings</i>
+                        </span>
+                        <span class="icon">
+                            <i class="material-symbols-outlined picture_in_picture">picture_in_picture_alt</i>
+                        </span>
+                        <span class="icon">
+                            <i class="material-symbols-outlined fullscreen">fullscreen</i>
+                        </span>
+                    </div>
+                </div>
+                <div id="settings">
+                    <div class="playback">
+                        <span>Video Hızı</span>
+                        <ul>
+                            <li data-speed="0.25" >0.25</li>
+                            <li data-speed="0.50">0.5</li>
+                            <li data-speed="0.75">0.75</li>
+                            <li data-speed="1" class="active">Normal</li>
+                            <li data-speed="1.25">1.25</li>
+                            <li data-speed="1.5">1.5</li>
+                            <li data-speed="1.75">1.75</li>
+                            <li data-speed="2">2</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="comments">
@@ -430,11 +377,8 @@
 <script src="node_modules/swiper/swiper-bundle.min.js"></script>
 <!--SPLIDE JS-->
 <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
-<!--VİDEO JS-->
-<script src="node_modules/video.js/dist/video.min.js"></script>
 <!--JS-->
+<script src="js/video.js"></script>
 <script src="js/main.js"></script>
 <script src="js/main2.js"></script>
 <script src="js/splide.js"></script>
-
-
