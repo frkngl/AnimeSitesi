@@ -4,6 +4,7 @@ const video_player = document.querySelector('#videoplayer'),
    controls = video_player.querySelector('.controls'),
    progress_area = video_player.querySelector('.progress_area'),
    progress_bar = video_player.querySelector('.progress_bar'),
+   bufferedbar = video_player.querySelector('.buffered_progress_bar'),
    fast_rewind = video_player.querySelector('.fast-rewind'),
    play_pause = video_player.querySelector('.play_pause'),
    fast_forward = video_player.querySelector('.fast-forward'),
@@ -16,6 +17,16 @@ const video_player = document.querySelector('#videoplayer'),
    fullscreen = video_player.querySelector('.fullscreen'),
    settings = video_player.querySelector('#settings'),
    playback = video_player.querySelectorAll('.playback li');
+
+mainVideo.addEventListener('loadeddata',()=>{
+   setInterval(() => {
+      let bufferedTime = mainVideo.buffered.end(0);
+      let duration = mainVideo.duration;
+      let width = (bufferedTime / duration) * 100;
+      bufferedbar.style.width = `${width}%`;
+   }, 500);
+})
+
 
 
 document.addEventListener("keydown", e => {

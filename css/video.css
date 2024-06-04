@@ -61,10 +61,20 @@
     width: 100%;
     height: 5px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: #f0f0f07c;
     cursor: pointer;
   }
   
+  .content #videoplayer .controls .progress_area .buffered_progress_bar{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    background-color: rgb(206,206,206);
+    height: inherit;
+    border-radius: inherit;
+    cursor: pointer;
+    z-index: -1;
+  }
   .content #videoplayer .controls .progress_area .progress_bar {
     position: relative;
     width: 0%;
@@ -73,14 +83,13 @@
     border-radius: inherit;
     cursor: pointer;
   }
-  
   .content #videoplayer .controls .progress_area .progress_bar::before {
     content: '';
     position: absolute;
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    right: -7px;
+    right: -5px;
     top: 50%;
     transform: translateY(-50%);
     background-color: #FF7F00;
