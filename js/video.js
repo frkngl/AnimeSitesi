@@ -17,44 +17,18 @@ const video_player = document.querySelector('#videoplayer'),
    fullscreen = video_player.querySelector('.fullscreen'),
    settings = video_player.querySelector('#settings'),
    playback = video_player.querySelectorAll('.playback li');
+   thumbnail = video_player.querySelector('.thumbnail');
 
-mainVideo.addEventListener('loadeddata',()=>{
+
+
+mainVideo.addEventListener('loadeddata', () => {
    setInterval(() => {
       let bufferedTime = mainVideo.buffered.end(0);
       let duration = mainVideo.duration;
       let width = (bufferedTime / duration) * 100;
       bufferedbar.style.width = `${width}%`;
    }, 500);
-})
-
-
-
-document.addEventListener("keydown", e => {
-   const tagName = document.activeElement.tagName.toLowerCase()
-
-   switch (e.key.toLowerCase()) {
-      case " ":
-         playpause()
-         break
-      case "arrowleft":
-         fastrewind()
-         break
-      case "arrowright":
-         fastforward()
-         break
-      case "m":
-         muteVolume()
-         break
-      case "p":
-         pictureinpicture()
-         break
-      case "f":
-         full_screen()
-         breakf
-   }
-})
-
-
+});
 
 //VIDEO PLAY FUNCTION
 function playVideo() {
@@ -73,23 +47,13 @@ function pauseVideo() {
 play_pause.addEventListener('click', playpause);
 function playpause() {
    const isVideoPaused = video_player.classList.contains('paused');
-
    isVideoPaused ? pauseVideo() : playVideo();
 }
-
 mainVideo.addEventListener('click', () => {
    const isVideoPaused = video_player.classList.contains('paused');
-
    isVideoPaused ? pauseVideo() : playVideo();
 })
 
-mainVideo.addEventListener('play', () => {
-   playVideo();
-})
-
-mainVideo.addEventListener('pause', () => {
-   pauseVideo();
-})
 
 
 
@@ -101,14 +65,13 @@ function fastrewind() {
 
 //FAST FORWARD PAUSE FUNCTION
 fast_forward.addEventListener('click', fastforward);
-function fastforward(){
+function fastforward() {
    mainVideo.currentTime += 10;
 }
 
 
 
 //LOAD VIDEO DURATION
-
 mainVideo.addEventListener('loadeddata', (e) => {
    let videoDuration = e.target.duration;
    let totalMin = Math.floor(videoDuration / 60);
@@ -139,7 +102,6 @@ mainVideo.addEventListener('timeupdate', (e) => {
 })
 
 //let's update playing video current time on according to the progress bar width
-
 progress_area.addEventListener('click', (e) => {
    let videoDuration = mainVideo.duration;
    let progressWidthval = progress_area.clientWidth;
@@ -180,24 +142,56 @@ volume.addEventListener('click', () => {
    muteVolume();
 })
 
-//Update progress area time and display bock on mouse move
+//Update progress area time and display block on mouse move
 
 progress_area.addEventListener('mousemove', (e) => {
-   let progressWidthval = progress_area.clientWidth;
+   let progressWidthval = progress_area.clientWidth + 2;
    let x = e.offsetX;
-   progressAreaTime.style.setProperty('--x', `${x}px`);
-   progressAreaTime.style.display = "block";
    let videoDuration = mainVideo.duration;
    let progressTime = Math.floor((x / progressWidthval) * videoDuration);
    let currentMin = Math.floor(progressTime / 60);
    let currentSec = Math.floor(progressTime % 60);
+   progressAreaTime.style.setProperty('--x', `${x}px`);
+   progressAreaTime.style.display = "block";
+
+   if (x >= progressWidthval - 80) {
+      x = progressWidthval - 80;
+   } else if (x <= 75) {
+      x = 75;
+   } else {
+      x = e.offsetX;
+   }
 
    //if seconds are less then 10 then add 0 at the begning
    currentSec < 10 ? currentSec = "0" + currentSec : currentSec;
    progressAreaTime.innerHTML = `${currentMin} : ${currentSec}`;
+
+   thumbnail.style.setProperty('--x', `${x}px`);
+   thumbnail.style.display = "block";
+
+  
+   for (var item of thumbnails) {
+      //
+      var data = item.sec.find(x1 => x1.index === Math.floor(progressTime));
+
+      // thumbnail found
+      if (data) {
+         if (item.data != undefined) {
+            thumbnail.setAttribute("style", `
+            background-image: url(${item.data});
+            background-position-x: ${data.backgroundPositionX}px;
+            background-position-y:${data.backgroundPositionY}px;
+            --x: ${x}px;display: block;
+            `)
+            // exit
+            return;
+         }
+      }
+   }
 })
 
 progress_area.addEventListener('mouseleave', () => {
+   thumbnail.style.display = "none";
    progressAreaTime.style.display = "none";
 })
 
@@ -245,21 +239,7 @@ function removeAciveClasses() {
    });
 }
 
-//Store video duration and video path in local storage
 
-window.addEventListener('unload', () => {
-   let setDuration = localStorage.setItem('duration', `${mainVideo.currentTime}`);
-   let letSrc = localStorage.setItem('src', `${mainVideo.getAttribute('src')}`);
-})
-
-window.addEventListener('load', () => {
-   let getDuration = localStorage.getItem('duration');
-   let getSrc = localStorage.getItem('src');
-   if (getSrc) {
-      mainVideo.src = getSrc;
-      mainVideo.currentTime = getDuration;
-   }
-})
 
 mainVideo.addEventListener('contextmenu', (e) => {
    e.preventDefault();
@@ -287,9 +267,9 @@ video_player.addEventListener('mouseleave', () => {
 //Mobile tocuh controls
 video_player.addEventListener('touchstart', () => {
    controls.classList.add('active');
-   setTimeout(()=>{
+   setTimeout(() => {
       controls
-      .classList.remove('active')
+         .classList.remove('active')
    }, 5000);
 })
 
@@ -302,3 +282,209 @@ video_player.addEventListener('touchmove', () => {
    }
 })
 
+
+//Video Preview
+
+var thumbnails = [];
+
+var thumbnailWidth = 158;
+var thumbnailHeight = 90;
+var horizontalItemCount = 5;
+var verticalItemCount = 5;
+
+let preview_video = document.createElement('video')
+preview_video.preload = "metadata";
+preview_video.width = "500";
+preview_video.height = "300";
+preview_video.controls = true;
+preview_video.src = mainVideo.querySelector("source").src;
+
+preview_video.addEventListener('loadeddata', async function () {
+   //
+   preview_video.pause();
+
+   //
+   var count = 1;
+
+   //
+   var id = 1;
+
+   //
+   var x = 0, y = 0;
+
+   //
+   var array = [];
+
+   //
+   var duration = parseInt(preview_video.duration);
+
+   //
+   for (var i = 1; i <= duration; i++) {
+      array.push(i);
+   }
+
+   //
+   var canvas;
+
+   //
+   var i, j;
+
+   for (i = 0, j = array.length; i < j; i += horizontalItemCount) {
+      //
+      for (var startIndex of array.slice(i, i + horizontalItemCount)) {
+         //
+         var backgroundPositionX = x * thumbnailWidth;
+
+         //
+         var backgroundPositionY = y * thumbnailHeight;
+
+         //
+         var item = thumbnails.find(x => x.id === id);
+
+         if (!item) {
+            // 
+
+            //
+            canvas = document.createElement('canvas');
+
+            //
+            canvas.width = thumbnailWidth * horizontalItemCount;
+            canvas.height = thumbnailHeight * verticalItemCount;
+
+            //
+            thumbnails.push({
+               id: id,
+               canvas: canvas,
+               sec: [{
+                  index: startIndex,
+                  backgroundPositionX: -backgroundPositionX,
+                  backgroundPositionY: -backgroundPositionY
+               }]
+            });
+         } else {
+            //
+
+            //
+            canvas = item.canvas;
+
+            //
+            item.sec.push({
+               index: startIndex,
+               backgroundPositionX: -backgroundPositionX,
+               backgroundPositionY: -backgroundPositionY
+            });
+         }
+
+         //
+         var context = canvas.getContext('2d');
+
+         //
+         preview_video.currentTime = startIndex;
+
+         //
+         await new Promise(function (resolve) {
+            var event = function () {
+               //
+               context.drawImage(
+                  preview_video, 
+                  backgroundPositionX, 
+                  backgroundPositionY,
+                  thumbnailWidth, 
+                  thumbnailHeight
+               );
+
+               //
+               x++;
+
+               // removing duplicate events
+               preview_video.removeEventListener('canplay', event);
+
+               // 
+               resolve();
+            };
+
+            // 
+            preview_video.addEventListener('canplay', event);
+         });
+
+
+         // 1 thumbnail is generated completely
+         count++;
+      }
+
+      // reset x coordinate
+      x = 0;
+
+      // increase y coordinate
+      y++;
+
+      // checking for overflow
+      if (count > horizontalItemCount * verticalItemCount) {
+         //
+         count = 1;
+
+         //
+         x = 0;
+
+         //
+         y = 0;
+
+         //
+         id++;
+      }
+
+   }
+   // looping through thumbnail list to update thumbnail
+   thumbnails.forEach(function (item) {
+      // converting canvas to blob to get short url
+      item.canvas.toBlob(blob => item.data = URL.createObjectURL(blob), 'image/jpeg');
+
+      // deleting unused property
+      delete item.canvas;
+   });
+
+
+
+   console.log('done...');
+});
+
+
+document.addEventListener("keydown", e => {
+   const tagName = document.activeElement.tagName.toLowerCase()
+
+   switch (e.key.toLowerCase()) {
+      case " ":
+         playpause()
+         break
+      case "arrowleft":
+         fastrewind()
+         break
+      case "arrowright":
+         fastforward()
+         break
+      case "m":
+         muteVolume()
+         break
+      case "p":
+         pictureinpicture()
+         break
+      case "f":
+         full_screen()
+         break
+   }
+})
+
+//Storage video duration and video path in local storage
+
+// window.addEventListener('unload', () => {
+//    let setDuration = localStorage.setItem('duration', `${mainVideo.currentTime}`);
+//    let letSrc = localStorage.setItem('src', `${mainVideo.getAttribute('src')}`);
+// })
+// window.addEventListener('load', () => {
+//    let getDuration = localStorage.getItem('duration');
+//    let getSrc = localStorage.getItem('src');
+//    if (getSrc) {
+//       mainVideo.src = getSrc;
+//       mainVideo.currentTime = getDuration;
+//    }
+// })
