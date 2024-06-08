@@ -80,15 +80,19 @@
             </div>
         </div>
         <div id="videoplayer">
+            <div class="spinner"></div>
             <video preload="metadata" id="main-video">
-                <source src="./video/naber1.mp4" type="video/mp4">
+                <source src="./video/videoplayback.mp4" size="360" type="video/mp4">
+                <source src="./video/naber1.mp4" size="720" type="video/mp4">
+                <source src="./video/naber1.mp4" size="1080" type="video/mp4">
             </video>
             <div class="thumbnail"></div>
             <div class="progressAreaTime"></div>
             <div class="controls">
                 <div class="progress_area">
+                    <canvas class="bufferedBar"></canvas>
                     <div class="progress_bar">
-                       <span></span>
+                        <span></span>
                     </div>
                     <div class="buffered_progress_bar"></div>
                 </div>
@@ -124,10 +128,32 @@
                     </div>
                 </div>
                 <div id="settings">
-                    <div class="playback">
-                        <span>Video Hızı</span>
+                    <div data-label="settingHome">
                         <ul>
-                            <li data-speed="0.25" >0.25</li>
+                            <li style="display: flex; align-items: center;" data-label="speed">
+                                <span class="material-symbols-outlined">
+                                    timer
+                                </span>
+                                <span>Hız</span>
+                            </li>
+                            <li style="display: flex; align-items: center;" data-label="quality">
+                                <span class="material-symbols-outlined">
+                                    hd
+                                </span>
+                                <span>Kalite</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="playback" data-label="speed" hidden>
+                        <span>
+                            <i style="font-size: 16px; padding: 5px 10px; cursor: pointer;" class="material-symbols-outlined back_arrow" data-label="settingHome">
+                                arrow_back
+                            </i>
+                            <span>Video Hızı</span>
+                        </span>
+                        <ul>
+                            <li data-speed="0.25">0.25</li>
                             <li data-speed="0.50">0.5</li>
                             <li data-speed="0.75">0.75</li>
                             <li data-speed="1" class="active">Normal</li>
@@ -135,6 +161,17 @@
                             <li data-speed="1.5">1.5</li>
                             <li data-speed="1.75">1.75</li>
                             <li data-speed="2">2</li>
+                        </ul>
+                    </div>
+                    <div data-label="quality" hidden>
+                        <span>
+                            <i style="font-size: 16px; padding: 5px 10px; cursor: pointer;" class="material-symbols-outlined back_arrow" data-label="settingHome">
+                                arrow_back
+                            </i>
+                            <span>Video Kalite</span>
+                        </span>
+                        <ul>
+                            <li data-quality="auto" class="active">Auto</li>
                         </ul>
                     </div>
                 </div>

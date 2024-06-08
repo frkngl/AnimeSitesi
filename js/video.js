@@ -4,6 +4,7 @@ const video_player = document.querySelector('#videoplayer'),
    controls = video_player.querySelector('.controls'),
    progress_area = video_player.querySelector('.progress_area'),
    progress_bar = video_player.querySelector('.progress_bar'),
+   bufffered_bar = video_player.querySelector('.bufferedBar'),
    bufferedbar = video_player.querySelector('.buffered_progress_bar'),
    fast_rewind = video_player.querySelector('.fast-rewind'),
    play_pause = video_player.querySelector('.play_pause'),
@@ -16,11 +17,72 @@ const video_player = document.querySelector('#videoplayer'),
    picture_in_picture = video_player.querySelector('.picture_in_picture'),
    fullscreen = video_player.querySelector('.fullscreen'),
    settings = video_player.querySelector('#settings'),
+   settingsHome = video_player.querySelectorAll("#settings [data-label='settingHome'] > ul > li"),
    playback = video_player.querySelectorAll('.playback li');
-   thumbnail = video_player.querySelector('.thumbnail');
+thumbnail = video_player.querySelector('.thumbnail');
+spinner = video_player.querySelector('.spinner');
 
 
 
+const settingDivs = video_player.querySelectorAll('#settings > div');
+const settingBack = video_player.querySelectorAll('#settings > div .back_arrow');
+const quality_ul = video_player.querySelector("#settings > [data-label='quality'] ul");
+const qualities =video_player.querySelectorAll("source[size]");
+
+qualities.forEach(event =>{
+   let quality_html =`<li data-quality="${event.getAttribute('size')}">${event.getAttribute('size')}p</li>`;
+   quality_ul.insertAdjacentHTML('afterbegin',quality_html);                      
+})
+
+const quality_li = video_player.querySelectorAll("#settings > [data-label='quality'] ul > li");
+quality_li.forEach((event) => {
+   event.addEventListener('click', (e) => {
+     let quality = event.getAttribute('data-quality');
+     removeActiveClasses(quality_li);
+     event.classList.add('active');
+      qualities.forEach(event => {
+        if (event.getAttribute('size') == quality) {
+          let video_current_duration = mainVideo.currentTime;
+          let video_source = event.getAttribute('src');
+          mainVideo.src = video_source;
+          mainVideo.currentTime = video_current_duration;
+          playVideo();
+        }
+      })
+   })
+ })
+
+settingBack.forEach((e) => {
+   e.addEventListener('click', (e) => {
+      let setting_label = e.target.getAttribute('data-label');
+      for (let i = 0; i < settingDivs.length; i++) {
+         if (settingDivs[i].getAttribute('data-label') == setting_label) {
+            settingDivs[i].removeAttribute('hidden');
+         }
+         else{
+            settingDivs[i].setAttribute('hidden',"");
+         }
+      }
+   })
+})
+settingsHome.forEach((e) => {
+   e.addEventListener('click', (e) => {
+      let setting_label = e.target.getAttribute('data-label');
+      for (let i = 0; i < settingDivs.length; i++) {
+         if (settingDivs[i].getAttribute('data-label') == setting_label) {
+            settingDivs[i].removeAttribute('hidden');
+         }
+         else{
+            settingDivs[i].setAttribute('hidden',"");
+         }
+      }
+   })
+})
+function removeActiveClasses(e) {
+   e.forEach((e) => {
+      e.classList.remove("active");
+   });
+}
 mainVideo.addEventListener('loadeddata', () => {
    setInterval(() => {
       let bufferedTime = mainVideo.buffered.end(0);
@@ -102,12 +164,59 @@ mainVideo.addEventListener('timeupdate', (e) => {
 })
 
 //let's update playing video current time on according to the progress bar width
-progress_area.addEventListener('click', (e) => {
-   let videoDuration = mainVideo.duration;
-   let progressWidthval = progress_area.clientWidth;
-   let ClickOffsetX = e.offsetX;
+progress_area.addEventListener("pointerdown", (e) => {
+   progress_area.setPointerCapture(e.pointerId);
+   setTimelinePosition(e);
+   progress_area.addEventListener("pointermove", setTimelinePosition);
+   progress_area.addEventListener("pointerup", () => {
+      progress_area.removeEventListener("pointermove", setTimelinePosition);
+   })
+});
 
+
+function setTimelinePosition(e) {
+   let videoDuration = mainVideo.duration;
+   let progressWidthval = progress_area.clientWidth + 2;
+   let ClickOffsetX = e.offsetX;
    mainVideo.currentTime = (ClickOffsetX / progressWidthval) * videoDuration;
+
+   let progressWidth = (mainVideo.currentTime / videoDuration) * 100 + 0.5;
+   progress_bar.style.width = `${progressWidth}%`;
+
+
+   let currentVideoTime = mainVideo.currentTime;
+   let currentMin = Math.floor(currentVideoTime / 60);
+   let currentSec = Math.floor(currentVideoTime % 60);
+   //if seconds are less then 10 then add 0 at the begning
+   currentSec < 10 ? currentSec = "0" + currentSec : currentSec;
+   current.innerHTML = `${currentMin} : ${currentSec}`;
+}
+
+function drawProgress(canvas, buffered, duration) {
+   let context = canvas.getContext('2d', { antialias: false });
+   context.fillStyle = '#f0f0f07c';
+
+   let height = canvas.height;
+   let width = canvas.width;
+   if (!height || !width) throw "Canva's width or height or not set.";
+   context.clearRect(0, 0, width, height);
+   for (let i = 0; i < buffered.length; i++) {
+      let leadingEdge = buffered.start(i) / duration * width;
+      let trailingEdge = buffered.end(i) / duration * width;
+      context.fillRect(leadingEdge, 0, trailingEdge - leadingEdge, height);
+   }
+}
+
+mainVideo.addEventListener('progress', () => {
+   drawProgress(bufffered_bar, mainVideo.buffered, mainVideo.duration);
+})
+
+
+mainVideo.addEventListener("waiting", () => {
+   spinner.style.display = "block";
+})
+mainVideo.addEventListener("canplay", () => {
+   spinner.style.display = "none";
 })
 
 //CHANGE VOLUME
@@ -169,7 +278,7 @@ progress_area.addEventListener('mousemove', (e) => {
    thumbnail.style.setProperty('--x', `${x}px`);
    thumbnail.style.display = "block";
 
-  
+
    for (var item of thumbnails) {
       //
       var data = item.sec.find(x1 => x1.index === Math.floor(progressTime));
@@ -211,11 +320,13 @@ function full_screen() {
       video_player.classList.add('openFullScreen');
       fullscreen.innerHTML = "close_fullscreen";
       video_player.requestFullscreen();
+      video_player.style.borderRadius = "0px";
    }
    else {
       video_player.classList.remove('openFullScreen');
       fullscreen.innerHTML = "open_in_full";
       document.exitFullscreen();
+      video_player.style.borderRadius = "15px";
    }
 }
 //Open Setting
@@ -287,7 +398,7 @@ video_player.addEventListener('touchmove', () => {
 
 var thumbnails = [];
 
-var thumbnailWidth = 158;
+var thumbnailWidth = 165;
 var thumbnailHeight = 90;
 var horizontalItemCount = 5;
 var verticalItemCount = 5;
@@ -386,10 +497,10 @@ preview_video.addEventListener('loadeddata', async function () {
             var event = function () {
                //
                context.drawImage(
-                  preview_video, 
-                  backgroundPositionX, 
+                  preview_video,
+                  backgroundPositionX,
                   backgroundPositionY,
-                  thumbnailWidth, 
+                  thumbnailWidth,
                   thumbnailHeight
                );
 
@@ -474,17 +585,16 @@ document.addEventListener("keydown", e => {
    }
 })
 
-//Storage video duration and video path in local storage
-
-// window.addEventListener('unload', () => {
-//    let setDuration = localStorage.setItem('duration', `${mainVideo.currentTime}`);
-//    let letSrc = localStorage.setItem('src', `${mainVideo.getAttribute('src')}`);
-// })
-// window.addEventListener('load', () => {
-//    let getDuration = localStorage.getItem('duration');
-//    let getSrc = localStorage.getItem('src');
-//    if (getSrc) {
-//       mainVideo.src = getSrc;
-//       mainVideo.currentTime = getDuration;
-//    }
-// })
+// Storage video duration and video path in local storage
+//  window.addEventListener('unload', () => {
+//     let setDuration = localStorage.setItem('duration', `${mainVideo.currentTime}`);
+//     let letSrc = localStorage.setItem('src', `${mainVideo.getAttribute('src')}`);
+//  })
+//  window.addEventListener('load', () => {
+//     let getDuration = localStorage.getItem('duration');
+//     let getSrc = localStorage.getItem('src');
+//     if (getSrc) {
+//        mainVideo.src = getSrc;
+//        mainVideo.currentTime = getDuration;
+//     }
+//  })
