@@ -6,7 +6,6 @@ document.querySelectorAll('nav a').forEach(link => {
         link.classList.add('active');
     }
 });
-
 /*SEASON ACTİVE KISMI*/
 document.querySelectorAll('content3 season box').forEach(links => {
     links.classList.remove('active');
@@ -15,20 +14,11 @@ document.querySelectorAll('content3 season box').forEach(links => {
         links.classList.add('active');
     }
 });
-
-
-
 /*YÜKLEME EKRANI KODU*/
 window.addEventListener('load', loaderfunc);
-
 function loaderfunc() {
     document.getElementById('loader').style.display = 'none';
 }
-
-
-
-
-
 /*PAROLA GÖSTEME KODU*/
 const img = document.getElementById('images');
 let toggle = true;

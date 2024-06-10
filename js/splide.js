@@ -36,7 +36,6 @@ new Splide('#splide1', {
     },
   },
 }).mount();
-
 new Splide('#splide2', {
   type: 'slide',
   perPage: 6,
@@ -75,7 +74,6 @@ new Splide('#splide2', {
     },
   },
 }).mount();
-
 new Splide('#splide3', {
   type: 'slide',
   perPage: 6,
@@ -114,8 +112,6 @@ new Splide('#splide3', {
     },
   },
 }).mount();
-
-
 new Splide('#splide4', {
   type: 'slide',
   perPage: 6,
@@ -154,7 +150,6 @@ new Splide('#splide4', {
     },
   },
 }).mount();
-
 new Splide('#splide5', {
   type: 'slide',
   perPage: 6,

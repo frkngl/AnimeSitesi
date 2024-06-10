@@ -851,6 +851,9 @@ header .box .user a:hover {
     width: 100%;
     height: 475px;
   }
+  .splide .splide__list a {
+    z-index: 9999;
+  }
   .splide .splide__list a .videoimg {
     width: 100%;
     height: 430px;
@@ -887,7 +890,7 @@ header .box .user a:hover {
 }
 @media only screen and (max-width: 1200px) {
   .splide .splide__list a .video {
-    display: none;
+    display: block;
   }
 }
 @media only screen and (max-width: 1000px) {
