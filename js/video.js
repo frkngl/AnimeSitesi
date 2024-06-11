@@ -414,7 +414,7 @@ ${video_player.innerHTML}
          } else {
             controls.classList.remove("active");
          }
-      }, 2000);
+      }, 4000);
    }
    hideControls();
    video_player.addEventListener("mousemove", () => {
@@ -422,13 +422,14 @@ ${video_player.innerHTML}
       clearTimeout(timer);
       hideControls();
    });
+
    //Mobile tocuh controls
    video_player.addEventListener('touchstart', () => {
       controls.classList.add('active');
       setTimeout(() => {
          controls
             .classList.remove('active')
-      }, 5000);
+      }, 20000);
    })
    video_player.addEventListener('touchmove', () => {
       if (video_player.classList.contains('paused')) {

@@ -2,7 +2,9 @@
   user-select: none;
   -webkit-user-select: none;
 }
-
+video::-webkit-media-controls {   
+  display: none !important; 
+}
 .content .videoplayer {
   position: relative;
   width: 100%;
@@ -25,7 +27,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: 999;
   font-size: 10rem;
   color: #ffffff;
 }
@@ -121,12 +123,12 @@
   height: 50px;
   width: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, .75), transparent);
-  transform: translateY(180%);
+  opacity: 0;
   transition: all 300ms;
 }
 
 .content .videoplayer .controls.active {
-  transform: translateY(0);
+  opacity: 1;
 }
 
 .content .videoplayer .controls .progress_area {
