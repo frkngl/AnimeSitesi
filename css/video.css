@@ -1,3 +1,64 @@
+/*VIDEOPLAYER ROOT*/
+:root {
+  --videoplayer-color1: #ffffff;
+}
+
+/*POSTER PLAY BTN ROOT*/
+:root {
+  --btn-color: #ffffff;
+  
+  --btn-font-size:5rem;
+}
+/*SPINNER ROOT*/
+:root {
+  --spinner-color1: #FF7F00;
+  --spinner-color2: #ffffff;
+}
+/*THUMBNAIL ROOT*/
+:root {
+  --thumbnaıl-color1: #FF7F00;
+  --thumbnaıl-color2: rgba(0, 0, 0, .75);
+}
+/*PROGRESS ROOT*/
+:root {
+  --progress-color1: #ffffff;
+  --progress-color2: #f0f0f07c;
+  --progress-color3: rgb(206, 206, 206);
+  --progress-color4: #FF7F00;
+  --progress-color5: #313131;
+
+  --progress-font-size:var(1rem);
+}
+/*CONTROLS ROOT*/
+:root {
+  --controls-color1: rgba(0, 0, 0, .75);
+  --controls-color2: #ffffff;
+
+  --controls-font-size:0.8rem;
+  --controls-font-size2:2rem;
+}
+/*SETTINGS ROOT*/
+:root {
+  --setting-color1: rgb(28 28 28 / 80%);
+  --setting-color2: #ffffff;
+
+  --setting-font-size: 1.8rem;
+  --setting-font-size2: 0.9rem;
+  --setting-font-size3: 0.5rem;
+  --setting-font-size4: 0.8rem;
+  --setting-font-size5: 1.2rem;
+  --setting-font-size6: 1.8rem;
+}
+
+/*SETTINGS SCROLL ROOT*/
+:root {
+  --setting-scroll-color1: #313131;
+  --setting-scroll-color2: #FF7F00;
+  --setting-scroll-color3: #ffffff;
+}
+
+
+
 .material-symbols-outlined {
   user-select: none;
   -webkit-user-select: none;
@@ -11,7 +72,7 @@ video::-webkit-media-controls {
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: #ffffff 0px 0px 20px;
+  box-shadow: var(--videoplayer-color1) 0px 0px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,8 +89,8 @@ video::-webkit-media-controls {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  font-size: 10rem;
-  color: #ffffff;
+  font-size: var(--btn-font-size);
+  color: var(--btn-color);
 }
 
 .content .videoplayer .postervideo .poster {
@@ -50,8 +111,8 @@ video::-webkit-media-controls {
   transform: translate(-50%, -50%);
   height: 60px;
   width: 60px;
-  border: 4px solid #ffffff;
-  border-bottom-color: #FF7F00;
+  border: 4px solid var(--spinner-color2);
+  border-bottom-color: var(--spinner-color1);
   border-radius: 50%;
   z-index: 1;
   animation: anispin 0.6s linear infinite;
@@ -75,7 +136,7 @@ video::-webkit-media-controls {
   transform: translateX(-56%);
   width: 250px;
   height: 150px;
-  border: 2px solid #FF7F00;
+  border: 2px solid var(--thumbnaıl-color1);
   border-radius: 5px;
   display: none;
   object-fit: cover;
@@ -87,10 +148,10 @@ video::-webkit-media-controls {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 50px;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  background: linear-gradient(to top, rgba(0, 0, 0, .75), transparent);
+  background: linear-gradient(to top, var(--thumbnaıl-color2), transparent);
 }
 
 .content .videoplayer .progressAreaTime {
@@ -100,8 +161,8 @@ video::-webkit-media-controls {
   min-width: 50px;
   padding: 5px 10px;
   white-space: nowrap;
-  color: #ffffff;
-  font-size: 14px;
+  color: var(--progress-color1);
+  font-size: var(--progress-font-size);
   border-radius: 5px;
   z-index: 1;
   bottom: 55px;
@@ -122,7 +183,7 @@ video::-webkit-media-controls {
   left: 0;
   height: 50px;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, .75), transparent);
+  background: linear-gradient(to top, var(--controls-color1), transparent);
   opacity: 0;
   transition: all 300ms;
 }
@@ -135,7 +196,7 @@ video::-webkit-media-controls {
   width: 100%;
   height: 5px;
   margin: auto;
-  background-color: #f0f0f07c;
+  background-color: var(--progress-color2);
   cursor: pointer;
 }
 
@@ -143,7 +204,7 @@ video::-webkit-media-controls {
   position: absolute;
   top: 0;
   width: 100px;
-  background-color: rgb(206, 206, 206);
+  background-color: var(--progress-color3);
   height: inherit;
   border-radius: inherit;
   cursor: pointer;
@@ -153,7 +214,7 @@ video::-webkit-media-controls {
 .content .videoplayer .controls .progress_area .progress_bar {
   position: relative;
   width: 0%;
-  background-color: #FF7F00;
+  background-color: var(--progress-color4);
   height: inherit;
   border-radius: inherit;
   cursor: pointer;
@@ -168,8 +229,8 @@ video::-webkit-media-controls {
   right: -5px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #FF7F00;
-  color: #FF7F00;
+  background-color: var(--progress-color4);
+  color: var(--progress-color4);
   opacity: 0;
   transition: all 300ms;
 }
@@ -187,8 +248,8 @@ video::-webkit-media-controls {
   right: -1px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #313131;
-  color: #313131;
+  background-color: var(--progress-color5);
+  color: var(--progress-color5);
   opacity: 0;
   transition: all 300ms;
 }
@@ -222,9 +283,9 @@ video::-webkit-media-controls {
 }
 
 .content .videoplayer .controls .control-list .control-left .timer {
-  font-size: 0.8rem;
+  font-size: var(--controls-font-size);
   white-space: nowrap;
-  color: #ffffff;
+  color: var(--controls-color2);
   margin-left: 10px;
   text-align: center;
 }
@@ -234,13 +295,13 @@ video::-webkit-media-controls {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffffff;
+  color: var(--controls-color2);
   margin: 0px 5px 0px 8px;
 }
 
 .content .videoplayer .controls .icon .material-symbols-outlined {
-  font-size: 26px;
-  color: #ffffff;
+  font-size: var(--controls-font-size2);
+  color: var(--controls-color2);
   cursor: pointer;
 }
 
@@ -258,8 +319,8 @@ video::-webkit-media-controls {
   -webkit-appearance: none;
   appearance: none;
   height: 3px;
-  background-color: #ffffff;
-  color: #ffffff;
+  background-color: var(--controls-color2);
+  color: var(--controls-color2);
   width: 0px;
   cursor: pointer;
   outline: none;
@@ -275,8 +336,8 @@ video::-webkit-media-controls {
   border-radius: 50%;
   border: none;
   outline: none;
-  background-color: #ffffff;
-  color: #ffffff;
+  background-color: var(--controls-color2);
+  color: var(--controls-color2);
   opacity: 0;
   transition: 0.3s;
 }
@@ -293,7 +354,7 @@ video::-webkit-media-controls {
 }
 
 .content .videoplayer .controls .control-right .icon .material-symbols-outlined.settingsBtn {
-  font-size: 24px;
+  font-size: var(--setting-font-size);
   transition: 0.3s;
 }
 
@@ -305,8 +366,8 @@ video::-webkit-media-controls {
   position: absolute;
   bottom: 62px;
   right: 25px;
-  background-color: rgb(28 28 28 / 80%);
-  color: #ffffff;
+  background-color: var(--setting-color1);
+  color: var(--setting-color2);
   overflow-y: auto;
   width: 150px;
   max-height: 250px;
@@ -320,16 +381,16 @@ video::-webkit-media-controls {
 }
 
 .videoplayer .settings>div>span {
-  font-size: 0.9rem;
+  font-size: var(--setting-font-size2);
   font-weight: 500;
   padding: 10px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--setting-color1);
 }
 
 .videoplayer .settings>div>span .icon {
-  font-size: 0.5rem;
+  font-size: var(--setting-font-size3);
   margin: 0px 5px;
   cursor: pointer;
 }
@@ -340,14 +401,14 @@ video::-webkit-media-controls {
 
 .videoplayer .settings::-webkit-scrollbar {
   width: 10px;
-  background-color: #313131;
-  border-left: 1px solid #313131;
+  background-color: var(--setting-scroll-color1);
+  border-left: 1px solid var(--setting-scroll-color1);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .videoplayer .settings::-webkit-scrollbar-thumb {
-  background-color: #FF7F00;
+  background-color: var(--setting-scroll-color2);
   border-radius: 4px;
 }
 
@@ -362,7 +423,7 @@ video::-webkit-media-controls {
   width: 100%;
   cursor: pointer;
   display: block;
-  font-size: 0.8rem;
+  font-size: var(--setting-font-size4);
   transition: all 300ms;
   display: flex;
   justify-content: space-between;
@@ -371,8 +432,8 @@ video::-webkit-media-controls {
 }
 
 .videoplayer .settings ul li:hover {
-  background-color: #ffffff;
-  color: #313131;
+  background-color: var(--setting-scroll-color3);
+  color: var(--setting-scroll-color1);
 }
 
 .videoplayer .settings>div ul li.active::before {
@@ -382,13 +443,13 @@ video::-webkit-media-controls {
   top: 50%;
   transform: translateY(-50%);
   padding-right: 10px;
-  font-size: 18px;
+  font-size: var(--setting-font-size5);
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:1200px) {
   .controls .icon {
     margin: 0px 5px 0px 5px;
-    font-size: 24px;
+    font-size: var(--setting-font-size6);
   }
 
   .volume,
