@@ -441,8 +441,8 @@ ${video_player.innerHTML}
    })
    //Video Preview
    var thumbnails = [];
-   var thumbnailWidth = 165;
-   var thumbnailHeight = 90;
+   var thumbnailWidth = 250;
+   var thumbnailHeight = 150;
    var horizontalItemCount = 5;
    var verticalItemCount = 5;
    let preview_video = document.createElement('video')
@@ -533,29 +533,29 @@ ${video_player.innerHTML}
       console.log('done...');
    });
    //FAST KEYBOARD
-   document.addEventListener("keydown", e => {
-      const tagName = document.activeElement.tagName.toLowerCase()
-      switch (e.key.toLowerCase()) {
-         case " ":
-            playpause()
-            break
-         case "arrowleft":
-            fastrewind()
-            break
-         case "arrowright":
-            fastforward()
-            break
-         case "m":
-            muteVolume()
-            break
-         case "p":
-            pictureinpicture()
-            break
-         case "f":
-            full_screen()
-            break
-      }
-   })
+   // document.addEventListener("keydown", e => {
+   //    const tagName = document.activeElement.tagName.toLowerCase()
+   //    switch (e.key.toLowerCase()) {
+   //       case " ":
+   //          playpause()
+   //          break
+   //       case "arrowleft":
+   //          fastrewind()
+   //          break
+   //       case "arrowright":
+   //          fastforward()
+   //          break
+   //       case "m":
+   //          muteVolume()
+   //          break
+   //       case "p":
+   //          pictureinpicture()
+   //          break
+   //       case "f":
+   //          full_screen()
+   //          break
+   //    }
+   // })
    // Storage video duration and video path in local storage
    // window.addEventListener('unload', () => {
    //    let setDuration = localStorage.setItem('duration', `${mainVideo.currentTime}`);

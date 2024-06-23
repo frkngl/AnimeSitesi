@@ -47,7 +47,7 @@ const video = document.querySelectorAll(".splide__slide .video");
 video.forEach(video => {
     video.onmouseenter = () => {
         video.play();
-        video.volume = 0.2;
+        video.volume = 0.05;
         video.classList.add("active");
     };
 
@@ -56,9 +56,9 @@ video.forEach(video => {
         video.classList.remove("active");
     };
 
-    video.ontouchstart = () => {
+    video.ontouchmove = () => {
         video.play();
-        video.volume = 0.2;
+        video.volume = 0.05;
         video.classList.add("active");
     };
 
