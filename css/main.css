@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Pacifico&family=Sedgwick+Ave+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Inter:wght@100..900&family=Pacifico&family=Sedgwick+Ave+Display&display=swap");
 /*BODY ROOT*/
 :root {
   --color-body: #000000;
@@ -87,7 +85,7 @@ body {
   background-color: var(--color-body);
   overflow-x: hidden;
   max-width: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -98,7 +96,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color2);
-  border-radius: 20px;
 }
 
 video::-webkit-media-controls,
@@ -119,23 +116,12 @@ video::-ms-media-controls {
   align-items: center;
   justify-content: center;
 }
-#loader #box1 {
+#loader #box1 img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 10px solid var(--loading-color3);
-  border-top: 10px solid var(--loading-color2);
-  animation: loader 1s linear infinite;
 }
 
-@keyframes loader {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /*---------------------------------------LOADING END---------------------------------------*/
 /*---------------------------------------HEADER START---------------------------------------*/
 .header-change {
@@ -1284,7 +1270,7 @@ footer .copyright .text {
 
 @media only screen and (max-width: 550px) {
   footer {
-    margin-top: 100px;
+    margin-top: 0px !important;
     width: 100%;
     height: 600px;
     position: relative;
@@ -1415,904 +1401,798 @@ footer .copyright .text {
   height: auto;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
   justify-content: center;
   align-items: center;
+  margin-top: 36px;
+  width: 100%;
 }
-.content .aniepitit {
+.content .head {
   width: 100%;
   height: auto;
-  margin-top: 25px;
+  padding: 0 10rem;
+  margin-top: 50px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
-.content .aniepitit .title {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin: 10px 0px;
+.content .head .episodeandcomment {
+  width: 65%;
+  height: auto;
 }
-.content .aniepitit .search {
-  margin: 10px 0px;
-  background-color: var(--color3);
-  display: flex;
-  align-items: center;
-  border-radius: 50px;
-  padding: 5px;
-}
-.content .aniepitit .search i {
-  color: var(--color2);
-  padding-left: 10px;
-}
-.content .aniepitit .search input {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 0.9rem;
-  color: var(--color4);
-  padding-left: 10px;
-}
-.content .aniepitit .prevandnext {
-  margin: 10px 0px;
-  display: flex;
-  color: #ffffff;
-  font-size: 0.9rem;
-}
-.content .aniepitit .prevandnext .prev {
-  margin: 0px 10px;
-  padding: 3px;
-  background-color: #313131;
-  border-radius: 5px;
-  transition: all 300ms;
-  cursor: pointer;
-}
-.content .aniepitit .prevandnext .prev:hover {
-  background-color: #ffffff;
-  color: #313131;
-}
-.content .aniepitit .prevandnext .next {
-  background-color: #313131;
-  border-radius: 5px;
-  padding: 3px;
-  transition: all 300ms;
-  cursor: pointer;
-}
-.content .aniepitit .prevandnext .next:hover {
-  background-color: #ffffff;
-  color: #313131;
-}
-.content .episodes {
-  position: relative;
+.content .head .episodeandcomment .episodetail {
   width: 100%;
-  height: 400px;
+  height: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  overflow: auto;
-  border-radius: 10px;
-  list-style-type: none;
-  padding: 0px;
-  margin-bottom: 100px;
 }
-.content .episodes li {
-  margin-bottom: 20px;
-}
-.content .episodes li a {
-  text-decoration: none;
-  color: #ffffff;
-  width: 150px;
+.content .head .episodeandcomment .episodetail img {
+  width: 250px;
   height: 150px;
-  background-color: #313131;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.content .head .episodeandcomment .episodetail .detail {
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  border-radius: 10px;
+  justify-content: start;
+  line-height: 1.3;
+}
+.content .head .episodeandcomment .episodetail .detail .title {
+  font-size: 1rem;
+  color: #FF7F00;
+  font-weight: bold;
+  font-style: normal;
+}
+.content .head .episodeandcomment .episodetail .detail .episodename {
+  font-size: 1.2rem;
+  color: #ffffff;
   font-weight: 500;
   font-style: normal;
-  transition: all 300ms;
+  line-height: 1.1;
 }
-.content .episodes li a:hover {
-  color: #313131;
-  background-color: #ffffff;
-}
-.content .aa {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0px;
-}
-.content .aa .title {
-  color: var(--color4);
-  position: relative;
-}
-.content .aa .title a {
-  text-decoration: none;
-  color: var(--color4);
-  position: relative;
-}
-.content .aa .title a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color4);
-  left: 0;
-}
-.content .aa .subs {
-  display: none;
-}
-.content .aa .subs .btn {
-  margin-right: 10px;
-  background-color: var(--color3);
-  color: var(--color4);
-  border-radius: 5px;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  font-weight: 400;
+.content .head .episodeandcomment .episodetail .detail .time {
+  font-size: 0.9rem;
+  font-weight: 500;
   font-style: normal;
+  color: #ffffff;
+}
+.content .head .episodeandcomment .episodetail .detail .date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content .head .episodeandcomment .episodetail .detail .likeandunlike {
+  display: flex;
+}
+.content .head .episodeandcomment .episodetail .detail .likeandunlike .like {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  cursor: pointer;
   transition: all 300ms;
-  padding-top: 2px;
-  padding-bottom: 2px;
 }
-.content .aa .subs .btn:hover {
-  background-color: var(--color4);
-  color: var(--color1);
+.content .head .episodeandcomment .episodetail .detail .likeandunlike .like:hover {
+  color: #FF7F00;
 }
-.content .comments {
+.content .head .episodeandcomment .episodetail .detail .likeandunlike .like i {
+  font-size: 1rem;
+}
+.content .head .episodeandcomment .episodetail .detail .likeandunlike .unlike {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.content .head .episodeandcomment .episodetail .detail .likeandunlike .unlike:hover {
+  color: #FF7F00;
+}
+.content .head .episodeandcomment .episodetail .detail .likeandunlike .unlike i {
+  font-size: 1rem;
+}
+.content .head .episodeandcomment .commentplace {
   width: 100%;
+  height: auto;
   margin-top: 30px;
 }
-.content .comments .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.content .head .episodeandcomment .commentplace .headcomment {
   width: 100%;
-  height: 30px;
+  height: auto;
 }
-.content .comments .title .a {
-  color: var(--color4);
-  margin-bottom: 20px;
-  font-size: 1.3rem;
-  font-weight: 500;
-  position: relative;
+.content .head .episodeandcomment .commentplace .headcomment .title {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: normal;
 }
-.content .comments form {
+.content .head .episodeandcomment .commentplace .headcomment form {
+  width: 98%;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
-.content .comments form textarea {
-  border: 2px solid var(--color2);
-  border-radius: 20px;
-  margin-bottom: 10px;
+.content .head .episodeandcomment .commentplace .headcomment form textarea {
+  width: 100%;
+  height: 20vh;
   background-color: transparent;
-  color: var(--color4);
-  padding: 0.8rem;
-  font-size: 1.2rem;
-  transition: all 300ms;
+  color: #ffffff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  padding: 7px;
+  border: 2px solid #FF7F00;
+  border-radius: 10px;
+  outline: none;
 }
-.content .comments form textarea:focus {
-  background: var(--color3);
-}
-.content .comments form button {
-  width: 100px;
-  height: 35px;
-  border-radius: 20px;
+.content .head .episodeandcomment .commentplace .headcomment form button {
+  margin: 5px;
   outline: none;
   border: none;
+  background-color: #313131;
+  color: #ffffff;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
   transition: all 300ms;
-  background-color: var(--color3);
-  color: var(--color4);
 }
-.content .comments form button:hover {
-  color: var(--color3);
-  background-color: var(--color4);
+.content .head .episodeandcomment .commentplace .headcomment form button:hover {
+  background-color: #ffffff;
+  color: #313131;
 }
-.content .comments .comment {
+.content .head .episodeandcomment .commentboxes {
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+.content .head .episodeandcomment .commentboxes .title {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: normal;
+}
+.content .head .episodeandcomment .commentboxes .comments {
   display: flex;
   flex-direction: column;
   align-items: end;
-}
-.content .comments .comment .title {
-  margin: 10px 0px;
-}
-.content .comments .comment .title .b {
-  color: var(--color4);
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  position: relative;
-}
-.content .comments .comment .comment-box {
   width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  background-color: var(--color3);
-  border-radius: 10px;
-  padding: 10px;
 }
-.content .comments .comment .comment-box img {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
+.content .head .episodeandcomment .commentboxes .comments .comment1 {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+}
+.content .head .episodeandcomment .commentboxes .comments .comment1 img {
+  width: 60px;
+  height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
 }
-.content .comments .comment .comment-box .detail {
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding-left: 30px;
+  justify-content: start;
+  line-height: 2;
+  margin-left: 10px;
 }
-.content .comments .comment .comment-box .detail .tr {
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .user {
   display: flex;
   align-items: center;
 }
-.content .comments .comment .comment-box .detail .tr .username {
-  color: var(--color4);
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-.content .comments .comment .comment-box .detail .tr .date {
-  color: var(--color4);
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .user .name {
   font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #ffffff;
+}
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .user .year {
+  font-size: 0.9rem;
   font-weight: 500;
-  margin: 0px 10px;
+  font-style: normal;
+  color: #ffffff;
+  margin-left: 10px;
 }
-.content .comments .comment .comment-box .detail .text {
-  color: var(--color4);
-  font-size: 1rem;
-  font-weight: 400;
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
+  color: #ffffff;
 }
-.content .comments .comment .comment-box .detail .r {
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .more {
   display: flex;
+  align-items: end;
 }
-.content .comments .comment .comment-box .detail .r .reply a {
-  color: var(--color4);
-  text-decoration: none;
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .more .reply {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
   transition: all 300ms;
 }
-.content .comments .comment .comment-box .detail .r .reply a:hover {
-  color: var(--color2);
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .more .reply:hover {
+  color: #FF7F00;
 }
-.content .comments .comment .comment-box .detail .r .like {
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .more .likeandunlike {
   display: flex;
-  color: var(--color4);
-  padding: 0px 0px 0px 10px;
+  align-items: end;
 }
-.content .comments .comment .comment-box .detail .r .like .bir {
-  margin: 0px 10px;
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .more .likeandunlike .like {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 300ms;
 }
-.content .comments .comment .comment-box .detail .r .like .iki {
-  margin: 0px 10px;
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .more .likeandunlike .like:hover {
+  color: #FF7F00;
 }
-.content .comments .comment .comment-box2 {
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .more .likeandunlike .unlike {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 300ms;
+}
+.content .head .episodeandcomment .commentboxes .comments .comment1 .detail .more .likeandunlike .unlike:hover {
+  color: #FF7F00;
+}
+.content .head .episodeandcomment .commentboxes .comments .comment2 {
+  display: flex;
+  margin-top: 20px;
   width: 95%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  background-color: var(--color3);
-  border-radius: 10px;
-  padding: 10px;
 }
-.content .comments .comment .comment-box2 img {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
+.content .head .episodeandcomment .commentboxes .comments .comment2 img {
+  width: 60px;
+  height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
 }
-.content .comments .comment .comment-box2 .detail {
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding-left: 30px;
+  justify-content: start;
+  line-height: 2;
+  margin-left: 10px;
 }
-.content .comments .comment .comment-box2 .detail .tr {
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .user {
   display: flex;
   align-items: center;
 }
-.content .comments .comment .comment-box2 .detail .tr .username {
-  color: var(--color4);
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-.content .comments .comment .comment-box2 .detail .tr .date {
-  color: var(--color4);
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .user .name {
   font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #ffffff;
+}
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .user .year {
+  font-size: 0.9rem;
   font-weight: 500;
-  margin: 0px 10px;
+  font-style: normal;
+  color: #ffffff;
+  margin-left: 10px;
 }
-.content .comments .comment .comment-box2 .detail .text {
-  color: var(--color4);
-  font-size: 1rem;
-  font-weight: 400;
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
+  color: #ffffff;
 }
-.content .comments .comment .comment-box2 .detail .r {
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .more {
   display: flex;
+  align-items: end;
 }
-.content .comments .comment .comment-box2 .detail .r .reply a {
-  color: var(--color4);
-  text-decoration: none;
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .more .reply {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
   transition: all 300ms;
 }
-.content .comments .comment .comment-box2 .detail .r .reply a:hover {
-  color: var(--color2);
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .more .reply:hover {
+  color: #FF7F00;
 }
-.content .comments .comment .comment-box2 .detail .r .like {
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .more .likeandunlike {
   display: flex;
-  color: var(--color4);
-  padding: 0px 0px 0px 10px;
+  align-items: end;
 }
-.content .comments .comment .comment-box2 .detail .r .like .bir {
-  margin: 0px 10px;
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .more .likeandunlike .like {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 300ms;
 }
-.content .comments .comment .comment-box2 .detail .r .like .iki {
-  margin: 0px 10px;
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .more .likeandunlike .like:hover {
+  color: #FF7F00;
+}
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .more .likeandunlike .unlike {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 300ms;
+}
+.content .head .episodeandcomment .commentboxes .comments .comment2 .detail .more .likeandunlike .unlike:hover {
+  color: #FF7F00;
+}
+.content .head .nextandprevepisode {
+  width: 35%;
+  height: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: start;
+}
+.content .head .nextandprevepisode .prev {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.content .head .nextandprevepisode .prev .title {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: normal;
+}
+.content .head .nextandprevepisode .prev a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.content .head .nextandprevepisode .prev a .box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  border-radius: 10px;
+  transition: all 300ms;
+}
+.content .head .nextandprevepisode .prev a .box:hover {
+  background-color: #313131;
+}
+.content .head .nextandprevepisode .prev a .box img {
+  width: 200px;
+  height: 125px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.content .head .nextandprevepisode .prev a .box .animedetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 10px;
+  line-height: 1.3;
+}
+.content .head .nextandprevepisode .prev a .box .animedetail .episodename {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
+}
+.content .head .nextandprevepisode .prev a .box .animedetail .time {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content .head .nextandprevepisode .prev a .box .animedetail .date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content .head .nextandprevepisode .next {
+  display: flex;
+  flex-direction: column;
+}
+.content .head .nextandprevepisode .next .title {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: normal;
+}
+.content .head .nextandprevepisode .next a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.content .head .nextandprevepisode .next a .box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  border-radius: 10px;
+  transition: all 300ms;
+}
+.content .head .nextandprevepisode .next a .box:hover {
+  background-color: #313131;
+}
+.content .head .nextandprevepisode .next a .box img {
+  width: 200px;
+  height: 125px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.content .head .nextandprevepisode .next a .box .animedetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  line-height: 1.3;
+  margin-left: 10px;
+}
+.content .head .nextandprevepisode .next a .box .animedetail .episodename {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
+}
+.content .head .nextandprevepisode .next a .box .animedetail .time {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.content .head .nextandprevepisode .next a .box .animedetail .date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
 }
 
-@media only screen and (max-width: 1200px) {
-  .content {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-  }
-  .content .aa {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px;
-  }
-  .content .aa .title {
-    color: var(--color4);
-    position: relative;
-  }
-  .content .aa .title a {
-    text-decoration: none;
-    color: var(--color4);
-    position: relative;
-  }
-  .content .aa .title a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color4);
-    left: 0;
-  }
-  .content .aa .subs {
-    display: none;
-  }
-  .content .aa .subs .btn {
-    margin-right: 10px;
-    background-color: var(--color3);
-    color: var(--color4);
-    border-radius: 5px;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    font-weight: 400;
-    font-style: normal;
-    transition: all 300ms;
-    padding-top: 2px;
-    padding-bottom: 2px;
-  }
-  .content .aa .subs .btn:hover {
-    background-color: var(--color4);
-    color: var(--color3);
-  }
-  .content .aa .subs .btn.active {
-    background-color: var(--color4);
-    color: var(--color3);
-  }
-  .content .comments {
-    width: 100%;
-    margin-top: 30px;
-  }
-  .content .comments .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 30px;
-  }
-  .content .comments .title .a {
-    color: var(--color4);
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    font-weight: 500;
-    position: relative;
-  }
-  .content .comments .title .a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color4);
-    margin-top: -3px;
-  }
-  .content .comments form {
-    display: flex;
-    flex-direction: column;
-  }
-  .content .comments form textarea {
-    border: 2px solid var(--color2);
-    border-radius: 20px;
-    margin-bottom: 10px;
-    background-color: transparent;
-    color: var(--color4);
-    padding: 0.8rem;
-    font-size: 1.2rem;
-    transition: all 300ms;
-  }
-  .content .comments form textarea:focus {
-    background: var(--color3);
-  }
-  .content .comments form button {
-    width: 100px;
-    height: 35px;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    transition: all 300ms;
-    background-color: var(--color3);
-    color: var(--color4);
-  }
-  .content .comments form button:hover {
-    color: var(--color3);
-    background-color: var(--color4);
-  }
-  .content .comments .comment {
-    width: 100%;
-    height: auto;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
-  .content .comments .comment .title {
-    margin: 10px 0px;
-  }
-  .content .comments .comment .title .b {
-    color: var(--color4);
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    font-weight: 500;
-    position: relative;
-  }
-  .content .comments .comment .title .b::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color4);
-    margin-top: -3px;
-  }
-  .content .comments .comment .comment-box {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin-bottom: 20px;
-  }
-  .content .comments .comment .comment-box img {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .content .comments .comment .comment-box .detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding-left: 30px;
-  }
-  .content .comments .comment .comment-box .detail .tr {
-    display: flex;
-    align-items: center;
-  }
-  .content .comments .comment .comment-box .detail .tr .username {
-    color: var(--color4);
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  .content .comments .comment .comment-box .detail .tr .date {
-    color: var(--color4);
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box .detail .text {
-    color: var(--color4);
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  .content .comments .comment .comment-box .detail .r {
-    display: flex;
-  }
-  .content .comments .comment .comment-box .detail .r .reply a {
-    color: var(--color4);
-    text-decoration: none;
-  }
-  .content .comments .comment .comment-box .detail .r .like {
-    display: flex;
-    color: var(--color4);
-    padding: 0px 0px 0px 10px;
-  }
-  .content .comments .comment .comment-box .detail .r .like .bir {
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box .detail .r .like .iki {
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box2 {
-    width: 95%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .content .comments .comment .comment-box2 img {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .content .comments .comment .comment-box2 .detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding-left: 30px;
-  }
-  .content .comments .comment .comment-box2 .detail .tr {
-    display: flex;
-    align-items: center;
-  }
-  .content .comments .comment .comment-box2 .detail .tr .username {
-    color: var(--color4);
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  .content .comments .comment .comment-box2 .detail .tr .date {
-    color: var(--color4);
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box2 .detail .text {
-    color: var(--color4);
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  .content .comments .comment .comment-box2 .detail .r {
-    display: flex;
-  }
-  .content .comments .comment .comment-box2 .detail .r .reply a {
-    color: var(--color4);
-    text-decoration: none;
-  }
-  .content .comments .comment .comment-box2 .detail .r .like {
-    display: flex;
-    color: var(--color4);
-    padding: 0px 0px 0px 10px;
-  }
-  .content .comments .comment .comment-box2 .detail .r .like .bir {
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box2 .detail .r .like .iki {
-    margin: 0px 10px;
+@media only screen and (max-width: 1730px) {
+  .head {
+    padding: 0 5rem !important;
   }
 }
-@media only screen and (max-width: 900px) {
-  .content {
+@media only screen and (max-width: 1400px) {
+  .head {
+    padding: 0 1rem !important;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .head {
+    width: 100%;
     height: auto;
+    padding: 0 5rem !important;
+    margin-top: 30px !important;
     display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column-reverse;
   }
-  .content .aa {
-    width: 100%;
+  .head .nextandprevepisode {
     display: flex;
-    justify-content: space-between;
-    margin: 20px 0px;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    width: 100% !important;
   }
-  .content .aa .title {
-    color: var(--color4);
+  .head .nextandprevepisode .prev {
+    width: 250px;
     position: relative;
+    margin-top: 0px !important;
   }
-  .content .aa .title a {
-    text-decoration: none;
-    color: var(--color4);
-    position: relative;
-  }
-  .content .aa .title a::after {
-    content: "";
-    display: block;
+  .head .nextandprevepisode .prev img {
+    width: 250px !important;
+    height: 140.63px !important;
     position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color4);
-    left: 0;
+    filter: brightness(0.6);
   }
-  .content .aa .subs {
+  .head .nextandprevepisode .prev .animedetail {
+    position: absolute;
+    width: 250px !important;
+    height: 140.63px !important;
+    margin: 0px !important;
+    left: 0 !important;
+    display: flex;
+    justify-content: end !important;
+  }
+  .head .nextandprevepisode .prev .animedetail .episodename {
+    font-size: 0.9rem !important;
+    text-align: center;
+  }
+  .head .nextandprevepisode .prev .animedetail .time {
     display: none;
   }
-  .content .aa .subs .btn {
-    margin-right: 10px;
-    background-color: var(--color3);
-    color: var(--color4);
-    border-radius: 5px;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    font-weight: 400;
-    font-style: normal;
-    transition: all 300ms;
-    padding-top: 2px;
-    padding-bottom: 2px;
+  .head .nextandprevepisode .prev .animedetail .date {
+    display: none;
   }
-  .content .aa .subs .btn:hover {
-    background-color: var(--color4);
-    color: var(--color3);
+  .head .nextandprevepisode .next {
+    width: 250px;
+    position: relative;
   }
-  .content .aa .subs .btn.active {
-    background-color: var(--color4);
-    color: var(--color3);
+  .head .nextandprevepisode .next .title {
+    display: flex !important;
+    justify-content: end !important;
   }
-  .content .comments {
+  .head .nextandprevepisode .next img {
+    width: 250px !important;
+    height: 140.63px !important;
+    position: absolute;
+    filter: brightness(0.6);
+  }
+  .head .nextandprevepisode .next .animedetail {
+    position: absolute;
+    width: 250px !important;
+    height: 140.63px !important;
+    margin: 0px !important;
+    left: 0 !important;
+    display: flex;
+    justify-content: end !important;
+  }
+  .head .nextandprevepisode .next .animedetail .episodename {
+    font-size: 0.9rem !important;
+    text-align: center;
+  }
+  .head .nextandprevepisode .next .animedetail .time {
+    display: none;
+  }
+  .head .nextandprevepisode .next .animedetail .date {
+    display: none;
+  }
+  .head .episodeandcomment {
+    width: 100% !important;
+    height: auto;
+    margin-top: 170px !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .head {
+    padding: 0 1rem !important;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .head {
     width: 100%;
+    height: auto;
+    padding: 0.5rem !important;
+    margin-top: 30px !important;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .head .nextandprevepisode {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .head .nextandprevepisode .prev {
+    width: 48%;
+    position: relative;
+  }
+  .head .nextandprevepisode .prev .title {
+    font-size: 0.9rem !important;
+    color: #ffffff;
+    font-weight: 500 !important;
+    font-style: normal;
+  }
+  .head .nextandprevepisode .prev img {
+    width: 100% !important;
+    height: 130px !important;
+    position: absolute;
+    filter: brightness(0.6);
+  }
+  .head .nextandprevepisode .prev .animedetail {
+    position: absolute;
+    width: 100% !important;
+    height: 130px !important;
+    margin: 0px !important;
+    left: 0 !important;
+    display: flex;
+    justify-content: end !important;
+  }
+  .head .nextandprevepisode .prev .animedetail .episodename {
+    font-size: 0.9rem !important;
+    text-align: center;
+  }
+  .head .nextandprevepisode .prev .animedetail .time {
+    display: none;
+  }
+  .head .nextandprevepisode .prev .animedetail .date {
+    display: none;
+  }
+  .head .nextandprevepisode .next {
+    width: 48%;
+    position: relative;
+    margin-top: 0px !important;
+  }
+  .head .nextandprevepisode .next .title {
+    font-size: 0.9rem !important;
+    color: #ffffff;
+    font-weight: 500 !important;
+    font-style: normal;
+  }
+  .head .nextandprevepisode .next img {
+    width: 100% !important;
+    height: 130px !important;
+    position: absolute;
+    filter: brightness(0.6);
+  }
+  .head .nextandprevepisode .next .animedetail {
+    position: absolute;
+    width: 100% !important;
+    height: 130px !important;
+    margin: 0px !important;
+    left: 0 !important;
+    display: flex;
+    justify-content: end !important;
+  }
+  .head .nextandprevepisode .next .animedetail .episodename {
+    font-size: 0.9rem !important;
+    text-align: center;
+  }
+  .head .nextandprevepisode .next .animedetail .time {
+    display: none;
+  }
+  .head .nextandprevepisode .next .animedetail .date {
+    display: none;
+  }
+  .head .episodeandcomment {
+    width: 100% !important;
+    height: auto;
+    margin-top: 170px !important;
+  }
+  .head .episodeandcomment .episodetail {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  .head .episodeandcomment .episodetail img {
+    width: 50% !important;
+    height: 140.63px !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .head .episodeandcomment .episodetail .detail {
+    margin-left: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .head .episodeandcomment .episodetail .detail .title {
+    font-size: 0.9rem !important;
+    color: #FF7F00;
+    font-weight: 500 !important;
+    font-style: normal;
+  }
+  .head .episodeandcomment .episodetail .detail .episodename {
+    font-size: 1rem !important;
+    color: #ffffff;
+    font-weight: 500 !important;
+    font-style: normal;
+  }
+  .head .episodeandcomment .episodetail .detail .time {
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .head .episodeandcomment .episodetail .detail .date {
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .head .episodeandcomment .episodetail .detail .likeandunlike {
+    display: flex;
+  }
+  .head .episodeandcomment .episodetail .detail .likeandunlike .like {
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .head .episodeandcomment .episodetail .detail .likeandunlike .like i {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .head .episodeandcomment .episodetail .detail .likeandunlike .unlike {
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+    margin-left: 10px;
+  }
+  .head .episodeandcomment .episodetail .detail .likeandunlike .unlike i {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .head .episodeandcomment .commentplace {
+    width: 100%;
+    height: auto;
     margin-top: 30px;
   }
-  .content .comments .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .head .episodeandcomment .commentplace .headcomment {
     width: 100%;
-    height: 30px;
+    height: auto;
   }
-  .content .comments .title .a {
-    color: var(--color4);
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    position: relative;
+  .head .episodeandcomment .commentplace .headcomment .title {
+    font-size: 0.9rem !important;
+    color: #ffffff;
+    font-weight: 500 !important;
+    font-style: normal;
   }
-  .content .comments .title .a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: var(--color4);
-    margin-top: -3px;
+  .head .episodeandcomment .commentplace .headcomment .title {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    font-style: normal;
   }
-  .content .comments .title .b {
-    color: var(--color4);
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    position: relative;
-  }
-  .content .comments .title .b::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: var(--color4);
-    margin-top: -3px;
-  }
-  .content .comments form {
+  .head .episodeandcomment .commentplace .headcomment form {
+    width: 98%;
+    height: auto;
     display: flex;
     flex-direction: column;
   }
-  .content .comments form textarea {
-    border: 2px solid var(--color2);
-    border-radius: 20px;
-    margin-bottom: 10px;
+  .head .episodeandcomment .commentplace .headcomment form textarea {
+    width: 100%;
+    height: 15vh !important;
     background-color: transparent;
-    color: var(--color4);
-    padding: 0.8rem;
-    font-size: 1.2rem;
-    transition: all 300ms;
+    color: #ffffff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    padding: 7px;
+    border: 2px solid #FF7F00;
+    border-radius: 10px;
+    outline: none;
   }
-  .content .comments form textarea:focus {
-    background: var(--color3);
-  }
-  .content .comments form button {
-    width: 100px;
-    height: 35px;
-    border-radius: 20px;
+  .head .episodeandcomment .commentplace .headcomment form button {
+    margin: 5px;
     outline: none;
     border: none;
+    background-color: #313131;
+    color: #ffffff;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    font-style: normal;
     transition: all 300ms;
-    background-color: var(--color3);
-    color: var(--color4);
   }
-  .content .comments form button:hover {
-    color: var(--color3);
-    background-color: var(--color4);
+  .head .episodeandcomment .commentplace .headcomment form button:hover {
+    background-color: #ffffff;
+    color: #313131;
   }
-  .content .comments .comment {
-    width: 100%;
-    height: auto;
-    margin-top: 50px;
+  .head .episodeandcomment .commentboxes .comments .comment1 {
     display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
-  .content .comments .comment .title {
-    margin: 10px 0px;
-  }
-  .content .comments .comment .title .b {
-    color: var(--color4);
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    position: relative;
-  }
-  .content .comments .comment .title .b::after {
-    content: "";
-    display: block;
-    position: absolute;
+    margin-top: 20px;
     width: 100%;
-    height: 2px;
-    background-color: var(--color4);
-    margin-top: -3px;
   }
-  .content .comments .comment .comment-box {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin-bottom: 20px;
-  }
-  .content .comments .comment .comment-box img {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
+  .head .episodeandcomment .commentboxes .comments .comment1 img {
+    width: 40px !important;
+    height: 40px !important;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  .content .comments .comment .comment-box .detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding-left: 30px;
-  }
-  .content .comments .comment .comment-box .detail .tr {
-    display: flex;
-    align-items: center;
-  }
-  .content .comments .comment .comment-box .detail .tr .username {
-    color: var(--color4);
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  .content .comments .comment .comment-box .detail .tr .date {
-    color: var(--color4);
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box .detail .text {
-    color: var(--color4);
-    font-size: 0.8rem;
-    font-weight: 400;
-  }
-  .content .comments .comment .comment-box .detail .r {
-    display: flex;
-  }
-  .content .comments .comment .comment-box .detail .r .reply a {
-    color: var(--color4);
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  .content .comments .comment .comment-box .detail .r .like {
-    display: flex;
-    color: var(--color4);
-    padding: 0px 0px 0px 10px;
-  }
-  .content .comments .comment .comment-box .detail .r .like .bir {
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box .detail .r .like .iki {
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box2 {
-    width: 95%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .content .comments .comment .comment-box2 img {
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+  }
+  .head .episodeandcomment .commentboxes .comments .comment2 {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .head .episodeandcomment .commentboxes .comments .comment2 img {
+    width: 40px !important;
+    height: 40px !important;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  .content .comments .comment .comment-box2 .detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding-left: 30px;
-  }
-  .content .comments .comment .comment-box2 .detail .tr {
-    display: flex;
-    align-items: center;
-  }
-  .content .comments .comment .comment-box2 .detail .tr .username {
-    color: var(--color4);
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  .content .comments .comment .comment-box2 .detail .tr .date {
-    color: var(--color4);
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box2 .detail .text {
-    color: var(--color4);
-    font-size: 0.8rem;
-    font-weight: 400;
-  }
-  .content .comments .comment .comment-box2 .detail .r {
-    display: flex;
-  }
-  .content .comments .comment .comment-box2 .detail .r .reply a {
-    color: var(--color4);
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  .content .comments .comment .comment-box2 .detail .r .like {
-    display: flex;
-    color: var(--color4);
-    padding: 0px 0px 0px 10px;
-  }
-  .content .comments .comment .comment-box2 .detail .r .like .bir {
-    margin: 0px 10px;
-  }
-  .content .comments .comment .comment-box2 .detail .r .like .iki {
-    margin: 0px 10px;
+    border-radius: 50%;
   }
 }
 /*---------------------------------------DETAİL END---------------------------------------*/

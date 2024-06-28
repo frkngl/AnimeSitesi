@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Pacifico&family=Sedgwick+Ave+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Inter:wght@100..900&family=Pacifico&family=Sedgwick+Ave+Display&display=swap');
-
-
 /*BODY ROOT*/
 :root {
     --color-body: #000000;
@@ -103,7 +99,7 @@ body {
     background-color: var(--color-body);
     overflow-x: hidden;
     max-width: 100%;
-    font-family: "Inter", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -114,7 +110,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-color2);
-    border-radius: 20px;
 }
 
 video::-webkit-media-controls,
@@ -137,24 +132,30 @@ video::-ms-media-controls {
     justify-content: center;
 
     #box1 {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 10px solid var(--loading-color3);
-        border-top: 10px solid var(--loading-color2);
-        animation: loader 1s linear infinite;
+        // width: 100px;
+        // height: 100px;
+        // border-radius: 50%;
+        // border: 10px solid var(--loading-color3);
+        // border-top: 10px solid var(--loading-color2);
+        // animation: loader 1s linear infinite;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
     }
 }
 
-@keyframes loader {
-    from {
-        transform: rotate(0deg);
-    }
+// @keyframes loader {
+//     from {
+//         transform: rotate(0deg);
+//     }
 
-    to {
-        transform: rotate(360deg);
-    }
-}
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }
 
 /*---------------------------------------LOADING END---------------------------------------*/
 
@@ -1488,7 +1489,7 @@ footer {
 
 @media only screen and (max-width:550px) {
     footer {
-        margin-top: 100px;
+        margin-top: 0px !important;
         width: 100%;
         height: 600px;
         position: relative;
@@ -1645,1095 +1646,948 @@ footer {
     height: auto;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
     justify-content: center;
     align-items: center;
+    margin-top: 36px;
+    width: 100%;
 
-    .aniepitit {
+    .head {
         width: 100%;
         height: auto;
-        margin-top: 25px;
+        padding: 0 10rem;
+        margin-top: 50px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
 
-        .title {
-            color: #ffffff;
-            font-size: 1.2rem;
-            margin: 10px 0px;
-        }
+        .episodeandcomment {
+            width: 65%;
+            height: auto;
 
-        .search {
-            margin: 10px 0px;
-            background-color: var(--color3);
-            display: flex;
-            align-items: center;
-            border-radius: 50px;
-            padding: 5px;
+            .episodetail {
+                width: 100%;
+                height: auto;
+                display: flex;
 
-            i {
-                color: var(--color2);
-                padding-left: 10px;
+                img {
+                    width: 250px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+
+                .detail {
+                    margin-left: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    line-height: 1.3;
+
+                    .title {
+                        font-size: 1rem;
+                        color: #FF7F00;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+
+                    .episodename {
+                        font-size: 1.2rem;
+                        color: #ffffff;
+                        font-weight: 500;
+                        font-style: normal;
+                        line-height: 1.1;
+                    }
+
+                    .time {
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    .date {
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    .likeandunlike {
+                        display: flex;
+
+                        .like {
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                            font-style: normal;
+                            color: #ffffff;
+                            cursor: pointer;
+                            transition: all 300ms;
+
+                            &:hover {
+                                color: #FF7F00;
+                            }
+
+                            i {
+                                font-size: 1rem;
+
+                            }
+
+                        }
+
+                        .unlike {
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                            font-style: normal;
+                            color: #ffffff;
+                            margin-left: 10px;
+                            cursor: pointer;
+                            transition: all 300ms;
+
+                            &:hover {
+                                color: #FF7F00;
+                            }
+
+                            i {
+                                font-size: 1rem;
+
+                            }
+
+                        }
+                    }
+                }
             }
 
-            input {
-                background-color: transparent;
-                border: none;
-                outline: none;
-                font-size: 0.9rem;
-                color: var(--color4);
-                padding-left: 10px;
+            .commentplace {
+                width: 100%;
+                height: auto;
+                margin-top: 30px;
 
+                .headcomment {
+                    width: 100%;
+                    height: auto;
+
+                    .title {
+                        font-size: 1rem;
+                        color: #ffffff;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+
+                    form {
+                        width: 98%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+
+                        textarea {
+                            width: 100%;
+                            height: 20vh;
+                            background-color: transparent;
+                            color: #ffffff;
+                            font-size: 1rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            padding: 7px;
+                            border: 2px solid #FF7F00;
+                            border-radius: 10px;
+                            outline: none;
+                        }
+
+                        button {
+                            margin: 5px;
+                            outline: none;
+                            border: none;
+                            background-color: #313131;
+                            color: #ffffff;
+                            width: 100px;
+                            border-radius: 10px;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            font-style: normal;
+                            transition: all 300ms;
+
+                            &:hover {
+                                background-color: #ffffff;
+                                color: #313131;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .commentboxes {
+                width: 100%;
+                height: auto;
+                margin-top: 30px;
+
+                .title {
+                    font-size: 1rem;
+                    color: #ffffff;
+                    font-weight: bold;
+                    font-style: normal;
+                }
+
+                .comments {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    width: 100%;
+
+                    .comment1 {
+                        display: flex;
+                        margin-top: 20px;
+                        width: 100%;
+
+                        img {
+                            width: 60px;
+                            height: 60px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+
+                        .detail {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: start;
+                            line-height: 2;
+                            margin-left: 10px;
+
+                            .user {
+                                display: flex;
+                                align-items: center;
+
+                                .name {
+                                    font-size: 1rem;
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    color: #ffffff;
+                                }
+
+                                .year {
+                                    font-size: 0.9rem;
+                                    font-weight: 500;
+                                    font-style: normal;
+                                    color: #ffffff;
+                                    margin-left: 10px;
+
+                                }
+                            }
+
+                            .text {
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                                font-style: normal;
+                                line-height: 1.1;
+                                color: #ffffff;
+                            }
+
+                            .more {
+                                display: flex;
+                                align-items: end;
+
+                                .reply {
+                                    color: #ffffff;
+                                    font-size: 0.9rem;
+                                    font-weight: 500;
+                                    font-style: normal;
+                                    cursor: pointer;
+                                    transition: all 300ms;
+
+                                    &:hover {
+                                        color: #FF7F00;
+                                    }
+                                }
+
+                                .likeandunlike {
+                                    display: flex;
+                                    align-items: end;
+
+                                    .like {
+                                        color: #ffffff;
+                                        font-size: 0.9rem;
+                                        font-weight: 500;
+                                        font-style: normal;
+                                        cursor: pointer;
+                                        margin-left: 10px;
+                                        transition: all 300ms;
+
+                                        &:hover {
+                                            color: #FF7F00;
+                                        }
+                                    }
+
+                                    .unlike {
+                                        color: #ffffff;
+                                        font-size: 0.9rem;
+                                        font-weight: 500;
+                                        font-style: normal;
+                                        cursor: pointer;
+                                        margin-left: 10px;
+                                        transition: all 300ms;
+
+                                        &:hover {
+                                            color: #FF7F00;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .comment2 {
+                        display: flex;
+                        margin-top: 20px;
+                        width: 95%;
+
+
+                        img {
+                            width: 60px;
+                            height: 60px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+
+                        .detail {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: start;
+                            line-height: 2;
+                            margin-left: 10px;
+
+                            .user {
+                                display: flex;
+                                align-items: center;
+
+                                .name {
+                                    font-size: 1rem;
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    color: #ffffff;
+                                }
+
+                                .year {
+                                    font-size: 0.9rem;
+                                    font-weight: 500;
+                                    font-style: normal;
+                                    color: #ffffff;
+                                    margin-left: 10px;
+
+                                }
+                            }
+
+                            .text {
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                                font-style: normal;
+                                line-height: 1.1;
+                                color: #ffffff;
+                            }
+
+                            .more {
+                                display: flex;
+                                align-items: end;
+
+                                .reply {
+                                    color: #ffffff;
+                                    font-size: 0.9rem;
+                                    font-weight: 500;
+                                    font-style: normal;
+                                    cursor: pointer;
+                                    transition: all 300ms;
+
+                                    &:hover {
+                                        color: #FF7F00;
+                                    }
+                                }
+
+                                .likeandunlike {
+                                    display: flex;
+                                    align-items: end;
+
+                                    .like {
+                                        color: #ffffff;
+                                        font-size: 0.9rem;
+                                        font-weight: 500;
+                                        font-style: normal;
+                                        cursor: pointer;
+                                        margin-left: 10px;
+                                        transition: all 300ms;
+
+                                        &:hover {
+                                            color: #FF7F00;
+                                        }
+                                    }
+
+                                    .unlike {
+                                        color: #ffffff;
+                                        font-size: 0.9rem;
+                                        font-weight: 500;
+                                        font-style: normal;
+                                        cursor: pointer;
+                                        margin-left: 10px;
+                                        transition: all 300ms;
+
+                                        &:hover {
+                                            color: #FF7F00;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
-        .prevandnext {
-            margin: 10px 0px;
+        .nextandprevepisode {
+            width: 35%;
+            height: auto;
             display: flex;
-            color: #ffffff;
-            font-size: 0.9rem;
+            flex-direction: column-reverse;
+            justify-content: start;
 
             .prev {
-                margin: 0px 10px;
-                padding: 3px;
-                background-color: #313131;
-                border-radius: 5px;
-                transition: all 300ms;
-                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
 
-                &:hover {
-                    background-color: #ffffff;
-                    color: #313131;
+                .title {
+                    font-size: 1rem;
+                    color: #ffffff;
+                    font-weight: bold;
+                    font-style: normal;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+
+                    .box {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        border-radius: 10px;
+                        transition: all 300ms;
+
+                        &:hover {
+                            background-color: #313131;
+                        }
+
+                        img {
+                            width: 200px;
+                            height: 125px;
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+
+                        .animedetail {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: start;
+                            margin-left: 10px;
+                            line-height: 1.3;
+
+                            .episodename {
+                                font-size: 1.1rem;
+                                color: #ffffff;
+                                font-weight: 500;
+                                font-style: normal;
+                                line-height: 1.1;
+                            }
+
+                            .time {
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                                font-style: normal;
+                                color: #ffffff;
+                            }
+
+                            .date {
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                                font-style: normal;
+                                color: #ffffff;
+                            }
+                        }
+                    }
                 }
             }
 
             .next {
-                background-color: #313131;
-                border-radius: 5px;
-                padding: 3px;
-                transition: all 300ms;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #ffffff;
-                    color: #313131;
-                }
-            }
-        }
-    }
-
-    .episodes {
-        position: relative;
-        width: 100%;
-        height: 400px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        overflow: auto;
-        border-radius: 10px;
-        list-style-type: none;
-        padding: 0px;
-        margin-bottom: 100px;
-
-
-        li {
-            margin-bottom: 20px;
-            a {
-                text-decoration: none;
-                color: #ffffff;
-                width: 150px;
-                height: 150px;
-                background-color: #313131;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                font-size: 0.8rem;
-                border-radius: 10px;
-                font-weight: 500;
-                font-style: normal;
-                transition: all 300ms;
 
-                &:hover {
-                    color: #313131;
-                    background-color: #ffffff;
+                .title {
+                    font-size: 1rem;
+                    color: #ffffff;
+                    font-weight: bold;
+                    font-style: normal;
+
                 }
 
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+
+                    .box {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        border-radius: 10px;
+                        transition: all 300ms;
+
+                        &:hover {
+                            background-color: #313131;
+                        }
+
+                        img {
+                            width: 200px;
+                            height: 125px;
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+
+                        .animedetail {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: start;
+                            line-height: 1.3;
+                            margin-left: 10px;
+
+                            .episodename {
+                                font-size: 1.1rem;
+                                color: #ffffff;
+                                font-weight: 500;
+                                font-style: normal;
+                                line-height: 1.1;
+                            }
+
+                            .time {
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                                font-style: normal;
+                                color: #ffffff;
+                            }
+
+                            .date {
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                                font-style: normal;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+}
 
-    .aa {
+@media only screen and (max-width:1730px) {
+    .head {
+        padding: 0 5rem !important;
+    }
+}
+
+@media only screen and (max-width:1400px) {
+    .head {
+        padding: 0 1rem !important;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    .head {
         width: 100%;
+        height: auto;
+        padding: 0 5rem !important;
+        margin-top: 30px !important;
         display: flex;
-        justify-content: space-between;
-        margin: 20px 0px;
+        flex-direction: column-reverse;
 
-        .title {
-            color: var(--color4);
-            position: relative;
+        .nextandprevepisode {
+            display: flex;
+            flex-direction: row !important;
+            justify-content: space-around !important;
+            width: 100% !important;
 
-            a {
-                text-decoration: none;
-                color: var(--color4);
+            .prev {
+                width: 250px;
                 position: relative;
+                margin-top: 0px !important;
 
-                &::after {
-                    content: '';
-                    display: block;
+                img {
+                    width: 250px !important;
+                    height: 140.63px !important;
                     position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: var(--color4);
-                    left: 0;
+                    filter: brightness(0.6);
+                }
+
+                .animedetail {
+                    position: absolute;
+                    width: 250px !important;
+                    height: 140.63px !important;
+                    margin: 0px !important;
+                    left: 0 !important;
+                    display: flex;
+                    justify-content: end !important;
+
+                    .episodename {
+                        font-size: 0.9rem !important;
+                        text-align: center;
+                    }
+
+                    .time {
+                        display: none;
+                    }
+
+                    .date {
+                        display: none;
+                    }
                 }
             }
-        }
 
-        .subs {
-            display: none;
-
-            .btn {
-                margin-right: 10px;
-                background-color: var(--color3);
-                color: var(--color4);
-                border-radius: 5px;
-                text-decoration: none;
-                outline: none;
-                border: none;
-                font-size: 1rem;
-                font-weight: 400;
-                font-style: normal;
-                transition: all 300ms;
-                padding-top: 2px;
-                padding-bottom: 2px;
-
-                &:hover {
-                    background-color: var(--color4);
-                    color: var(--color1);
-                }
-            }
-        }
-    }
-
-    .comments {
-        width: 100%;
-        margin-top: 30px;
-
-        .title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            height: 30px;
-
-            .a {
-                color: var(--color4);
-                margin-bottom: 20px;
-                font-size: 1.3rem;
-                font-weight: 500;
+            .next {
+                width: 250px;
                 position: relative;
 
+                .title {
+                    display: flex !important;
+                    justify-content: end !important;
+                }
+
+                img {
+                    width: 250px !important;
+                    height: 140.63px !important;
+                    position: absolute;
+                    filter: brightness(0.6);
+                }
+
+                .animedetail {
+                    position: absolute;
+                    width: 250px !important;
+                    height: 140.63px !important;
+                    margin: 0px !important;
+                    left: 0 !important;
+                    display: flex;
+                    justify-content: end !important;
+
+                    .episodename {
+                        font-size: 0.9rem !important;
+                        text-align: center;
+                    }
+
+                    .time {
+                        display: none;
+                    }
+
+                    .date {
+                        display: none;
+                    }
+                }
 
             }
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-
-            textarea {
-                border: 2px solid var(--color2);
-                border-radius: 20px;
-                margin-bottom: 10px;
-                background-color: transparent;
-                color: var(--color4);
-                padding: 0.8rem;
-                font-size: 1.2rem;
-                transition: all 300ms;
-
-                &:focus {
-                    background: var(--color3);
-                }
-            }
-
-            button {
-                width: 100px;
-                height: 35px;
-                border-radius: 20px;
-                outline: none;
-                border: none;
-                transition: all 300ms;
-                background-color: var(--color3);
-                color: var(--color4);
-
-                &:hover {
-                    color: var(--color3);
-                    background-color: var(--color4);
-                }
-            }
-        }
-
-        .comment {
-            width: 100%;
+        .episodeandcomment {
+            width: 100% !important;
             height: auto;
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-
-            .title {
-                margin: 10px 0px;
-
-                .b {
-                    color: var(--color4);
-                    margin-bottom: 20px;
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    position: relative;
-
-
-                }
-            }
-
-            .comment-box {
-                width: 100%;
-                height: auto;
-                display: flex;
-                align-items: center;
-                margin-bottom: 20px;
-                background-color: var(--color3);
-                border-radius: 10px;
-                padding: 10px;
-
-
-                img {
-                    border-radius: 50%;
-                    width: 70px;
-                    height: 70px;
-                    object-fit: cover;
-                }
-
-                .detail {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    width: 100%;
-                    padding-left: 30px;
-
-                    .tr {
-                        display: flex;
-                        align-items: center;
-
-                        .username {
-                            color: var(--color4);
-                            font-size: 1.2rem;
-                            font-weight: 500;
-                        }
-
-                        .date {
-                            color: var(--color4);
-                            font-size: 1rem;
-                            font-weight: 500;
-                            margin: 0px 10px;
-                        }
-                    }
-
-                    .text {
-                        color: var(--color4);
-                        font-size: 1rem;
-                        font-weight: 400;
-
-                    }
-
-                    .r {
-                        display: flex;
-
-                        .reply {
-
-                            a {
-                                color: var(--color4);
-                                text-decoration: none;
-                                transition: all 300ms;
-
-                                &:hover {
-                                    color: var(--color2);
-                                }
-                            }
-                        }
-
-                        .like {
-                            display: flex;
-                            color: var(--color4);
-                            padding: 0px 0px 0px 10px;
-
-                            .bir {
-                                margin: 0px 10px;
-                            }
-
-                            .iki {
-                                margin: 0px 10px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .comment-box2 {
-                width: 95%;
-                height: auto;
-                display: flex;
-                align-items: center;
-                margin-bottom: 20px;
-                background-color: var(--color3);
-                border-radius: 10px;
-                padding: 10px;
-
-
-                img {
-                    border-radius: 50%;
-                    width: 70px;
-                    height: 70px;
-                    object-fit: cover;
-                }
-
-                .detail {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    width: 100%;
-                    padding-left: 30px;
-
-                    .tr {
-                        display: flex;
-                        align-items: center;
-
-                        .username {
-                            color: var(--color4);
-                            font-size: 1.2rem;
-                            font-weight: 500;
-                        }
-
-                        .date {
-                            color: var(--color4);
-                            font-size: 1rem;
-                            font-weight: 500;
-                            margin: 0px 10px;
-                        }
-                    }
-
-                    .text {
-                        color: var(--color4);
-                        font-size: 1rem;
-                        font-weight: 400;
-
-                    }
-
-                    .r {
-                        display: flex;
-
-                        .reply {
-
-                            a {
-                                color: var(--color4);
-                                text-decoration: none;
-                                transition: all 300ms;
-
-                                &:hover {
-                                    color: var(--color2);
-                                }
-                            }
-                        }
-
-                        .like {
-                            display: flex;
-                            color: var(--color4);
-                            padding: 0px 0px 0px 10px;
-
-                            .bir {
-                                margin: 0px 10px;
-                            }
-
-                            .iki {
-                                margin: 0px 10px;
-                            }
-                        }
-                    }
-                }
-            }
+            margin-top: 170px !important;
         }
     }
 }
 
-
-
-@media only screen and (max-width:1200px) {
-    .content {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        margin-top: 50px;
-        justify-content: center;
-        align-items: center;
-
-        .aa {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0px;
-
-            .title {
-                color: var(--color4);
-                position: relative;
-
-                a {
-                    text-decoration: none;
-                    color: var(--color4);
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        background-color: var(--color4);
-                        left: 0;
-                    }
-                }
-            }
-
-            .subs {
-                display: none;
-
-                .btn {
-                    margin-right: 10px;
-                    background-color: var(--color3);
-                    color: var(--color4);
-                    border-radius: 5px;
-                    text-decoration: none;
-                    outline: none;
-                    border: none;
-                    font-size: 1rem;
-                    font-weight: 400;
-                    font-style: normal;
-                    transition: all 300ms;
-                    padding-top: 2px;
-                    padding-bottom: 2px;
-
-                    &:hover {
-                        background-color: var(--color4);
-                        color: var(--color3);
-                    }
-                }
-
-                .btn.active {
-                    background-color: var(--color4);
-                    color: var(--color3);
-                }
-            }
-        }
-
-
-
-        .comments {
-            width: 100%;
-            margin-top: 30px;
-
-            .title {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                height: 30px;
-
-                .a {
-                    color: var(--color4);
-                    margin-bottom: 20px;
-                    font-size: 1.3rem;
-                    font-weight: 500;
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        background-color: var(--color4);
-                        margin-top: -3px;
-                    }
-                }
-            }
-
-            form {
-                display: flex;
-                flex-direction: column;
-
-                textarea {
-                    border: 2px solid var(--color2);
-                    border-radius: 20px;
-                    margin-bottom: 10px;
-                    background-color: transparent;
-                    color: var(--color4);
-                    padding: 0.8rem;
-                    font-size: 1.2rem;
-                    transition: all 300ms;
-
-                    &:focus {
-                        background: var(--color3);
-                    }
-                }
-
-                button {
-                    width: 100px;
-                    height: 35px;
-                    border-radius: 20px;
-                    outline: none;
-                    border: none;
-                    transition: all 300ms;
-                    background-color: var(--color3);
-                    color: var(--color4);
-
-                    &:hover {
-                        color: var(--color3);
-                        background-color: var(--color4);
-                    }
-                }
-            }
-
-            .comment {
-                width: 100%;
-                height: auto;
-                margin-top: 50px;
-                display: flex;
-                flex-direction: column;
-                align-items: end;
-
-                .title {
-                    margin: 10px 0px;
-
-                    .b {
-                        color: var(--color4);
-                        margin-bottom: 20px;
-                        font-size: 1.3rem;
-                        font-weight: 500;
-                        position: relative;
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 2px;
-                            background-color: var(--color4);
-                            margin-top: -3px;
-                        }
-                    }
-                }
-
-                .comment-box {
-                    width: 100%;
-                    height: auto;
-                    display: flex;
-                    align-items: center;
-                    border-top: none;
-                    border-left: none;
-                    border-right: none;
-                    margin-bottom: 20px;
-
-
-                    img {
-                        border-radius: 50%;
-                        width: 70px;
-                        height: 70px;
-                        object-fit: cover;
-                    }
-
-                    .detail {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        width: 100%;
-                        padding-left: 30px;
-
-                        .tr {
-                            display: flex;
-                            align-items: center;
-
-                            .username {
-                                color: var(--color4);
-                                font-size: 1.2rem;
-                                font-weight: 500;
-                            }
-
-                            .date {
-                                color: var(--color4);
-                                font-size: 1rem;
-                                font-weight: 500;
-                                margin: 0px 10px;
-                            }
-                        }
-
-                        .text {
-                            color: var(--color4);
-                            font-size: 1rem;
-                            font-weight: 400;
-
-                        }
-
-                        .r {
-                            display: flex;
-
-                            .reply {
-
-                                a {
-                                    color: var(--color4);
-                                    text-decoration: none;
-                                }
-                            }
-
-                            .like {
-                                display: flex;
-                                color: var(--color4);
-                                padding: 0px 0px 0px 10px;
-
-                                .bir {
-                                    margin: 0px 10px;
-                                }
-
-                                .iki {
-                                    margin: 0px 10px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .comment-box2 {
-                    width: 95%;
-                    height: auto;
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 20px;
-
-
-                    img {
-                        border-radius: 50%;
-                        width: 70px;
-                        height: 70px;
-                        object-fit: cover;
-                    }
-
-                    .detail {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        width: 100%;
-                        padding-left: 30px;
-
-                        .tr {
-                            display: flex;
-                            align-items: center;
-
-                            .username {
-                                color: var(--color4);
-                                font-size: 1.2rem;
-                                font-weight: 500;
-                            }
-
-                            .date {
-                                color: var(--color4);
-                                font-size: 1rem;
-                                font-weight: 500;
-                                margin: 0px 10px;
-                            }
-                        }
-
-                        .text {
-                            color: var(--color4);
-                            font-size: 1rem;
-                            font-weight: 400;
-
-                        }
-
-                        .r {
-                            display: flex;
-
-                            .reply {
-
-                                a {
-                                    color: var(--color4);
-                                    text-decoration: none;
-                                }
-                            }
-
-                            .like {
-                                display: flex;
-                                color: var(--color4);
-                                padding: 0px 0px 0px 10px;
-
-                                .bir {
-                                    margin: 0px 10px;
-                                }
-
-                                .iki {
-                                    margin: 0px 10px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
+@media only screen and (max-width:700px) {
+    .head {
+        padding: 0 1rem !important;
     }
 }
 
-
-
-@media only screen and (max-width:900px) {
-    .content {
+@media only screen and (max-width:550px) {
+    .head {
+        width: 100%;
         height: auto;
+        padding: 0.5rem !important;
+        margin-top: 30px !important;
         display: flex;
-        flex-direction: column;
-        margin-top: 50px;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column-reverse;
 
-        .aa {
-            width: 100%;
+        .nextandprevepisode {
             display: flex;
-            justify-content: space-between;
-            margin: 20px 0px;
+            flex-direction: row !important;
+            align-items: center !important;
+            width: 100% !important;
 
-            .title {
-                color: var(--color4);
+            .prev {
+                width: 48%;
                 position: relative;
 
-                a {
-                    text-decoration: none;
-                    color: var(--color4);
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        background-color: var(--color4);
-                        left: 0;
-                    }
-                }
-            }
-
-            .subs {
-                display: none;
-
-                .btn {
-                    margin-right: 10px;
-                    background-color: var(--color3);
-                    color: var(--color4);
-                    border-radius: 5px;
-                    text-decoration: none;
-                    outline: none;
-                    border: none;
-                    font-size: 1rem;
-                    font-weight: 400;
+                .title {
+                    font-size: 0.9rem !important;
+                    color: #ffffff;
+                    font-weight: 500 !important;
                     font-style: normal;
-                    transition: all 300ms;
-                    padding-top: 2px;
-                    padding-bottom: 2px;
+                }
 
-                    &:hover {
-                        background-color: var(--color4);
-                        color: var(--color3);
+                img {
+                    width: 100% !important;
+                    height: 130px !important;
+                    position: absolute;
+                    filter: brightness(0.6);
+                }
+
+                .animedetail {
+                    position: absolute;
+                    width: 100% !important;
+                    height: 130px !important;
+                    margin: 0px !important;
+                    left: 0 !important;
+                    display: flex;
+                    justify-content: end !important;
+
+                    .episodename {
+                        font-size: 0.9rem !important;
+                        text-align: center;
                     }
-                }
 
-                .btn.active {
-                    background-color: var(--color4);
-                    color: var(--color3);
-                }
-            }
-        }
-
-
-
-        .comments {
-            width: 100%;
-            margin-top: 30px;
-
-            .title {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                height: 30px;
-
-                .a {
-                    color: var(--color4);
-                    margin-bottom: 20px;
-                    font-size: 0.8rem;
-                    font-weight: 500;
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 1px;
-                        background-color: var(--color4);
-                        margin-top: -3px;
+                    .time {
+                        display: none;
                     }
-                }
 
-                .b {
-                    color: var(--color4);
-                    margin-bottom: 20px;
-                    font-size: 0.8rem;
-                    font-weight: 500;
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 1px;
-                        background-color: var(--color4);
-                        margin-top: -3px;
+                    .date {
+                        display: none;
                     }
                 }
             }
 
-            form {
-                display: flex;
-                flex-direction: column;
-
-                textarea {
-                    border: 2px solid var(--color2);
-                    border-radius: 20px;
-                    margin-bottom: 10px;
-                    background-color: transparent;
-                    color: var(--color4);
-                    padding: 0.8rem;
-                    font-size: 1.2rem;
-                    transition: all 300ms;
-
-                    &:focus {
-                        background: var(--color3);
-                    }
-                }
-
-                button {
-                    width: 100px;
-                    height: 35px;
-                    border-radius: 20px;
-                    outline: none;
-                    border: none;
-                    transition: all 300ms;
-                    background-color: var(--color3);
-                    color: var(--color4);
-
-                    &:hover {
-                        color: var(--color3);
-                        background-color: var(--color4);
-                    }
-                }
-            }
-
-            .comment {
-                width: 100%;
-                height: auto;
-                margin-top: 50px;
-                display: flex;
-                flex-direction: column;
-                align-items: end;
+            .next {
+                width: 48%;
+                position: relative;
+                margin-top: 0px !important;
 
                 .title {
-                    margin: 10px 0px;
+                    font-size: 0.9rem !important;
+                    color: #ffffff;
+                    font-weight: 500 !important;
+                    font-style: normal;
+                }
 
-                    .b {
-                        color: var(--color4);
-                        margin-bottom: 20px;
-                        font-size: 0.8rem;
-                        font-weight: 500;
-                        position: relative;
+                img {
+                    width: 100% !important;
+                    height: 130px !important;
+                    position: absolute;
+                    filter: brightness(0.6);
+                }
 
-                        &::after {
-                            content: "";
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 2px;
-                            background-color: var(--color4);
-                            margin-top: -3px;
-                        }
+                .animedetail {
+                    position: absolute;
+                    width: 100% !important;
+                    height: 130px !important;
+                    margin: 0px !important;
+                    left: 0 !important;
+                    display: flex;
+                    justify-content: end !important;
+
+                    .episodename {
+                        font-size: 0.9rem !important;
+                        text-align: center;
+                    }
+
+                    .time {
+                        display: none;
+                    }
+
+                    .date {
+                        display: none;
                     }
                 }
 
-                .comment-box {
+            }
+        }
+
+        .episodeandcomment {
+            width: 100% !important;
+            height: auto;
+            margin-top: 170px !important;
+
+            .episodetail {
+                width: 100%;
+                height: auto;
+                display: flex;
+
+                img {
+                    width: 50% !important;
+                    height: 140.63px !important;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+
+                .detail {
+                    margin-left: 10px;
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    .title {
+                        font-size: 0.9rem !important;
+                        color: #FF7F00;
+                        font-weight: 500 !important;
+                        font-style: normal;
+                    }
+
+                    .episodename {
+                        font-size: 1rem !important;
+                        color: #ffffff;
+                        font-weight: 500 !important;
+                        font-style: normal
+                    }
+
+                    .time {
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    .date {
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+
+                    .likeandunlike {
+                        display: flex;
+
+                        .like {
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                            font-style: normal;
+                            color: #ffffff;
+
+                            i {
+                                font-size: 1rem;
+                                cursor: pointer;
+                            }
+
+                        }
+
+                        .unlike {
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                            font-style: normal;
+                            color: #ffffff;
+                            margin-left: 10px;
+
+                            i {
+                                font-size: 1rem;
+                                cursor: pointer;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .commentplace {
+                width: 100%;
+                height: auto;
+                margin-top: 30px;
+
+                .headcomment {
                     width: 100%;
                     height: auto;
-                    display: flex;
-                    align-items: center;
-                    border-top: none;
-                    border-left: none;
-                    border-right: none;
-                    margin-bottom: 20px;
 
-
-                    img {
-                        border-radius: 50%;
-                        width: 70px;
-                        height: 70px;
-                        object-fit: cover;
+                    .title {
+                        font-size: 0.9rem !important;
+                        color: #ffffff;
+                        font-weight: 500 !important;
+                        font-style: normal;
                     }
 
-                    .detail {
+                    .title {
+                        font-size: 1rem;
+                        color: #ffffff;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+
+                    form {
+                        width: 98%;
+                        height: auto;
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
-                        width: 100%;
-                        padding-left: 30px;
 
-                        .tr {
-                            display: flex;
-                            align-items: center;
-
-                            .username {
-                                color: var(--color4);
-                                font-size: 0.9rem;
-                                font-weight: 500;
-                            }
-
-                            .date {
-                                color: var(--color4);
-                                font-size: 0.8rem;
-                                font-weight: 500;
-                                margin: 0px 10px;
-                            }
+                        textarea {
+                            width: 100%;
+                            height: 15vh !important;
+                            background-color: transparent;
+                            color: #ffffff;
+                            font-size: 1rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            padding: 7px;
+                            border: 2px solid #FF7F00;
+                            border-radius: 10px;
+                            outline: none;
                         }
 
-                        .text {
-                            color: var(--color4);
-                            font-size: 0.8rem;
-                            font-weight: 400;
+                        button {
+                            margin: 5px;
+                            outline: none;
+                            border: none;
+                            background-color: #313131;
+                            color: #ffffff;
+                            width: 100px;
+                            border-radius: 10px;
+                            font-size: 0.9rem !important;
+                            font-weight: 500;
+                            font-style: normal;
+                            transition: all 300ms;
 
-                        }
-
-                        .r {
-                            display: flex;
-
-                            .reply {
-
-                                a {
-                                    color: var(--color4);
-                                    text-decoration: none;
-                                    font-size: 0.9rem;
-                                }
+                            &:hover {
+                                background-color: #ffffff;
+                                color: #313131;
                             }
 
-                            .like {
-                                display: flex;
-                                color: var(--color4);
-                                padding: 0px 0px 0px 10px;
-
-                                .bir {
-                                    margin: 0px 10px;
-                                }
-
-                                .iki {
-                                    margin: 0px 10px;
-                                }
-                            }
                         }
                     }
                 }
+            }
 
-                .comment-box2 {
-                    width: 95%;
-                    height: auto;
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 20px;
+            .commentboxes {
 
+                .comments {
 
-                    img {
-                        border-radius: 50%;
-                        width: 70px;
-                        height: 70px;
-                        object-fit: cover;
+                    .comment1 {
+                        display: flex;
+                        margin-top: 20px;
+                        width: 100%;
+
+                        img {
+                            width: 40px !important;
+                            height: 40px !important;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
                     }
 
-                    .detail {
+                    .comment2 {
                         display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+                        margin-top: 20px;
                         width: 100%;
-                        padding-left: 30px;
 
-                        .tr {
-                            display: flex;
-                            align-items: center;
-
-                            .username {
-                                color: var(--color4);
-                                font-size: 0.9rem;
-                                font-weight: 500;
-                            }
-
-                            .date {
-                                color: var(--color4);
-                                font-size: 0.8rem;
-                                font-weight: 500;
-                                margin: 0px 10px;
-                            }
-                        }
-
-                        .text {
-                            color: var(--color4);
-                            font-size: 0.8rem;
-                            font-weight: 400;
-
-                        }
-
-                        .r {
-                            display: flex;
-
-                            .reply {
-
-                                a {
-                                    color: var(--color4);
-                                    text-decoration: none;
-                                    font-size: 0.9rem;
-                                }
-                            }
-
-                            .like {
-                                display: flex;
-                                color: var(--color4);
-                                padding: 0px 0px 0px 10px;
-
-                                .bir {
-                                    margin: 0px 10px;
-                                }
-
-                                .iki {
-                                    margin: 0px 10px;
-                                }
-                            }
+                        img {
+                            width: 40px !important;
+                            height: 40px !important;
+                            object-fit: cover;
+                            border-radius: 50%;
                         }
                     }
                 }
             }
         }
-
     }
 }
 

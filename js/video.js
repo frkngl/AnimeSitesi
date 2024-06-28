@@ -373,13 +373,11 @@ ${video_player.innerHTML}
          video_player.classList.add('openFullScreen');
          fullscreen.innerHTML = "close_fullscreen";
          video_player.requestFullscreen();
-         video_player.style.borderRadius = "0px";
       }
       else {
          video_player.classList.remove('openFullScreen');
          fullscreen.innerHTML = "open_in_full";
          document.exitFullscreen();
-         video_player.style.borderRadius = "15px";
       }
    }
    //Open Setting

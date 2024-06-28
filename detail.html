@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" type="text/css">
     <!--BOOTSTRAP CSS-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" type="text/css">
     <!--CSS-->>
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/main.css.map" type="text/css">
@@ -28,7 +29,7 @@
 <body>
     <div id="loader" style="height: 120vh; margin-top: -50px;">
         <div id="box1">
-
+            <img src="img/arisu-aris.gif">
         </div>
     </div>
     <!----------------------------------------------------HEADER START---------------------------------------------------->
@@ -64,19 +65,7 @@
     <!----------------------------------------------------HEADER END---------------------------------------------------->
 
     <!----------------------------------------------------CONTENT START---------------------------------------------------->
-    <div class="content container-xl">
-        <div class="aa">
-            <div class="title">
-                <i class="fa-solid fa-desktop fa-sm" style="color: #ffffff;"></i> <a href="animedetail.html">Solo
-                    Levelling</a> / Solo Levelling 1. Bölüm
-            </div>
-            <div class="subs">
-                <a class="btn" href="#">Sub1</a>
-                <a class="btn" href="#">Sub1</a>
-                <a class="btn" href="#">Sub1</a>
-                <a class="btn" href="#">Sub1</a>
-            </div>
-        </div>
+    <div class="content">
         <div class="videoplayer">
             <div class="postervideo">
                 <img src="img/1.png" class="poster">
@@ -89,343 +78,276 @@
                 <source src="./video/Ichigo Vs Aizen Türkçe Altyazılı - Bleach (1).mp4" size="720" type="video/mp4">
             </video>
         </div>
-        <div class="aniepitit">
-            <div class="title">
-                <i class="fa-solid fa-play" style="color: #ffffff;"></i> Bölümler
+        <div class="head">
+            <div class="episodeandcomment">
+                <div class="episodetail">
+                    <img src="img/1.png">
+                    <div class="detail">
+                        <div class="title">
+                            Solo Leveling
+                        </div>
+                        <div class="episodename">
+                            <span>S1</span> - <span>B1</span> Karanlık Geçmiş
+                        </div>
+                        <div class="time">
+                            <i class="bi bi-clock"></i> 23.12
+                        </div>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i> 20.12.2024
+                        </div>
+                        <div class="likeandunlike">
+                            <div class="like">
+                                <i class="bi bi-hand-thumbs-up"></i> 1024
+                            </div>
+                            <div class="unlike">
+                                <i class="bi bi-hand-thumbs-down"></i> 299
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentplace">
+                    <div class="headcomment">
+                        <div class="title">
+                            <i class="bi bi-pencil-square"></i> Düşüncelerinizi Yazın
+                        </div>
+                        <form action="#" method="get">
+                            <textarea></textarea>
+                            <button><i class="bi bi-send"></i> Gönder</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="commentboxes">
+                    <div class="title">
+                        <i class="bi bi-chat"></i> 30 Yorum
+                    </div>
+                    <div class="comments">
+                        <div class="comment1">
+                            <img src="img/1.png">
+                            <div class="detail">
+                                <div class="user">
+                                    <div class="name">
+                                        BABAPRO
+                                    </div>
+                                    <div class="year">
+                                        12.12.2023
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Dubbing a blonde loli who is older and more powerful than she looks? Call Monica Rial.
+                                </div>
+                                <div class="more">
+                                    <div class="reply">
+                                        <i class="bi bi-reply"></i>Cevapla
+                                    </div>
+                                    <div class="likeandunlike">
+                                        <div class="like">
+                                            <i class="bi bi-hand-thumbs-up"></i>1024
+                                        </div>
+                                        <div class="unlike">
+                                            <i class="bi bi-hand-thumbs-down"></i>299
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment2">
+                            <img src="img/1.png">
+                            <div class="detail">
+                                <div class="user">
+                                    <div class="name">
+                                        BABAPRO
+                                    </div>
+                                    <div class="year">
+                                        12.12.2023
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. At totam exercitationem
+                                    iure quia tempora suscipit illum adipisci voluptatum? Aspernatur, perspiciatis.
+                                </div>
+                                <div class="more">
+                                    <div class="reply">
+                                        <i class="bi bi-reply"></i> Cevapla
+                                    </div>
+                                    <div class="likeandunlike">
+                                        <div class="like">
+                                            <i class="bi bi-hand-thumbs-up"></i> 1024
+                                        </div>
+                                        <div class="unlike">
+                                            <i class="bi bi-hand-thumbs-down"></i> 299
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment1">
+                            <img src="img/1.png">
+                            <div class="detail">
+                                <div class="user">
+                                    <div class="name">
+                                        BABAPRO
+                                    </div>
+                                    <div class="year">
+                                        12.12.2023
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Dubbing a blonde loli who is older and more powerful than she looks? Call Monica Rial.
+                                </div>
+                                <div class="more">
+                                    <div class="reply">
+                                        <i class="bi bi-reply"></i>Cevapla
+                                    </div>
+                                    <div class="likeandunlike">
+                                        <div class="like">
+                                            <i class="bi bi-hand-thumbs-up"></i>1024
+                                        </div>
+                                        <div class="unlike">
+                                            <i class="bi bi-hand-thumbs-down"></i>299
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment2">
+                            <img src="img/1.png">
+                            <div class="detail">
+                                <div class="user">
+                                    <div class="name">
+                                        BABAPRO
+                                    </div>
+                                    <div class="year">
+                                        12.12.2023
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. At totam exercitationem
+                                    iure quia tempora suscipit illum adipisci voluptatum? Aspernatur, perspiciatis.
+                                </div>
+                                <div class="more">
+                                    <div class="reply">
+                                        <i class="bi bi-reply"></i> Cevapla
+                                    </div>
+                                    <div class="likeandunlike">
+                                        <div class="like">
+                                            <i class="bi bi-hand-thumbs-up"></i> 1024
+                                        </div>
+                                        <div class="unlike">
+                                            <i class="bi bi-hand-thumbs-down"></i> 299
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment2">
+                            <img src="img/1.png">
+                            <div class="detail">
+                                <div class="user">
+                                    <div class="name">
+                                        BABAPRO
+                                    </div>
+                                    <div class="year">
+                                        12.12.2023
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. At totam exercitationem
+                                    iure quia tempora suscipit illum adipisci voluptatum? Aspernatur, perspiciatis.
+                                </div>
+                                <div class="more">
+                                    <div class="reply">
+                                        <i class="bi bi-reply"></i> Cevapla
+                                    </div>
+                                    <div class="likeandunlike">
+                                        <div class="like">
+                                            <i class="bi bi-hand-thumbs-up"></i> 1024
+                                        </div>
+                                        <div class="unlike">
+                                            <i class="bi bi-hand-thumbs-down"></i> 299
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment1">
+                            <img src="img/1.png">
+                            <div class="detail">
+                                <div class="user">
+                                    <div class="name">
+                                        BABAPRO
+                                    </div>
+                                    <div class="year">
+                                        12.12.2023
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Dubbing a blonde loli who is older and more powerful than she looks? Call Monica Rial.
+                                </div>
+                                <div class="more">
+                                    <div class="reply">
+                                        <i class="bi bi-reply"></i>Cevapla
+                                    </div>
+                                    <div class="likeandunlike">
+                                        <div class="like">
+                                            <i class="bi bi-hand-thumbs-up"></i>1024
+                                        </div>
+                                        <div class="unlike">
+                                            <i class="bi bi-hand-thumbs-down"></i>299
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                <input type="text" autocomplete="off" name="searchTags" id="searchTags" placeholder="Aradığınız bölümü yazınız" />
-            </div>
-            <div class="prevandnext">
-                <div class="prev">Önceki Bölüm</div>
-                <div class="next">Sonraki Böllüm</div>
-            </div>
-        </div>
-        <ul class="episodes" id="menuFull">
-            <li>
-                <a href="#">
-                    <div class="title">naber</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Regular Show</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="title">Şafak Vakti</div>
-                    <div class="episode">1.Bölüm</div>
-                    <div class="date">20.12.2023</div>
-                </a>
-            </li>   
-        </ul>
-        <div class="comments">
-            <div class="title">
-                <div class="a">
-                    <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i> Ne düşünüyorsunuz?
-                </div>
-            </div>
-            <form action="#" method="get">
-                <textarea rows="5" cols="100"></textarea>
-                <button>Gönder</button>
-            </form>
-            <div class="comment">
-                <div class="title">
-                    <div class="b">
-                        <i class="fa-regular fa-comment"></i> 30 Yorum
+            <div class="nextandprevepisode">
+                <div class="prev">
+                    <div class="title">
+                        <i class="bi bi-arrow-left"></i> Önceki Bölüm
                     </div>
+                    <a href="#">
+                        <div class="box">
+                            <img src="img/1.png">
+                            <div class="animedetail">
+                                <div class="episodename">
+                                    <span>S1</span> - <span>B1</span> Karanlık Geçmişden Bir Adamın hikayesi
+                                </div>
+                                <div class="time">
+                                    <i class="bi bi-clock"></i> 23.12
+                                </div>
+                                <div class="date">
+                                    <i class="bi bi-calendar"></i> 20.12.2024
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="comment-box">
-                    <img src="img/1.png">
-                    <div class="detail">
-                        <div class="tr">
-                            <div class="username">
-                                Kertenkele3131
-                            </div>
-                            <div class="date">
-                                20.02.2024
-                            </div>
-                        </div>
-                        <div class="text">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, atque.
-                        </div>
-                        <div class="r">
-                            <div class="reply">
-                                <a href="#">Cevapla</a>
-                            </div>
-                            <div class="like">
-                                <div class="bir">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>1</span>
-                                </div>
-                                <div class="iki">
-                                    <i class="fa-solid fa-thumbs-down"></i>
-                                    <span>1</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="next">
+                    <div class="title">
+                        Sonraki Bölüm <i class="bi bi-arrow-right"></i>
                     </div>
-                </div>
-                <div class="comment-box2">
-                    <img src="img/1.png">
-                    <div class="detail">
-                        <div class="tr">
-                            <div class="username">
-                                Kertenkele3131
-                            </div>
-                            <div class="date">
-                                20.02.2024
-                            </div>
-                        </div>
-                        <div class="text">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, atque.
-                        </div>
-                        <div class="r">
-                            <div class="reply">
-                                <a href="#">Cevapla</a>
-                            </div>
-                            <div class="like">
-                                <div class="bir">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>1</span>
+                    <a href="#">
+                        <div class="box">
+                            <img src="img/1.png">
+                            <div class="animedetail">
+                                <div class="episodename">
+                                    <span>S1</span> - <span>B1</span> Bilgeliğin 12. Adımın Gücü
                                 </div>
-                                <div class="iki">
-                                    <i class="fa-solid fa-thumbs-down"></i>
-                                    <span>1</span>
+                                <div class="time">
+                                    <i class="bi bi-clock"></i> 23.12
+                                </div>
+                                <div class="date">
+                                    <i class="bi bi-calendar"></i> 20.12.2024
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="comment-box2">
-                    <img src="img/1.png">
-                    <div class="detail">
-                        <div class="tr">
-                            <div class="username">
-                                Kertenkele3131
-                            </div>
-                            <div class="date">
-                                20.02.2024
-                            </div>
-                        </div>
-                        <div class="text">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, atque.
-                        </div>
-                        <div class="r">
-                            <div class="reply">
-                                <a href="#">Cevapla</a>
-                            </div>
-                            <div class="like">
-                                <div class="bir">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>1</span>
-                                </div>
-                                <div class="iki">
-                                    <i class="fa-solid fa-thumbs-down"></i>
-                                    <span>1</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="comment-box">
-                    <img src="img/1.png">
-                    <div class="detail">
-                        <div class="tr">
-                            <div class="username">
-                                Kertenkele3131
-                            </div>
-                            <div class="date">
-                                20.02.2024
-                            </div>
-                        </div>
-                        <div class="text">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, atque.
-                        </div>
-                        <div class="r">
-                            <div class="reply">
-                                <a href="#">Cevapla</a>
-                            </div>
-                            <div class="like">
-                                <div class="bir">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>1</span>
-                                </div>
-                                <div class="iki">
-                                    <i class="fa-solid fa-thumbs-down"></i>
-                                    <span>1</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="comment-box2">
-                    <img src="img/1.png">
-                    <div class="detail">
-                        <div class="tr">
-                            <div class="username">
-                                Kertenkele3131
-                            </div>
-                            <div class="date">
-                                20.02.2024
-                            </div>
-                        </div>
-                        <div class="text">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, atque.
-                        </div>
-                        <div class="r">
-                            <div class="reply">
-                                <a href="#">Cevapla</a>
-                            </div>
-                            <div class="like">
-                                <div class="bir">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>1</span>
-                                </div>
-                                <div class="iki">
-                                    <i class="fa-solid fa-thumbs-down"></i>
-                                    <span>1</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!----------------------------------------------------CONTENT START---------------------------------------------------->
 
     <!----------------------------------------------------FOOTER START---------------------------------------------------->

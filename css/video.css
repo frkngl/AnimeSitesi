@@ -1,12 +1,11 @@
 /*VIDEOPLAYER ROOT*/
 :root {
-  --videoplayer-color1: #ffffff;
+  --videoplayer-color1: none
 }
 
 /*POSTER PLAY BTN ROOT*/
 :root {
   --btn-color: #ffffff;
-  
   --btn-font-size:5rem;
 }
 /*SPINNER ROOT*/
@@ -33,21 +32,20 @@
 :root {
   --controls-color1: rgba(0, 0, 0, .75);
   --controls-color2: #ffffff;
-
   --controls-font-size:0.8rem;
-  --controls-font-size2:2rem;
+  --controls-font-size2:1.4rem;
 }
 /*SETTINGS ROOT*/
 :root {
   --setting-color1: rgb(28 28 28 / 80%);
   --setting-color2: #ffffff;
 
-  --setting-font-size: 1.8rem;
+  --setting-font-size: 1.4rem;
   --setting-font-size2: 0.9rem;
   --setting-font-size3: 0.5rem;
   --setting-font-size4: 0.8rem;
   --setting-font-size5: 1.2rem;
-  --setting-font-size6: 1.8rem;
+  --setting-font-size6: 1.4rem;
 }
 
 /*SETTINGS SCROLL ROOT*/
@@ -69,10 +67,8 @@ video::-webkit-media-controls {
 .content .videoplayer {
   position: relative;
   width: 100%;
-  height: 100%;
-  border-radius: 15px;
+  height: 70vh;
   overflow: hidden;
-  box-shadow: var(--videoplayer-color1) 0px 0px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,7 +169,6 @@ video::-webkit-media-controls {
   position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   outline: none;
 }
 
