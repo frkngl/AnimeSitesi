@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" type="text/css">
     <!--BOOTSTRAP CSS-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" type="text/css">
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/main.css.map" type="text/css">
@@ -61,191 +62,554 @@
 
     <!----------------------------------------------------CONTENT START---------------------------------------------------->
     <div class="content3">
-        <div class="anititle">
-            <div class="title">
-                <i class="fa-solid fa-desktop" style="color: #ffffff;"></i> Solo Leveling
-            </div>
-        </div>
-        <div class="detail">
+        <div class="animeabout container-xl">
             <div class="img">
                 <img src="img/1.png">
             </div>
-            <div class="text">
-                <div class="subtitle">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime placeat qui sit totam et dignissimos
-                    sunt sint necessitatibus libero commodi saepe, inventore iusto consequatur debitis, deleniti quia a
-                    quidem? Blanditiis dicta explicabo, eum amet illum adipisci quos nam suscipit, quasi quibusdam ipsum
-                    omnis vero sequi quaerat voluptates molestiae nostrum nemo? In quisquam sint aspernatur sed corporis
-                    adipisci dignissimos, soluta odio esse magni doloremque illum nam? Eos reiciendis, nihil consequatur
-                    dolor perspiciatis ex labore ea natus, at earum vel itaque sequi quisquam excepturi dolorem! Vel
-                    quaerat doloribus aliquam fugit expedita atque, amet corrupti harum porro totam nesciunt velit eos.
-                    Animi, fugiat!
+            <div class="detail">
+                <div class="title">
+                    Solo Leveling
                 </div>
-                <div class="animename">
-                    Adı: Solo Leveling
+                
+                <div class="totalepisode">
+                    <i class="bi bi-play-circle"></i> Toplam Bölüm: 1024
                 </div>
                 <div class="year">
-                    Yıl: 2024
+                    <i class="bi bi-calendar"></i> Yapım Yılı:  2024
                 </div>
                 <div class="type">
-                    Tür: Aksiyon,Fantastik,Doğaüstü
+                    <i class="bi bi-ticket"></i> Tür: Doğa, Bilim Kurgu,Fantastik,Aksiyon
+                </div>
+                <div class="des">
+                    Eski çağlardan beri ormanda insan yiyen iblisler 
+                    olduğu söylentisi gezmektedir. Bundan ötürü yerli 
+                    halk gece vakti dışarıya çıkmayı hiç göze alamıyordu. 
+                    Aynı zamanda efsaneye göre geceleri bu kana susamış
+                     iblisleri avlayan bir iblis avcısı vardır. Genç 
+                     Tanjirou için bu söylentiler yakında acı gerçeklere
+                      dönüşecekti. Babasının ölümünden beri Tanjirou 
+                      ailesine bakma görevini üstlenmişti. Hayatları 
+                      trajedilerle karşılaşmış olsa bile mutluluğu 
+                      bulmuşlardı. Ama bu mutluluk Tanjirou ailesini 
+                      katledilmiş buluncaya kadardı ve hayatta kalan 
+                      tek üyesi olan kız kardeşi Nezuko, bir iblise 
+                      dönüşmüştü. Şaşırtıcı bir şekilde Nezuko hala 
+                      insan duygularını ve düşüncelerini taşıyordu. 
+                      Böylelikle Tanjirou'nun iblislerle dövüşme ve 
+                      kız kardeşini tekrar insana dönüştürme görevi 
+                      başladı.
+                </div>
+                <div class="save">
+                    <i class="bi bi-bookmark"></i>
+                </div>
+                <div class="likeandunlikerating">
+                    <div class="rating">
+                        IMDb 8.0
+                    </div>
+                    <div class="likeandunlike">
+                        <div class="like">
+                            <i class="bi bi-hand-thumbs-up"></i> 102421
+                        </div>
+                        <div class="unlike">
+                            <i class="bi bi-hand-thumbs-down"></i> 299545
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="margin-left: 5px; margin-top: 75px;" class="epititle">
+        <div class="allepisode container-xl">
+            <div class="searchcategory">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                    <input type="text" autocomplete="off" name="searchTags" id="searchTags" placeholder="Bölüm Arayınız" />
+                </div>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Sezonlar
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">1.Sezon</a></li>
+                        <li><a class="dropdown-item" href="#">2.Sezon</a></li>
+                        <li><a class="dropdown-item" href="#">3.Sezon</a></li>
+                        <li><a class="dropdown-item" href="#">4.Sezon </a></li>
+                        <li><a class="dropdown-item" href="#">5.Sezon</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="episode">
+                <ul id="menuFull">
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B1 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B2 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B3 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B4 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B5 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B6 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B7 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B8 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B9 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B10 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B11 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B12 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B13 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B14 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B15 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B16 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B17 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box">
+                                <div class="img">
+                                    <i class="bi bi-play-circle"></i>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="detail">
+                                    <div class="title">
+                                      B18 - Karanlık Gerçek
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </dvi>
+        </div>
+        <div class="commentplace">
+            <div class="headcomment">
+                <div class="title">
+                    <i class="bi bi-pencil-square"></i> Düşüncelerinizi Yazın
+                </div>
+                <form action="#" method="get">
+                    <textarea></textarea>
+                    <button><i class="bi bi-send"></i> Gönder</button>
+                </form>
+            </div>
+        </div>
+        <div class="commentboxes">
             <div class="title">
-                <i class="fa-solid fa-play" style="color: #ffffff;"></i> Sezonlar
+                <i class="bi bi-chat"></i> 30 Yorum
             </div>
-        </div>
-        <div class="season">
-            <a href="#"class="box active">
-                1. Sezon
-            </a>
-            <a href="#"class="box">
-                2. Sezon
-            </a>
-            <a href="#"class="box">
-                3. Sezon
-            </a>
-        </div>
-        <div style="margin-top: 75px;" class="epititle">
-            <div class="title">
-                <i class="fa-solid fa-play" style="color: #ffffff;"></i> Bölümler
+            <div class="comments">
+                <div class="comment1">
+                    <img src="img/1.png">
+                    <div class="detail">
+                        <div class="user">
+                            <div class="name">
+                                BABAPRO
+                            </div>
+                            <div class="year">
+                                12.12.2023
+                            </div>
+                        </div>
+                        <div class="text">
+                            Dubbing a blonde loli who is older and more powerful than she looks? Call Monica Rial.
+                        </div>
+                        <div class="more">
+                            <div class="reply">
+                                <i class="bi bi-reply"></i>Cevapla
+                            </div>
+                            <div class="likeandunlike">
+                                <div class="like">
+                                    <i class="bi bi-hand-thumbs-up"></i>1024
+                                </div>
+                                <div class="unlike">
+                                    <i class="bi bi-hand-thumbs-down"></i>299
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment2">
+                    <img src="img/1.png">
+                    <div class="detail">
+                        <div class="user">
+                            <div class="name">
+                                BABAPRO
+                            </div>
+                            <div class="year">
+                                12.12.2023
+                            </div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At totam exercitationem
+                            iure quia tempora suscipit illum adipisci voluptatum? Aspernatur, perspiciatis.
+                        </div>
+                        <div class="more">
+                            <div class="reply">
+                                <i class="bi bi-reply"></i> Cevapla
+                            </div>
+                            <div class="likeandunlike">
+                                <div class="like">
+                                    <i class="bi bi-hand-thumbs-up"></i> 1024
+                                </div>
+                                <div class="unlike">
+                                    <i class="bi bi-hand-thumbs-down"></i> 299
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment1">
+                    <img src="img/1.png">
+                    <div class="detail">
+                        <div class="user">
+                            <div class="name">
+                                BABAPRO
+                            </div>
+                            <div class="year">
+                                12.12.2023
+                            </div>
+                        </div>
+                        <div class="text">
+                            Dubbing a blonde loli who is older and more powerful than she looks? Call Monica Rial.
+                        </div>
+                        <div class="more">
+                            <div class="reply">
+                                <i class="bi bi-reply"></i>Cevapla
+                            </div>
+                            <div class="likeandunlike">
+                                <div class="like">
+                                    <i class="bi bi-hand-thumbs-up"></i>1024
+                                </div>
+                                <div class="unlike">
+                                    <i class="bi bi-hand-thumbs-down"></i>299
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment2">
+                    <img src="img/1.png">
+                    <div class="detail">
+                        <div class="user">
+                            <div class="name">
+                                BABAPRO
+                            </div>
+                            <div class="year">
+                                12.12.2023
+                            </div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At totam exercitationem
+                            iure quia tempora suscipit illum adipisci voluptatum? Aspernatur, perspiciatis.
+                        </div>
+                        <div class="more">
+                            <div class="reply">
+                                <i class="bi bi-reply"></i> Cevapla
+                            </div>
+                            <div class="likeandunlike">
+                                <div class="like">
+                                    <i class="bi bi-hand-thumbs-up"></i> 1024
+                                </div>
+                                <div class="unlike">
+                                    <i class="bi bi-hand-thumbs-down"></i> 299
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment2">
+                    <img src="img/1.png">
+                    <div class="detail">
+                        <div class="user">
+                            <div class="name">
+                                BABAPRO
+                            </div>
+                            <div class="year">
+                                12.12.2023
+                            </div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At totam exercitationem
+                            iure quia tempora suscipit illum adipisci voluptatum? Aspernatur, perspiciatis.
+                        </div>
+                        <div class="more">
+                            <div class="reply">
+                                <i class="bi bi-reply"></i> Cevapla
+                            </div>
+                            <div class="likeandunlike">
+                                <div class="like">
+                                    <i class="bi bi-hand-thumbs-up"></i> 1024
+                                </div>
+                                <div class="unlike">
+                                    <i class="bi bi-hand-thumbs-down"></i> 299
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment1">
+                    <img src="img/1.png">
+                    <div class="detail">
+                        <div class="user">
+                            <div class="name">
+                                BABAPRO
+                            </div>
+                            <div class="year">
+                                12.12.2023
+                            </div>
+                        </div>
+                        <div class="text">
+                            Dubbing a blonde loli who is older and more powerful than she looks? Call Monica Rial.
+                        </div>
+                        <div class="more">
+                            <div class="reply">
+                                <i class="bi bi-reply"></i>Cevapla
+                            </div>
+                            <div class="likeandunlike">
+                                <div class="like">
+                                    <i class="bi bi-hand-thumbs-up"></i>1024
+                                </div>
+                                <div class="unlike">
+                                    <i class="bi bi-hand-thumbs-down"></i>299
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="episode">
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>
-            <a class="btn" href="detail.html">
-                <img src="img/1.png" alt="">
-                <div class="dd">
-                    <div class="Q">1S 1B</div>
-                    <div class="title">Karanlık Gerçek</div>
-                    <div class="date">22.02.2024</div>
-                </div>
-            </a>    
         </div>
     </div>
     <!----------------------------------------------------CONTENT END---------------------------------------------------->
-    
+
 
 
 
@@ -284,7 +648,7 @@
             </div>
         </div>
         <div class="copyright ">
-            <div class="logoimg"  style="color: antiquewhite;">
+            <div class="logoimg" style="color: antiquewhite;">
                 ANİGO
             </div>
             <div class="text">
@@ -296,6 +660,8 @@
 </body>
 
 </html>
+<!--JQUERY JS-->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <!--BOOTSTRAP JS-->
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--SWIPER JS-->
@@ -306,5 +672,3 @@
 <script src="js/main.js"></script>
 <script src="js/main2.js"></script>
 <script src="js/splide.js"></script>
-
-

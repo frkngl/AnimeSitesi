@@ -61,9 +61,16 @@
   user-select: none;
   -webkit-user-select: none;
 }
-video::-webkit-media-controls {   
-  display: none !important; 
+
+
+.main-video::-webkit-media-controls,
+.main-video::-moz-media-controls,
+.main-video::-o-media-controls,
+.main-video::-ms-media-controls {
+    display: none !important;
 }
+
+
 .content .videoplayer {
   position: relative;
   width: 100%;
