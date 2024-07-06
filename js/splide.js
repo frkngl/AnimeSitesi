@@ -1,18 +1,32 @@
 new Splide('#splide1', {
   type: 'slide',
-  perPage: 6,
   gap: '2em',
   padding: '4rem',
   breakpoints: {
-    1500: {
-      perPage: 5,
+    2700: {
+      perPage: 8,
       gap: '2rem',
       padding: '3rem',
     },
-    1200: {
-      perPage: 4,
+    2300: {
+      perPage: 7,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1900: {
+      perPage: 6,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1400: {
+      perPage: 5,
       gap: '2rem',
       padding: '2rem',
+    },
+    1100: {
+      perPage: 4,
+      gap: '2rem',
+      padding: '3rem',
     },
     900: {
       perPage: 3,
@@ -38,19 +52,33 @@ new Splide('#splide1', {
 }).mount();
 new Splide('#splide2', {
   type: 'slide',
-  perPage: 6,
   gap: '2em',
   padding: '4rem',
   breakpoints: {
-    1500: {
-      perPage: 5,
+    2700: {
+      perPage: 8,
       gap: '2rem',
       padding: '3rem',
     },
-    1200: {
-      perPage: 4,
+    2200: {
+      perPage: 7,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1900: {
+      perPage: 6,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1400: {
+      perPage: 5,
       gap: '2rem',
       padding: '2rem',
+    },
+    1100: {
+      perPage: 4,
+      gap: '2rem',
+      padding: '3rem',
     },
     900: {
       perPage: 3,
@@ -76,19 +104,33 @@ new Splide('#splide2', {
 }).mount();
 new Splide('#splide3', {
   type: 'slide',
-  perPage: 6,
   gap: '2em',
   padding: '4rem',
   breakpoints: {
-    1500: {
-      perPage: 5,
+    2700: {
+      perPage: 8,
       gap: '2rem',
       padding: '3rem',
     },
-    1200: {
-      perPage: 4,
+    2200: {
+      perPage: 7,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1900: {
+      perPage: 6,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1400: {
+      perPage: 5,
       gap: '2rem',
       padding: '2rem',
+    },
+    1100: {
+      perPage: 4,
+      gap: '2rem',
+      padding: '3rem',
     },
     900: {
       perPage: 3,
@@ -114,19 +156,33 @@ new Splide('#splide3', {
 }).mount();
 new Splide('#splide4', {
   type: 'slide',
-  perPage: 6,
   gap: '2em',
   padding: '4rem',
   breakpoints: {
-    1500: {
-      perPage: 5,
+    2700: {
+      perPage: 8,
       gap: '2rem',
       padding: '3rem',
     },
-    1200: {
-      perPage: 4,
+    2200: {
+      perPage: 7,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1900: {
+      perPage: 6,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1400: {
+      perPage: 5,
       gap: '2rem',
       padding: '2rem',
+    },
+    1100: {
+      perPage: 4,
+      gap: '2rem',
+      padding: '3rem',
     },
     900: {
       perPage: 3,
@@ -152,19 +208,33 @@ new Splide('#splide4', {
 }).mount();
 new Splide('#splide5', {
   type: 'slide',
-  perPage: 6,
   gap: '2em',
   padding: '4rem',
   breakpoints: {
-    1500: {
-      perPage: 5,
+    2700: {
+      perPage: 8,
       gap: '2rem',
       padding: '3rem',
     },
-    1200: {
-      perPage: 4,
+    2200: {
+      perPage: 7,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1900: {
+      perPage: 6,
+      gap: '2rem',
+      padding: '3rem',
+    },
+    1400: {
+      perPage: 5,
       gap: '2rem',
       padding: '2rem',
+    },
+    1100: {
+      perPage: 4,
+      gap: '2rem',
+      padding: '3rem',
     },
     900: {
       perPage: 3,

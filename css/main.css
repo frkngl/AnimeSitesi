@@ -141,18 +141,14 @@ header .container-xl .logo {
   z-index: 9999;
 }
 header .container-xl .logo a {
-  font-size: 2rem;
-  color: var(--header-color2);
   text-decoration: none;
-  font-family: "Pacifico", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  transition: all 300ms;
-  height: 60px;
-  margin-top: 5px;
 }
-header .container-xl .logo a:hover {
-  color: var(--header-color3);
+header .container-xl .logo a .logomobile {
+  display: none;
+}
+header .container-xl .logo a img {
+  width: 140px;
+  height: auto;
 }
 header .container-xl nav {
   height: 60px;
@@ -233,11 +229,22 @@ header .box .user a:hover {
     justify-content: space-between;
   }
   header .container-xl .row .logo {
-    transform: translateX(100%);
-    margin-top: 10px;
+    transform: translateX(70%);
   }
   header .container-xl .row .logo a {
-    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  header .container-xl .row .logo a .logomobile {
+    display: block;
+    width: 58px;
+    height: 58px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  header .container-xl .row .logo a img {
+    display: none;
+    width: 140px;
+    height: auto;
   }
   header .container-xl .row .hamburger-btn {
     display: block;
@@ -1429,7 +1436,8 @@ footer .copyright .text {
   justify-content: start;
   line-height: 1.3;
 }
-.content .head .episodeandcomment .episodetail .detail .title {
+.content .head .episodeandcomment .episodetail .detail .title a {
+  text-decoration: none;
   font-size: 1rem;
   color: #FF7F00;
   font-weight: bold;
@@ -2557,6 +2565,7 @@ footer .copyright .text {
   width: 100%;
   height: auto;
   display: flex;
+  padding: 0rem 10rem;
 }
 .content3 .animeabout .img {
   position: relative;
@@ -2574,7 +2583,7 @@ footer .copyright .text {
 .content3 .animeabout .detail {
   margin-left: 0px !important;
   line-height: 1.5;
-  width: 85% !important;
+  width: 100% !important;
   height: 300px;
   position: relative;
   padding: 0px 10px;
@@ -2679,6 +2688,7 @@ footer .copyright .text {
   width: 100%;
   height: auto;
   margin-top: 50px;
+  padding: 0rem 10rem;
 }
 .content3 .allepisode .searchcategory {
   width: 100%;
@@ -2755,30 +2765,31 @@ footer .copyright .text {
   padding: 0px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
   max-height: 560px;
   overflow: auto;
+  gap: 1%;
 }
 .content3 .allepisode .episode #menuFull li {
-  margin: 10px;
   transition: all 250ms;
+  width: 19%;
+  margin-bottom: 20px;
 }
 .content3 .allepisode .episode #menuFull li a {
   text-decoration: none;
   color: #ffffff;
 }
 .content3 .allepisode .episode #menuFull li a .box {
-  width: 237px;
+  width: 100%;
   line-height: 0.7;
 }
 .content3 .allepisode .episode #menuFull li a .box .img {
   position: relative;
-  width: 237px;
+  width: 100%;
   height: 150px;
 }
 .content3 .allepisode .episode #menuFull li a .box .img img {
-  width: 237px;
+  width: 100%;
   height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2795,8 +2806,8 @@ footer .copyright .text {
   transform: translate(-50%, -50%);
 }
 .content3 .allepisode .episode #menuFull li a .box .detail .title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   font-style: normal;
 }
 .content3 .commentplace {
@@ -3040,6 +3051,63 @@ footer .copyright .text {
   color: #FF7F00;
 }
 
+@media only screen and (max-width: 2700px) {
+  .content3 {
+    padding: 0rem !important;
+  }
+  .content3 #menuFull {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 560px;
+    overflow: auto;
+    gap: 1.2% !important;
+  }
+  .content3 #menuFull li {
+    transition: all 250ms;
+    width: 10% !important;
+  }
+}
+@media only screen and (max-width: 2000px) {
+  .content3 {
+    padding: 0rem !important;
+  }
+  .content3 #menuFull {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 560px;
+    overflow: auto;
+    gap: 1.8% !important;
+  }
+  .content3 #menuFull li {
+    transition: all 250ms;
+    width: 15% !important;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .content3 {
+    padding: 0rem !important;
+  }
+  .content3 #menuFull {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 560px;
+    overflow: auto;
+    gap: 1% !important;
+  }
+  .content3 #menuFull li {
+    transition: all 250ms;
+    width: 19% !important;
+  }
+}
 @media only screen and (max-width: 1400px) {
   .content3 {
     padding: 0rem !important;
@@ -3048,12 +3116,57 @@ footer .copyright .text {
     width: 100%;
     height: auto;
     display: flex;
+    padding: 0rem 1rem !important;
   }
   .content3 .animeabout .detail {
     margin-left: 10px;
     line-height: 1.5;
     width: 65%;
     position: relative;
+  }
+  .content3 .allepisode {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding: 0rem 1rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .content3 {
+    padding: 0rem !important;
+  }
+  .content3 #menuFull {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 560px;
+    overflow: auto;
+    gap: 1% !important;
+  }
+  .content3 #menuFull li {
+    transition: all 250ms;
+    width: 24% !important;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .content3 {
+    padding: 0rem !important;
+  }
+  .content3 #menuFull {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 560px;
+    overflow: auto;
+    gap: 1% !important;
+  }
+  .content3 #menuFull li {
+    transition: all 250ms;
+    width: 32% !important;
   }
 }
 @media only screen and (max-width: 550px) {
@@ -3112,6 +3225,20 @@ footer .copyright .text {
     color: #ffffff;
     font-style: normal;
     cursor: pointer;
+  }
+  .content3 #menuFull {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 560px;
+    overflow: auto;
+    gap: 1% !important;
+  }
+  .content3 #menuFull li {
+    transition: all 250ms;
+    width: 49% !important;
   }
   .content3 .commentboxes {
     width: 100%;
