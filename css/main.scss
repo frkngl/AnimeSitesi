@@ -4698,6 +4698,7 @@ footer {
                 font-size: 0.9rem;
                 font-weight: 500;
                 font-style: normal;
+                margin-top: 10px;
 
             }
         }
@@ -4720,7 +4721,7 @@ footer {
             }
 
             .search {
-                width: 180px;
+                width: 170px;
                 height: 35px;
                 background-color: #313131;
                 border-radius: 20px;
@@ -5030,7 +5031,7 @@ footer {
                     display: flex;
                     flex-wrap: wrap;
                     width: 100%;
-                    max-height: 560px;
+                    max-height: 400px;
                     overflow: auto;
                     gap: 4% !important;
 
@@ -5057,7 +5058,6 @@ footer {
 
             .animeler {
                 width: 100%;
-                min-height: 400px;
 
                 ul {
                     list-style-type: none;
@@ -5065,7 +5065,6 @@ footer {
                     display: flex;
                     flex-wrap: wrap;
                     width: 100%;
-                    max-height: 560px;
                     overflow: auto;
                     gap: 1% !important;
 

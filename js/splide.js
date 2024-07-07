@@ -9,12 +9,12 @@ new Splide('#splide1', {
       padding: '3rem',
     },
     2300: {
-      perPage: 7,
+      perPage: 6,
       gap: '2rem',
       padding: '3rem',
     },
-    1900: {
-      perPage: 6,
+    1700: {
+      perPage: 5,
       gap: '2rem',
       padding: '3rem',
     },
@@ -23,20 +23,20 @@ new Splide('#splide1', {
       gap: '2rem',
       padding: '2rem',
     },
-    1100: {
+    1300: {
       perPage: 4,
       gap: '2rem',
       padding: '3rem',
     },
-    900: {
+    1024: {
       perPage: 3,
       gap: '2rem',
       padding: '3rem',
     },
-    700: {
+    800: {
       perPage: 3,
       gap: '1rem',
-      padding: '3rem',
+      padding: '2rem',
     },
     600: {
       perPage: 2,
@@ -60,13 +60,13 @@ new Splide('#splide2', {
       gap: '2rem',
       padding: '3rem',
     },
-    2200: {
-      perPage: 7,
+    2300: {
+      perPage: 6,
       gap: '2rem',
       padding: '3rem',
     },
-    1900: {
-      perPage: 6,
+    1700: {
+      perPage: 5,
       gap: '2rem',
       padding: '3rem',
     },
@@ -75,20 +75,20 @@ new Splide('#splide2', {
       gap: '2rem',
       padding: '2rem',
     },
-    1100: {
+    1300: {
       perPage: 4,
       gap: '2rem',
       padding: '3rem',
     },
-    900: {
+    1024: {
       perPage: 3,
       gap: '2rem',
       padding: '3rem',
     },
-    700: {
+    800: {
       perPage: 3,
       gap: '1rem',
-      padding: '3rem',
+      padding: '2rem',
     },
     600: {
       perPage: 2,
@@ -112,13 +112,13 @@ new Splide('#splide3', {
       gap: '2rem',
       padding: '3rem',
     },
-    2200: {
-      perPage: 7,
+    2300: {
+      perPage: 6,
       gap: '2rem',
       padding: '3rem',
     },
-    1900: {
-      perPage: 6,
+    1700: {
+      perPage: 5,
       gap: '2rem',
       padding: '3rem',
     },
@@ -127,20 +127,20 @@ new Splide('#splide3', {
       gap: '2rem',
       padding: '2rem',
     },
-    1100: {
+    1300: {
       perPage: 4,
       gap: '2rem',
       padding: '3rem',
     },
-    900: {
+    1024: {
       perPage: 3,
       gap: '2rem',
       padding: '3rem',
     },
-    700: {
+    800: {
       perPage: 3,
       gap: '1rem',
-      padding: '3rem',
+      padding: '2rem',
     },
     600: {
       perPage: 2,
@@ -164,13 +164,13 @@ new Splide('#splide4', {
       gap: '2rem',
       padding: '3rem',
     },
-    2200: {
-      perPage: 7,
+    2300: {
+      perPage: 6,
       gap: '2rem',
       padding: '3rem',
     },
-    1900: {
-      perPage: 6,
+    1700: {
+      perPage: 5,
       gap: '2rem',
       padding: '3rem',
     },
@@ -179,20 +179,20 @@ new Splide('#splide4', {
       gap: '2rem',
       padding: '2rem',
     },
-    1100: {
+    1300: {
       perPage: 4,
       gap: '2rem',
       padding: '3rem',
     },
-    900: {
+    1024: {
       perPage: 3,
       gap: '2rem',
       padding: '3rem',
     },
-    700: {
+    800: {
       perPage: 3,
       gap: '1rem',
-      padding: '3rem',
+      padding: '2rem',
     },
     600: {
       perPage: 2,
@@ -216,13 +216,13 @@ new Splide('#splide5', {
       gap: '2rem',
       padding: '3rem',
     },
-    2200: {
-      perPage: 7,
+    2300: {
+      perPage: 6,
       gap: '2rem',
       padding: '3rem',
     },
-    1900: {
-      perPage: 6,
+    1700: {
+      perPage: 5,
       gap: '2rem',
       padding: '3rem',
     },
@@ -231,20 +231,20 @@ new Splide('#splide5', {
       gap: '2rem',
       padding: '2rem',
     },
-    1100: {
+    1300: {
       perPage: 4,
       gap: '2rem',
       padding: '3rem',
     },
-    900: {
+    1024: {
       perPage: 3,
       gap: '2rem',
       padding: '3rem',
     },
-    700: {
+    800: {
       perPage: 3,
       gap: '1rem',
-      padding: '3rem',
+      padding: '2rem',
     },
     600: {
       perPage: 2,
