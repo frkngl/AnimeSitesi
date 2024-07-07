@@ -89,6 +89,23 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    // keyup ile inputa herhangi bir değer girilince fonksiyonu tetikliyoruz
+    $("#searchTags9").keyup(function () {
+        // inputa yazılan değeri alıyoruz
+        var value = $("#searchTags9").val();
+        // eğer input içinde değer yoksa yani boşsa tüm menüyü çıkartıyoruz
+        if (value.length == 0) {
+            $("#menuFull9 li").show();
+            // arama yapılmışsa ilk olarak tüm menüyü gizliyoruz ve girilen değer ile eşleşen kısmı çıkarıyoruz
+        } else {
+            $("#menuFull9 li").hide();
+            $("#menuFull9 li:contains(" + value + ")").show();
+        }
+
+    });
+});
+
 
 
 
