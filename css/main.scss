@@ -5082,3 +5082,59 @@ footer {
     }
 }
 /*---------------------------------------USER END---------------------------------------*/
+
+
+/*---------------------------------------ABOUT END---------------------------------------*/
+.about{
+    width: 100%;
+    height: auto;
+    padding: 0rem 10rem;
+    margin-top: 100px;
+
+    .title{
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 500;
+        font-style: normal;
+        color: #ffffff;
+    }
+    
+    .des{
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 500;
+        font-style: normal;
+        color: #ffffff;
+    }
+}
+
+
+@media only screen and (max-width:1200px){
+    .about{
+        width: 100%;
+        height: auto;
+        padding: 0rem 1rem;
+        margin-top: 100px;
+    
+        .title{
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: 500;
+            font-style: normal;
+            color: #ffffff;
+        }
+        
+        .des{
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 500;
+            font-style: normal;
+            color: #ffffff;
+        }
+    }
+}
+/*---------------------------------------ABOUT END---------------------------------------*/
+
+
+
+

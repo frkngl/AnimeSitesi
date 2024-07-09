@@ -134,7 +134,7 @@
 
 .content .videoplayer .thumbnail {
   position: absolute;
-  bottom: 55px;
+  bottom: 65px;
   left: calc(var(--x) + 11px);
   transform: translateX(-56%);
   width: 250px;
@@ -151,7 +151,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 65px;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   background: linear-gradient(to top, var(--thumbnaıl-color2), transparent);
@@ -165,10 +165,12 @@
   padding: 5px 10px;
   white-space: nowrap;
   color: var(--progress-color1);
-  font-size: var(--progress-font-size);
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
   border-radius: 5px;
   z-index: 1;
-  bottom: 55px;
+  bottom: 65px;
   display: none;
 }
 
@@ -181,9 +183,10 @@
 
 .content .videoplayer .controls {
   position: absolute;
+  --webkit-display: none;
   bottom: 0px;
   left: 0;
-  height: 50px;
+  height: 60px;
   width: 100%;
   background: linear-gradient(to top, var(--controls-color1), transparent);
   opacity: 0;
@@ -196,7 +199,7 @@
 
 .content .videoplayer .controls .progress_area {
   width: 100%;
-  height: 5px;
+  height: 10px;
   margin: auto;
   background-color: var(--progress-color2);
   cursor: pointer;
@@ -228,17 +231,12 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  right: -5px;
+  right: -10px;
   top: 50%;
   transform: translateY(-50%);
   background-color: var(--progress-color4);
   color: var(--progress-color4);
-  opacity: 0;
   transition: all 300ms;
-}
-
-.content .videoplayer .controls .progress_area:hover .progress_bar::before {
-  opacity: 1;
 }
 
 .content .videoplayer .controls .progress_area .progress_bar::after {
@@ -247,17 +245,12 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  right: -1px;
+  right: -6px;
   top: 50%;
   transform: translateY(-50%);
   background-color: var(--progress-color5);
   color: var(--progress-color5);
-  opacity: 0;
   transition: all 300ms;
-}
-
-.content .videoplayer .controls .progress_area:hover .progress_bar::after {
-  opacity: 1;
 }
 
 .content .videoplayer .controls .progress_area .bufferedBar {
@@ -272,7 +265,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  width: 97%;
+  width: 100%;
   height: 46px;
   margin: 0 auto;
 }
@@ -285,7 +278,9 @@
 }
 
 .content .videoplayer .controls .control-list .control-left .timer {
-  font-size: var(--controls-font-size);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
   white-space: nowrap;
   color: var(--controls-color2);
   margin-left: 10px;
@@ -302,7 +297,9 @@
 }
 
 .content .videoplayer .controls .icon .material-symbols-outlined {
-  font-size: var(--controls-font-size2);
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 500;
   color: var(--controls-color2);
   cursor: pointer;
 }
@@ -356,7 +353,9 @@
 }
 
 .content .videoplayer .controls .control-right .icon .material-symbols-outlined.settingsBtn {
-  font-size: var(--setting-font-size);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
   transition: 0.3s;
 }
 

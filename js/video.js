@@ -205,10 +205,13 @@ ${video_player.innerHTML}
       const isVideoPaused = video_player.classList.contains('paused');
       isVideoPaused ? pauseVideo() : playVideo();
    }
-   mainVideo.addEventListener('click', () => {
-      const isVideoPaused = video_player.classList.contains('paused');
-      isVideoPaused ? pauseVideo() : playVideo();
-   })
+
+   // mainVideo.addEventListener('click', () => {
+   //    const isVideoPaused = video_player.classList.contains('paused');
+   //    isVideoPaused ? pauseVideo() : playVideo();
+   // })
+
+
    //FAST REWIND PAUSE FUNCTION
    fast_rewind.addEventListener('click', fastrewind);
    function fastrewind() {
@@ -412,7 +415,7 @@ ${video_player.innerHTML}
          } else {
             controls.classList.remove("active");
          }
-      }, 4000);
+      }, 8000);
    }
    hideControls();
    video_player.addEventListener("mousemove", () => {
@@ -425,18 +428,20 @@ ${video_player.innerHTML}
    video_player.addEventListener('touchstart', () => {
       controls.classList.add('active');
       setTimeout(() => {
-         controls
-            .classList.remove('active')
-      }, 20000);
-   })
-   video_player.addEventListener('touchmove', () => {
-      if (video_player.classList.contains('paused')) {
          controls.classList.remove('active')
-      }
-      else {
-         controls.classList.add('active');
-      }
+      }, 8000);
    })
+
+   // video_player.addEventListener('touchmove', () => {
+   //    if (video_player.classList.contains('paused')) {
+   //       controls.classList.remove('active')
+   //    }
+   //    else {
+   //       controls.classList.add('active');
+   //    }
+   // })
+
+
    //Video Preview
    var thumbnails = [];
    var thumbnailWidth = 250;
@@ -530,6 +535,8 @@ ${video_player.innerHTML}
       });
       console.log('done...');
    });
+
+   
    //FAST KEYBOARD
    // document.addEventListener("keydown", e => {
    //    const tagName = document.activeElement.tagName.toLowerCase()
@@ -554,6 +561,9 @@ ${video_player.innerHTML}
    //          break
    //    }
    // })
+
+
+   
    // Storage video duration and video path in local storage
    // window.addEventListener('unload', () => {
    //    let setDuration = localStorage.setItem('duration', `${mainVideo.currentTime}`);
