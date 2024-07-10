@@ -369,20 +369,62 @@ ${video_player.innerHTML}
    function pictureinpicture() {
       mainVideo.requestPictureInPicture();
    }
+   
    //FullScreen
    fullscreen.addEventListener('click', full_screen);
    function full_screen() {
-      if (!video_player.classList.contains('openFullScreen')) {
-         video_player.classList.add('openFullScreen');
+      if (fullscreen.innerHTML == "open_in_full") {
+
+         if (video_player.requestFullscreen) {
+            video_player.requestFullscreen();
+         }
+
+         else if (video_player.msRequestFullscreen) {
+            video_player.msRequestFullscreen();
+         }
+
+         else if (video_player.mozRequestFullscreen) {
+            video_player.mozRequestFullscreen();
+         }
+
+         else if (video_player.webkitRequestFullscreen){
+            video_player.webkitRequestFullscreen();
+         }
          fullscreen.innerHTML = "close_fullscreen";
-         video_player.requestFullscreen();
       }
       else {
-         video_player.classList.remove('openFullScreen');
+
+         if (document.exitFullscreen) {
+            document.exitFullscreen();
+         }
+
+         else if(document.msexitFullscreen){
+            document.msexitFullscreen();
+         }
+
+         else if(document.mozexitFullscreen){
+            document.mozexitFullscreen();
+         }
+
+         else if(document.webkitexitFullscreen){
+            document.webkitexitFullscreen();
+         }
          fullscreen.innerHTML = "open_in_full";
-         document.exitFullscreen();
       }
    }
+
+   // if (!video_player.classList.contains('openFullScreen')) {
+   //    video_player.classList.add('openFullScreen');
+   //    fullscreen.innerHTML = "close_fullscreen";
+   //    video_player.requestFullscreen();
+   // }
+   // else {
+   //    video_player.classList.remove('openFullScreen');
+   //    fullscreen.innerHTML = "open_in_full";
+   //    document.exitFullscreen();
+   // }
+
+
    //Open Setting
    settingsBtn.addEventListener('click', () => {
       settings.classList.toggle('active');
@@ -444,8 +486,8 @@ ${video_player.innerHTML}
 
    //Video Preview
    var thumbnails = [];
-   var thumbnailWidth = 250;
-   var thumbnailHeight = 150;
+   var thumbnailWidth = 150;
+   var thumbnailHeight = 90;
    var horizontalItemCount = 5;
    var verticalItemCount = 5;
    let preview_video = document.createElement('video')
@@ -536,7 +578,7 @@ ${video_player.innerHTML}
       console.log('done...');
    });
 
-   
+
    //FAST KEYBOARD
    // document.addEventListener("keydown", e => {
    //    const tagName = document.activeElement.tagName.toLowerCase()
@@ -563,7 +605,7 @@ ${video_player.innerHTML}
    // })
 
 
-   
+
    // Storage video duration and video path in local storage
    // window.addEventListener('unload', () => {
    //    let setDuration = localStorage.setItem('duration', `${mainVideo.currentTime}`);

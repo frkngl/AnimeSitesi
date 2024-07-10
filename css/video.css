@@ -137,8 +137,8 @@
   bottom: 65px;
   left: calc(var(--x) + 11px);
   transform: translateX(-56%);
-  width: 250px;
-  height: 150px;
+  width: 150px;
+  height: 90px;
   border: 2px solid var(--thumbnaıl-color1);
   border-radius: 5px;
   display: none;
@@ -160,7 +160,7 @@
 .content .videoplayer .progressAreaTime {
   position: absolute;
   left: var(--x);
-  transform: translateX(-50%);
+  transform: translateX(-40%);
   min-width: 50px;
   padding: 5px 10px;
   white-space: nowrap;
