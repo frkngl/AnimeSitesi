@@ -73,6 +73,16 @@
   --font-size-14: 0.7rem;
 }
 
+::-moz-selection {
+  background-color: #FF7F00;
+  color: #000000;
+}
+
+::selection {
+  background-color: #FF7F00;
+  color: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;

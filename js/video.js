@@ -447,6 +447,8 @@ ${video_player.innerHTML}
    mainVideo.addEventListener('contextmenu', (e) => {
       e.preventDefault();
    })
+
+
    //Mouse Move Controller
    let timer;
    const hideControls = () => {
@@ -466,6 +468,8 @@ ${video_player.innerHTML}
       hideControls();
    });
 
+
+   
    //Mobile tocuh controls
    video_player.addEventListener('touchstart', () => {
       controls.classList.add('active');
