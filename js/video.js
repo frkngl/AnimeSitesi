@@ -663,7 +663,27 @@ ${video_player.innerHTML}
       }
    });
 
-
+   
+   let timeoutIdd = null;
+   
+   video_player.addEventListener('play', () => {
+      timeoutIdd = setTimeout(() => {
+         video_player.classList.add('hide-cursor');
+     }, 5000);
+   });
+   
+   video_player.addEventListener('pause', () => {
+      video_player.classList.remove('hide-cursor');
+     clearTimeout(timeoutIdd);
+   });
+   
+   video_player.addEventListener('mousemove', () => {
+      video_player.classList.remove('hide-cursor');
+     clearTimeout(timeoutIdd);
+     timeoutIdd = setTimeout(() => {
+      video_player.classList.add('hide-cursor');
+     }, 5000);
+   });
 
    // Storage video duration and video path in local storage
    // window.addEventListener('unload', () => {
