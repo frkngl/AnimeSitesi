@@ -193,6 +193,8 @@ ${video_player.innerHTML}
       poster.style.display = "none";
       playVideo();
    }
+
+   
    //VIDEO PAUSE FUNCTION
    function pauseVideo() {
       play_pause.innerHTML = "play_circle";
@@ -206,11 +208,10 @@ ${video_player.innerHTML}
       isVideoPaused ? pauseVideo() : playVideo();
    }
 
-   // mainVideo.addEventListener('click', () => {
-   //    const isVideoPaused = video_player.classList.contains('paused');
-   //    isVideoPaused ? pauseVideo() : playVideo();
-   // })
-
+    mainVideo.addEventListener('click', () => {
+       const isVideoPaused = video_player.classList.contains('paused');
+       isVideoPaused ? pauseVideo() : playVideo();
+    })
 
    //FAST REWIND PAUSE FUNCTION
    fast_rewind.addEventListener('click', fastrewind);
@@ -364,12 +365,57 @@ ${video_player.innerHTML}
       thumbnail.style.display = "none";
       progressAreaTime.style.display = "none";
    })
+
+   progress_area.addEventListener('touchmove', (e) => {
+      let progressWidthval = progress_area.clientWidth + 2;
+      let x = e.touches[0].clientX;
+      let videoDuration = mainVideo.duration;
+      let progressTime = Math.floor((x / progressWidthval) * videoDuration);
+      let currentMin = Math.floor(progressTime / 60);
+      let currentSec = Math.floor(progressTime % 60);
+      progressAreaTime.style.setProperty('--x', `${x}px`);
+      progressAreaTime.style.display = "block";
+      if (x >= progressWidthval - 80) {
+         x = progressWidthval - 80;
+      } else if (x <= 75) {
+         x = 75;
+      } else {
+         x = e.touches[0].clientX;
+      }
+      //if seconds are less then 10 then add 0 at the begning
+      currentSec < 10 ? currentSec = "0" + currentSec : currentSec;
+      progressAreaTime.innerHTML = `${currentMin} : ${currentSec}`;
+      thumbnail.style.setProperty('--x', `${x}px`);
+      thumbnail.style.display = "block";
+      for (var item of thumbnails) {
+         var data = item.sec.find(x1 => x1.index === Math.floor(progressTime));
+         // thumbnail found
+         if (data) {
+            if (item.data != undefined) {
+               thumbnail.setAttribute("style", `
+               background-image: url(${item.data});
+               background-position-x: ${data.backgroundPositionX}px;
+               background-position-y:${data.backgroundPositionY}px;
+               --x: ${x}px;display: block;
+               `)
+               // exit
+               return;
+            }
+         }
+      }
+   })
+
+   progress_area.addEventListener('touchend', () => {
+      thumbnail.style.display = "none";
+      progressAreaTime.style.display = "none";
+   })
+
    //Picture In Picture
    picture_in_picture.addEventListener('click', pictureinpicture);
    function pictureinpicture() {
       mainVideo.requestPictureInPicture();
    }
-   
+
    //FullScreen
    fullscreen.addEventListener('click', full_screen);
    function full_screen() {
@@ -387,7 +433,7 @@ ${video_player.innerHTML}
             video_player.mozRequestFullscreen();
          }
 
-         else if (video_player.webkitRequestFullscreen){
+         else if (video_player.webkitRequestFullscreen) {
             video_player.webkitRequestFullscreen();
          }
          fullscreen.innerHTML = "close_fullscreen";
@@ -398,15 +444,15 @@ ${video_player.innerHTML}
             document.exitFullscreen();
          }
 
-         else if(document.msexitFullscreen){
+         else if (document.msexitFullscreen) {
             document.msexitFullscreen();
          }
 
-         else if(document.mozexitFullscreen){
+         else if (document.mozexitFullscreen) {
             document.mozexitFullscreen();
          }
 
-         else if(document.webkitexitFullscreen){
+         else if (document.webkitexitFullscreen) {
             document.webkitexitFullscreen();
          }
          fullscreen.innerHTML = "open_in_full";
@@ -459,7 +505,7 @@ ${video_player.innerHTML}
          } else {
             controls.classList.remove("active");
          }
-      }, 8000);
+      }, 5000);
    }
    hideControls();
    video_player.addEventListener("mousemove", () => {
@@ -469,24 +515,34 @@ ${video_player.innerHTML}
    });
 
 
-   
+
    //Mobile tocuh controls
-   video_player.addEventListener('touchstart', () => {
-      controls.classList.add('active');
-      setTimeout(() => {
-         controls.classList.remove('active')
-      }, 8000);
-   })
+   let timeoutId = null;
 
-   // video_player.addEventListener('touchmove', () => {
-   //    if (video_player.classList.contains('paused')) {
-   //       controls.classList.remove('active')
-   //    }
-   //    else {
-   //       controls.classList.add('active');
-   //    }
-   // })
-
+   video_player.addEventListener('pointerdown', () => {
+     controls.classList.add('active');
+     clearTimeout(timeoutId); // Clear the previous timeout
+     timeoutId = setTimeout(() => {
+       controls.classList.remove('active');
+     }, 5000);
+   });
+   
+   video_player.addEventListener('ontouchend', debounce(() => {
+     if (video_player.classList.contains('paused')) {
+       controls.classList.remove('active');
+     } else {
+       controls.classList.add('active');
+       clearTimeout(timeoutId); // Clear the timeout again
+     }
+   }, 100));
+   
+   function debounce(fn, delay) {
+     let timeoutId = null;
+     return function() {
+       clearTimeout(timeoutId);
+       timeoutId = setTimeout(fn, delay);
+     };
+   }
 
    //Video Preview
    var thumbnails = [];
@@ -579,34 +635,33 @@ ${video_player.innerHTML}
          // deleting unused property
          delete item.canvas;
       });
-      console.log('done...');
+      console.log('Thumbnail Hazır...');
    });
 
 
    //FAST KEYBOARD
-   // document.addEventListener("keydown", e => {
-   //    const tagName = document.activeElement.tagName.toLowerCase()
-   //    switch (e.key.toLowerCase()) {
-   //       case " ":
-   //          playpause()
-   //          break
-   //       case "arrowleft":
-   //          fastrewind()
-   //          break
-   //       case "arrowright":
-   //          fastforward()
-   //          break
-   //       case "m":
-   //          muteVolume()
-   //          break
-   //       case "p":
-   //          pictureinpicture()
-   //          break
-   //       case "f":
-   //          full_screen()
-   //          break
-   //    }
-   // })
+   video_player.addEventListener("keydown", e => {
+      switch (e.key.toLowerCase()) {
+         case " ":
+            playpause()
+            break
+         case "arrowleft":
+            fastrewind()
+            break
+         case "arrowright":
+            fastforward()
+            break
+         case "m":
+            muteVolume()
+            break
+         case "p":
+            pictureinpicture()
+            break
+         case "f":
+            full_screen()
+            break
+      }
+   });
 
 
 

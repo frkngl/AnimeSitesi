@@ -79,6 +79,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: none;
+}
+
+.goster-mouse{
+  cursor: default;
 }
 
 .content .videoplayer .postervideo {

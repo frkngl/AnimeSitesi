@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime | Anasayfa</title>
+    <!--İOS Cihazlarda fullscreen'i etkinleştirmek için işe yarayana HTML TAG'I-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -673,5 +675,26 @@
 <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
 <!--JS-->
 <script src="js/main.js"></script>
-<script src="js/main2.js"></script>
 <script src="js/splide.js"></script>
+
+<script>
+    /*NAVBAR'DAKİ LİNK ACTİVE*/
+    document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active');
+
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        }
+    });
+    //Sayfa Yükleme Ekranı
+    window.addEventListener('load', loaderfunc);
+    function loaderfunc() {
+        document.getElementById('loader').style.display = 'none';
+    }
+    //Sayfada Aşağı boşluk tuşuna bastığında inmemeye yarayana Kod
+    document.addEventListener('keydown', function (event) {
+        if (event.key === ' ') {
+            event.preventDefault();
+        }
+    });
+</script>
