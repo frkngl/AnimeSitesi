@@ -1217,7 +1217,6 @@
     </footer>
     <!----------------------------------------------------FOOTER END---------------------------------------------------->
 </body>
-
 </html>
 <!--BOOTSTRAP JS-->
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -1238,15 +1237,18 @@
             link.classList.add('active');
         }
     });
+
     //Sayfa Yükleme Ekranı
     window.addEventListener('load', loaderfunc);
     function loaderfunc() {
         document.getElementById('loader').style.display = 'none';
     }
+
     //Sayfada Aşağı boşluk tuşuna bastığında inmemeye yarayana Kod
     document.addEventListener('keydown', function (event) {
         if (event.key === ' ') {
             event.preventDefault();
         }
     });
+
 </script>

@@ -62,6 +62,10 @@ window.addEventListener("scroll", () => {
         togglePositionalHeaderStyles();
     }, 50);
 });
+
+
+
+
 /*TITLE*/
 window.addEventListener("blur", () => {
     document.title = "Tekrar Bekleriz :)";
@@ -69,6 +73,10 @@ window.addEventListener("blur", () => {
 window.addEventListener("focus", () => {
     document.title = "AniSekai | Anasayfa";
 });
+
+
+
+
 /*SWIPER*/
 const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
@@ -96,6 +104,12 @@ var swiper = new Swiper(".mySwiper", {
         }
     }
 });
+
+
+
+
+
+
 /*KATEGORİLER DÖNGÜYE ALAN EDİTLER*/
 const video = document.querySelectorAll(".splide__slide .video");
 video.forEach(video => {
@@ -121,6 +135,13 @@ video.forEach(video => {
         video.classList.remove("active");
     };
 });
+
+
+
+
+
+
+
 //Aramalarda büyük küçük harf duyarlılığı için
 jQuery.expr[':'].contains = function (a, i, m) {
     return jQuery(a).text().toUpperCase()

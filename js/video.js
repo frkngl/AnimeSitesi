@@ -113,14 +113,14 @@ ${video_player.innerHTML}
       fullscreen = video_player.querySelector('.fullscreen'),
       settings = video_player.querySelector('.settings'),
       settingsHome = video_player.querySelectorAll(".settings [data-label='settingHome'] > ul > li"),
-      playback = video_player.querySelectorAll('.playback li');
-   thumbnail = video_player.querySelector('.thumbnail');
-   spinner = video_player.querySelector('.spinner');
+      playback = video_player.querySelectorAll('.playback li'),
+      thumbnail = video_player.querySelector('.thumbnail'),
+      spinner = video_player.querySelector('.spinner');
    const settingDivs = video_player.querySelectorAll('.settings > div');
    const settingBack = video_player.querySelectorAll('.settings > div .back_arrow');
    const quality_ul = video_player.querySelector(".settings > [data-label='quality'] ul");
-   const qualities = video_player.querySelectorAll("source[size]");
    const poster = document.querySelector('.postervideo');
+   const qualities = video_player.querySelectorAll("source[size]");
    qualities.forEach(event => {
       let quality_html = `<li data-quality="${event.getAttribute('size')}">${event.getAttribute('size')}p</li>`;
       quality_ul.insertAdjacentHTML('afterbegin', quality_html);
@@ -173,6 +173,11 @@ ${video_player.innerHTML}
          e.classList.remove("active");
       });
    }
+
+
+
+
+   //------------------------------VIDEO PLAY FUNCTION-------------------------------------
    mainVideo.addEventListener('loadeddata', () => {
       setInterval(() => {
          let bufferedTime = mainVideo.buffered.end(0);
@@ -181,7 +186,12 @@ ${video_player.innerHTML}
          bufferedbar.style.width = `${width}%`;
       }, 500);
    });
-   //VIDEO PLAY FUNCTION
+
+
+
+
+
+   //------------------------------VIDEO PLAY FUNCTION-----------------------------------------
    function playVideo() {
       play_pause.innerHTML = "pause_circle";
       play_pause.title = "pause";
@@ -194,36 +204,54 @@ ${video_player.innerHTML}
       playVideo();
    }
 
-   
-   //VIDEO PAUSE FUNCTION
+
+
+
+   //------------------------------VIDEO PAUSE FUNCTION-------------------------------------------
    function pauseVideo() {
       play_pause.innerHTML = "play_circle";
       play_pause.title = "play";
       video_player.classList.remove('paused');
       mainVideo.pause();
    }
+
+
+   //------------------------------PLAY PAUSE FUNCTION-------------------------------------------
    play_pause.addEventListener('click', playpause);
    function playpause() {
       const isVideoPaused = video_player.classList.contains('paused');
       isVideoPaused ? pauseVideo() : playVideo();
    }
 
-    mainVideo.addEventListener('click', () => {
-       const isVideoPaused = video_player.classList.contains('paused');
-       isVideoPaused ? pauseVideo() : playVideo();
-    })
+   mainVideo.addEventListener('click', () => {
+      const isVideoPaused = video_player.classList.contains('paused');
+      isVideoPaused ? pauseVideo() : playVideo();
+   })
 
-   //FAST REWIND PAUSE FUNCTION
+
+
+
+   //-------------------------------FAST REWIND PAUSE FUNCTION---------------------------------------
    fast_rewind.addEventListener('click', fastrewind);
    function fastrewind() {
       mainVideo.currentTime -= 10;
    }
-   //FAST FORWARD PAUSE FUNCTION
+
+
+   //---------------------------------FAST FORWARD PAUSE FUNCTION--------------------------------------
    fast_forward.addEventListener('click', fastforward);
    function fastforward() {
       mainVideo.currentTime += 10;
    }
-   //LOAD VIDEO DURATION
+
+
+
+
+
+
+
+
+   //--------------------------------LOAD VIDEO DURATION---------------------------------------------
    mainVideo.addEventListener('loadeddata', (e) => {
       let videoDuration = e.target.duration;
       let totalMin = Math.floor(videoDuration / 60);
@@ -233,7 +261,12 @@ ${video_player.innerHTML}
       totalSec < 10 ? totalSec = "0" + totalSec : totalSec;
       totalDuration.innerHTML = `${totalMin} : ${totalSec}`;
    })
-   //Current video duration
+
+
+
+
+
+   //-----------------------------------Current video duration-------------------------------------------
    mainVideo.addEventListener('timeupdate', (e) => {
       let currentVideoTime = e.target.currentTime;
       let currentMin = Math.floor(currentVideoTime / 60);
@@ -246,7 +279,12 @@ ${video_player.innerHTML}
       let progressWidth = (currentVideoTime / videoDuration) * 100;
       progress_bar.style.width = `${progressWidth}%`;
    })
-   //let's update playing video current time on according to the progress bar width
+
+
+
+
+
+   //------------------let's update playing video current time on according to the progress bar width------------------------
    progress_area.addEventListener("pointerdown", (e) => {
       progress_area.setPointerCapture(e.pointerId);
       setTimelinePosition(e);
@@ -292,7 +330,14 @@ ${video_player.innerHTML}
    mainVideo.addEventListener("canplay", () => {
       spinner.style.display = "none";
    })
-   //CHANGE VOLUME
+
+
+
+
+
+
+
+   //-------------------------------------CHANGE VOLUME------------------------------------
    function changeVolume() {
       mainVideo.volume = volume_range.value / 100;
       if (volume_range.value == 0) {
@@ -322,7 +367,17 @@ ${video_player.innerHTML}
    volume.addEventListener('click', () => {
       muteVolume();
    })
-   //Update progress area time and display block on mouse move
+
+
+
+
+
+
+
+
+
+
+   //-----------------------Update progress area time and display block on mouse move---------------------------------------
    progress_area.addEventListener('mousemove', (e) => {
       let progressWidthval = progress_area.clientWidth + 2;
       let x = e.offsetX;
@@ -366,7 +421,11 @@ ${video_player.innerHTML}
       progressAreaTime.style.display = "none";
    })
 
+
+
+
    progress_area.addEventListener('touchmove', (e) => {
+      e.preventDefault();
       let progressWidthval = progress_area.clientWidth + 2;
       let x = e.touches[0].clientX;
       let videoDuration = mainVideo.duration;
@@ -387,17 +446,18 @@ ${video_player.innerHTML}
       progressAreaTime.innerHTML = `${currentMin} : ${currentSec}`;
       thumbnail.style.setProperty('--x', `${x}px`);
       thumbnail.style.display = "block";
+      progress_area.style.setProperty('--x', `${x}px`); // İlerleme çubuğunun pozisyonunu güncelle
       for (var item of thumbnails) {
          var data = item.sec.find(x1 => x1.index === Math.floor(progressTime));
          // thumbnail found
          if (data) {
             if (item.data != undefined) {
                thumbnail.setAttribute("style", `
-               background-image: url(${item.data});
-               background-position-x: ${data.backgroundPositionX}px;
-               background-position-y:${data.backgroundPositionY}px;
-               --x: ${x}px;display: block;
-               `)
+            background-image: url(${item.data});
+            background-position-x: ${data.backgroundPositionX}px;
+            background-position-y:${data.backgroundPositionY}px;
+            --x: ${x}px;display: block;
+            `)
                // exit
                return;
             }
@@ -410,13 +470,26 @@ ${video_player.innerHTML}
       progressAreaTime.style.display = "none";
    })
 
-   //Picture In Picture
+
+
+
+
+
+
+
+
+   //------------------------------------Picture In Picture--------------------------------------
    picture_in_picture.addEventListener('click', pictureinpicture);
    function pictureinpicture() {
       mainVideo.requestPictureInPicture();
    }
 
-   //FullScreen
+
+
+
+
+
+   //-------------------------------------FullScreen---------------------------------------------
    fullscreen.addEventListener('click', full_screen);
    function full_screen() {
       if (fullscreen.innerHTML == "open_in_full") {
@@ -459,6 +532,9 @@ ${video_player.innerHTML}
       }
    }
 
+
+
+
    // if (!video_player.classList.contains('openFullScreen')) {
    //    video_player.classList.add('openFullScreen');
    //    fullscreen.innerHTML = "close_fullscreen";
@@ -471,11 +547,17 @@ ${video_player.innerHTML}
    // }
 
 
-   //Open Setting
+
+
+
+
+
+   //----------------------------------------------------Open Setting--------------------------------------
    settingsBtn.addEventListener('click', () => {
       settings.classList.toggle('active');
       settingsBtn.classList.toggle('active');
    })
+
    //Playback Rate 
    playback.forEach((e) => {
       e.addEventListener('click', () => {
@@ -495,7 +577,12 @@ ${video_player.innerHTML}
    })
 
 
-   //Mouse Move Controller
+
+
+
+
+
+   //------------------------------------------Mouse Move Controller------------------------------
    let timer;
    const hideControls = () => {
       if (mainVideo.paused) return;
@@ -516,35 +603,38 @@ ${video_player.innerHTML}
 
 
 
-   //Mobile tocuh controls
-   let timeoutId = null;
 
+   //--------------------------Mobile tocuh controls------------------------------
+   let timeoutId = null;
    video_player.addEventListener('pointerdown', () => {
-     controls.classList.add('active');
-     clearTimeout(timeoutId); // Clear the previous timeout
-     timeoutId = setTimeout(() => {
-       controls.classList.remove('active');
-     }, 5000);
+      controls.classList.add('active');
+      clearTimeout(timeoutId); // Clear the previous timeout
+      timeoutId = setTimeout(() => {
+         controls.classList.remove('active');
+      }, 5000);
    });
-   
+
    video_player.addEventListener('ontouchend', debounce(() => {
-     if (video_player.classList.contains('paused')) {
-       controls.classList.remove('active');
-     } else {
-       controls.classList.add('active');
-       clearTimeout(timeoutId); // Clear the timeout again
-     }
+      if (video_player.classList.contains('paused')) {
+         controls.classList.remove('active');
+      } else {
+         controls.classList.add('active');
+         clearTimeout(timeoutId); // Clear the timeout again
+      }
    }, 100));
-   
+
    function debounce(fn, delay) {
-     let timeoutId = null;
-     return function() {
-       clearTimeout(timeoutId);
-       timeoutId = setTimeout(fn, delay);
-     };
+      let timeoutId = null;
+      return function () {
+         clearTimeout(timeoutId);
+         timeoutId = setTimeout(fn, delay);
+      };
    }
 
-   //Video Preview
+
+
+
+   //----------------------------Video Preview---------------------------------------
    var thumbnails = [];
    var thumbnailWidth = 150;
    var thumbnailHeight = 90;
@@ -639,7 +729,12 @@ ${video_player.innerHTML}
    });
 
 
-   //FAST KEYBOARD
+
+
+
+
+
+   //-----------------------------FAST KEYBOARD-----------------------------
    video_player.addEventListener("keydown", e => {
       switch (e.key.toLowerCase()) {
          case " ":
@@ -663,27 +758,32 @@ ${video_player.innerHTML}
       }
    });
 
-   
+
+
+
+   //-----------------------------------Mouse Place-----------------------------------------
    let timeoutIdd = null;
-   
    video_player.addEventListener('play', () => {
       timeoutIdd = setTimeout(() => {
          video_player.classList.add('hide-cursor');
-     }, 5000);
+      }, 5000);
    });
-   
+
    video_player.addEventListener('pause', () => {
       video_player.classList.remove('hide-cursor');
-     clearTimeout(timeoutIdd);
+      clearTimeout(timeoutIdd);
    });
-   
+
    video_player.addEventListener('mousemove', () => {
       video_player.classList.remove('hide-cursor');
-     clearTimeout(timeoutIdd);
-     timeoutIdd = setTimeout(() => {
-      video_player.classList.add('hide-cursor');
-     }, 5000);
+      clearTimeout(timeoutIdd);
+      timeoutIdd = setTimeout(() => {
+         video_player.classList.add('hide-cursor');
+      }, 5000);
    });
+
+
+
 
    // Storage video duration and video path in local storage
    // window.addEventListener('unload', () => {
