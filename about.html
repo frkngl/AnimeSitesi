@@ -154,8 +154,9 @@
     }
     //Sayfada Aşağı boşluk tuşuna bastığında inmemeye yarayana Kod
     document.addEventListener('keydown', function (event) {
-        if (event.key === ' ') {
+        if (event.code === 'Space' && event.target.tagName !== 'TEXTAREA' && event.target.tagName !== 'INPUT') {
             event.preventDefault();
+            event.stopPropagation();
         }
     });
 </script>

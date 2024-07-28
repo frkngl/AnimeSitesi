@@ -689,10 +689,11 @@
     function loaderfunc() {
         document.getElementById('loader').style.display = 'none';
     }
-    //Sayfada Aşağı boşluk tuşuna bastığında inmemeye yarayana Kod
-    document.addEventListener('keydown', function (event) {
-        if (event.key === ' ') {
+   //Sayfada Aşağı boşluk tuşuna bastığında inmemeye yarayana Kod
+   document.addEventListener('keydown', function (event) {
+        if (event.code === 'Space' && event.target.tagName !== 'TEXTAREA' && event.target.tagName !== 'INPUT') {
             event.preventDefault();
+            event.stopPropagation();
         }
     });
 </script>
