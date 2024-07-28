@@ -2,6 +2,9 @@ const video_players = document.querySelectorAll('.videoplayer');
 video_players.forEach(video_player => {
    const video_player_html = `
 <div class="spinner"></div>
+
+<div class="prev10"></div>
+<div class="next10"></div>
 ${video_player.innerHTML}
             <div class="thumbnail"></div>
             <div class="progressAreaTime"></div>
@@ -120,6 +123,8 @@ ${video_player.innerHTML}
    const settingBack = video_player.querySelectorAll('.settings > div .back_arrow');
    const quality_ul = video_player.querySelector(".settings > [data-label='quality'] ul");
    const poster = document.querySelector('.postervideo');
+   const prev10 = document.querySelector('.prev10');
+   const next10 = document.querySelector('.next10');
    const qualities = video_player.querySelectorAll("source[size]");
    qualities.forEach(event => {
       let quality_html = `<li data-quality="${event.getAttribute('size')}">${event.getAttribute('size')}p</li>`;
@@ -177,7 +182,7 @@ ${video_player.innerHTML}
 
 
 
-   //------------------------------VIDEO PLAY FUNCTION-------------------------------------
+   //------------------------------BufferedBar FUNCTION-------------------------------------
    mainVideo.addEventListener('loadeddata', () => {
       setInterval(() => {
          let bufferedTime = mainVideo.buffered.end(0);
@@ -198,11 +203,13 @@ ${video_player.innerHTML}
       video_player.classList.add('paused');
       mainVideo.play();
    }
-   poster.addEventListener('click', posterr);
-   function posterr() {
+
+
+
+   poster.addEventListener('click', () => {
       poster.style.display = "none";
       playVideo();
-   }
+   });
 
 
 
@@ -223,27 +230,128 @@ ${video_player.innerHTML}
       isVideoPaused ? pauseVideo() : playVideo();
    }
 
-   mainVideo.addEventListener('click', () => {
-      const isVideoPaused = video_player.classList.contains('paused');
-      isVideoPaused ? pauseVideo() : playVideo();
-   })
 
 
 
 
-   //-------------------------------FAST REWIND PAUSE FUNCTION---------------------------------------
+
+   //-------------------------------FAST REWIND FUNCTION---------------------------------------
    fast_rewind.addEventListener('click', fastrewind);
    function fastrewind() {
       mainVideo.currentTime -= 10;
    }
 
 
-   //---------------------------------FAST FORWARD PAUSE FUNCTION--------------------------------------
+   prev10.addEventListener('touchstart', handleTouchStartPrev);
+   prev10.addEventListener('touchend', handleTouchEndPrev);
+
+   let touchStartTimePrev = 0;
+   let touchCountPrev = 0;
+   let isTouchedPrev = false;
+   let timerPrev = null;
+
+   function handleTouchStartPrev() {
+      touchStartTimePrev = new Date().getTime();
+      isTouchedPrev = true;
+      if (timerPrev) {
+         clearTimeout(timerPrev);
+      }
+   }
+
+   function handleTouchEndPrev() {
+      if (isTouchedPrev) {
+         const touchEndTimePrev = new Date().getTime();
+         const touchTimePrev = touchEndTimePrev - touchStartTimePrev;
+         if (touchTimePrev < 300) { // 300ms içinde ikinci kez dokunulursa rewind10 fonksiyonu çalışır
+            touchCountPrev++;
+            if (touchCountPrev === 2) {
+               rewind10();
+               touchCountPrev = 0;
+            }
+            timerPrev = setTimeout(function () {
+               touchCountPrev = 0;
+            }, 300);
+         } else {
+            touchCountPrev = 0; // 300ms'den büyük olduğunda sıfırla
+         }
+         isTouchedPrev = false;
+      }
+   }
+
+   function rewind10() {
+      mainVideo.currentTime -= 10;
+      prev10.style.backgroundColor = "#f8f8ff";
+      prev10.style.opacity = "0.6";
+      prev10.style.borderRadius = "0% 50% 50% 0%"
+      prev10.style.transition = "all 200ms";
+      prev10.innerHTML = '<i style="font-size:5rem;" class="material-symbols-outlined fast-rewind">fast_rewind</i>';
+      setTimeout(function () {
+         prev10.style.backgroundColor = ""; // arka plan rengini sıfırla
+         prev10.innerHTML = '';
+      }, 200); // 200ms sonra arka plan rengini sıfırla
+   }
+
+
+
+
+
+
+   //---------------------------------FAST FORWARD FUNCTION--------------------------------------
    fast_forward.addEventListener('click', fastforward);
    function fastforward() {
       mainVideo.currentTime += 10;
    }
 
+
+
+   next10.addEventListener('touchstart', handleTouchStartNext);
+   next10.addEventListener('touchend', handleTouchEndNext);
+
+   let touchStartTimeNext = 0;
+   let touchCountNext = 0;
+   let isTouchedNext = false;
+   let timerNext = null;
+
+   function handleTouchStartNext() {
+      touchStartTimeNext = new Date().getTime();
+      isTouchedNext = true;
+      if (timerNext) {
+         clearTimeout(timerNext);
+      }
+   }
+
+   function handleTouchEndNext() {
+      if (isTouchedNext) {
+         const touchEndTimeNext = new Date().getTime();
+         const touchTimeNext = touchEndTimeNext - touchStartTimeNext;
+         if (touchTimeNext < 300) { // 300ms içinde ikinci kez dokunulursa forward10 fonksiyonu çalışır
+            touchCountNext++;
+            if (touchCountNext === 2) {
+               forward10();
+               touchCountNext = 0;
+            }
+            timerNext = setTimeout(function () {
+               touchCountNext = 0;
+            }, 300);
+         } else {
+            touchCountNext = 0; // 300ms'den büyük olduğunda sıfırla
+         }
+         isTouchedNext = false;
+      }
+   }
+
+   function forward10() {
+      mainVideo.currentTime += 10;
+      next10.style.backgroundColor = "#f8f8ff";
+      next10.style.borderRadius = "50% 0 0 50%";
+      next10.style.opacity = "0.6";
+      next10.style.transition = "all 200ms";
+      next10.innerHTML = '<i style="font-size:5rem;" class="material-symbols-outlined fast-forward">fast_forward</i>';
+      setTimeout(function () {
+         next10.style.backgroundColor = ""; // arka plan rengini sıfırla
+         next10.innerHTML = '';
+      }, 200); // 200ms sonra arka plan rengini sıfırla
+   }
 
 
 
