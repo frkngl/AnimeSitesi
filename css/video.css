@@ -6,18 +6,21 @@
 /*POSTER PLAY BTN ROOT*/
 :root {
   --btn-color: #ffffff;
-  --btn-font-size:5rem;
+  --btn-font-size: 5rem;
 }
+
 /*SPINNER ROOT*/
 :root {
   --spinner-color1: #FF7F00;
   --spinner-color2: #ffffff;
 }
+
 /*THUMBNAIL ROOT*/
 :root {
   --thumbnaıl-color1: #FF7F00;
   --thumbnaıl-color2: rgba(0, 0, 0, .75);
 }
+
 /*PROGRESS ROOT*/
 :root {
   --progress-color1: #ffffff;
@@ -26,15 +29,17 @@
   --progress-color4: #FF7F00;
   --progress-color5: #313131;
 
-  --progress-font-size:var(1rem);
+  --progress-font-size: var(1rem);
 }
+
 /*CONTROLS ROOT*/
 :root {
   --controls-color1: rgba(0, 0, 0, .75);
   --controls-color2: #ffffff;
-  --controls-font-size:0.8rem;
-  --controls-font-size2:1.4rem;
+  --controls-font-size: 0.8rem;
+  --controls-font-size2: 1.4rem;
 }
+
 /*SETTINGS ROOT*/
 :root {
   --setting-color1: rgb(28 28 28 / 80%);
@@ -67,7 +72,7 @@
 .main-video::-moz-media-controls,
 .main-video::-o-media-controls,
 .main-video::-ms-media-controls {
-    display: none !important;
+  display: none !important;
 }
 
 
@@ -82,7 +87,7 @@
   cursor: auto;
 }
 
-.content .videoplayer.hide-cursor{
+.content .videoplayer.hide-cursor {
   cursor: none;
 }
 
@@ -110,6 +115,11 @@
   z-index: 99;
   object-fit: cover;
   background-position: center;
+  filter: brightness(0.6);
+}
+
+.content .videoplayer .postervideo .postermobil {
+  display: none;
 }
 
 .content .videoplayer .spinner {
@@ -128,7 +138,7 @@
 }
 
 
-.content .videoplayer .prev10{
+.content .videoplayer .prev10 {
   position: absolute;
   left: 0;
   top: 0;
@@ -140,7 +150,7 @@
   justify-content: center;
 }
 
-.content .videoplayer .next10{
+.content .videoplayer .next10 {
   position: absolute;
   right: 0;
   top: 0;
@@ -265,7 +275,7 @@
   right: -10px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--progress-color4); 
+  background-color: var(--progress-color4);
   color: var(--progress-color4);
   transition: all 300ms;
 }
@@ -478,13 +488,35 @@
   font-size: var(--setting-font-size5);
 }
 
+
 @media only screen and (max-width:1370px) {
   .controls .icon {
     margin: 0px 5px 0px 5px;
     font-size: var(--setting-font-size6);
   }
+
   .volume_range,
+  .volume,
   .picture_in_picture {
     display: none !important;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .content .videoplayer .postervideo .poster {
+    display: none;
+  }
+
+  .content .videoplayer .postervideo .postermobil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    object-fit: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    display: block;
   }
 }
