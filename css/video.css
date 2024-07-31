@@ -489,7 +489,7 @@
 }
 
 
-@media only screen and (max-width:1370px) {
+@media only screen and (max-width:1400px) {
   .controls .icon {
     margin: 0px 5px 0px 5px;
     font-size: var(--setting-font-size6);

@@ -1904,7 +1904,10 @@ footer {
                             height: 60px;
                             object-fit: cover;
                             border-radius: 50%;
+                            position: relative;
+                            border:  2px solid #FF7F00;
                         }
+                        
 
                         .detail {
                             display: flex;
@@ -2007,6 +2010,7 @@ footer {
                             height: 60px;
                             object-fit: cover;
                             border-radius: 50%;
+                            border: 2px solid #F2F4F3;
                         }
 
                         .detail {
@@ -3483,6 +3487,7 @@ footer {
                     height: 60px;
                     object-fit: cover;
                     border-radius: 50%;
+                    border: 2px solid #FF7F00;
                 }
 
                 .detail {
@@ -3586,6 +3591,7 @@ footer {
                     height: 60px;
                     object-fit: cover;
                     border-radius: 50%;
+                    border: 2px solid #F2F4F3;
                 }
 
                 .detail {
@@ -4117,7 +4123,7 @@ footer {
         justify-content: center;
         height: 100vh;
         padding-top: 100px;
-        background-image: url(../img/militaryanime.jpg);
+        background-image: url(../img/postermobil.png);
         background-size: cover;
         background-position: center;
 
@@ -4432,7 +4438,7 @@ footer {
         justify-content: center;
         height: 100vh;
         padding-top: 100px;
-        background-image: url(../img/militaryanime.jpg);
+        background-image: url(../img/postermobil.png);
         background-size: cover;
         background-position: center;
 

@@ -641,18 +641,14 @@ ${video_player.innerHTML}
    }
 
 
+   const isIphone = /iPhone/i.test(navigator.userAgent);
+
+   if (isIphone) {
+     mainVideo.removeAttribute('playsinline');
+     fullscreen.style.display = 'none'; // Hide the fullscreen button
+   }
 
 
-   // if (!video_player.classList.contains('openFullScreen')) {
-   //    video_player.classList.add('openFullScreen');
-   //    fullscreen.innerHTML = "close_fullscreen";
-   //    video_player.requestFullscreen();
-   // }
-   // else {
-   //    video_player.classList.remove('openFullScreen');
-   //    fullscreen.innerHTML = "open_in_full";
-   //    document.exitFullscreen();
-   // }
 
 
 
